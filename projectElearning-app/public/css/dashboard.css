@@ -12,6 +12,7 @@ body {
 .sidebar {
   width: 7cm;
   position: fixed;
+  z-index: 1;
   height: 100%;
   background-color: var(--main-color);
 }
@@ -33,6 +34,22 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+}
+
+.sidebar .sidebar-menu ul a:link {
+  text-decoration: none;
+}
+
+.sidebar .sidebar-menu ul a:visited {
+  text-decoration: none;
+}
+
+.sidebar .sidebar-menu ul a:hover {
+  text-decoration: none;
+}
+
+.sidebar .sidebar-menu ul a:active {
+  text-decoration: none;
 }
 
 .sidebar .sidebar-menu ul .menu {
@@ -58,6 +75,14 @@ body {
 
 .sidebar .sidebar-menu ul .menu h3 {
   color: white;
+}
+
+.sidebar .sidebar-menu ul .menu.active, .sidebar .sidebar-menu ul .menu:hover {
+  background-color: #d9d9d9;
+}
+
+.sidebar .sidebar-menu ul .menu.active h3, .sidebar .sidebar-menu ul .menu:hover h3 {
+  color: black;
 }
 
 .header {
@@ -87,6 +112,7 @@ body {
 }
 
 hr {
+  z-index: 2;
   width: 100%;
   margin-top: 50px;
 }
