@@ -28,3 +28,17 @@ Route::get('/pay', function () {
 Route::get('/success_pay', function () {
     return view('success_pay');
 });
+Route::get('/dashboard', function () {
+    return view('dashboard');
+})->name('dashboard');
+
+Route::get('course', function() {
+    return view('course');
+})->name('course');
+
+
+Route::get('/memberList', function () {
+    return view('memberList');
+});
+
+// Route::get('/')
