@@ -13,6 +13,21 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
+Route::get('/mainpage', function () {
+    return view('mainpage');
+});
+
+Route::get('/payment_dashboard', function () {
+    return view('payment_dashboard');
+});
+
+Route::get('/pay', function () {
+    return view('pay');
+});
+
+Route::get('/success_pay', function () {
+    return view('success_pay');
+});
 Route::get('/dashboard', function () {
     return view('dashboard');
 })->name('dashboard');
