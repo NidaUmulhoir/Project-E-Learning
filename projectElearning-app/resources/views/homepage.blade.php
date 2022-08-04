@@ -17,6 +17,7 @@
 
     <!-- Template Main CSS File -->
   <link href="assets/css/style.css" rel="stylesheet">
+  <link rel="stylesheet" href="{{asset('/css/cardslider.css')}}">
 </head>
 <body>
 @include('header')
@@ -43,17 +44,9 @@
     </section>
     <!-- End Latest Activity Section -->
 
-    <!-- ======= Services Section ======= -->
-    <section id="services" class="services section border-top border-dark">
-      <div class="container" data-aos="fade-up">
-        <div class="section-title">
-          <h2 style="text-align: center">Services that we provide</h2>
-        </div>
-      </div>
-
-      </div>
-    </section><!-- End Sevices Section -->
-
+  <!-- ======= Services Section ======= -->
+  @include('layouts.cardslider')
+  <!-- End Sevices Section -->
   </main><!-- End #main -->
 
   <!-- Vendor JS Files -->
@@ -65,6 +58,24 @@
   <!-- Template Main JS File -->
   <script src="assets/js/main.js"></script>
 
+  <script>
+    const courseContainers = [...document.querySelectorAll('.course-container')];
+    const nextBtn = [...document.querySelectorAll('.next-btn')];
+    const preBtn = [...document.querySelectorAll('.pre-btn')];
+    
+    courseContainers.forEach((item, i) => {
+        let containerDimensions = item.getBoundingClientRect();
+        let containerWidth = containerDimensions.width;
+    
+        nextBtn[i].addEventListener('click', () => {
+            item.scrollLeft += containerWidth;
+        })
+    
+        preBtn[i].addEventListener('click', () => {
+            item.scrollLeft -= containerWidth;
+        })
+    })
+  </script>
 </body>
 @include('footer')
 </html>
