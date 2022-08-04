@@ -16,8 +16,6 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
-<<<<<<< Updated upstream
-=======
 
 Route::get('/payment_dashboard', function () {
     return view('payment_dashboard');
@@ -55,4 +53,3 @@ Route::get('/landing-page', function () {
     return view('landing-page');
 });
 // Route::get('/')
->>>>>>> Stashed changes
