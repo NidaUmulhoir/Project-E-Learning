@@ -1,0 +1,70 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;400;600;700&display=swap');
+$inika : 'Inter', serif;
+
+.profil{
+    margin-top: 200px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 50%;
+    width: 150px;
+    height: 150px;
+}
+
+h2{
+    text-align: center;
+    margin-top: 15px;
+    font-size: 25px;
+}
+
+.container{
+    .btn{
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        background-color: rgba(34, 87, 126, 1);
+        justify-content: center;
+        width: 130px;
+        border-radius: 20px;
+        font-weight: bold;
+        a{
+            color: white;
+        }
+    }
+}
+
+h3{
+    font-size: 20px;
+    font-weight: bold;
+}
+h4{
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 20%;
+
+}
+
+.container{
+    .status{
+        background-color: rgba(34, 87, 126, 1);
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        width: auto; 
+        height: 50px;  
+        border-radius:30px;
+        margin-bottom: 30px;
+    }
+
+    .percentCourse{
+        background-color: rgba(34, 87, 126, 1);
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        width: auto; 
+        height: 80px;  
+        border-radius:30px;
+        margin-bottom: 30px;
+    }
+    
+}
