@@ -17,7 +17,7 @@
 
     <!-- Template Main CSS File -->
   <link href="assets/css/style.css" rel="stylesheet">
-  <link rel="stylesheet" href="{{asset('/css/cardslider.css')}}">
+  <link href="assets/css/cardslider.css" rel="stylesheet">
 </head>
 <body>
 @include('header')
@@ -45,7 +45,7 @@
     <!-- End Latest Activity Section -->
 
   <!-- ======= Services Section ======= -->
-  @include('layouts.cardslider')
+  @include('cardslider')
   <!-- End Sevices Section -->
   </main><!-- End #main -->
 

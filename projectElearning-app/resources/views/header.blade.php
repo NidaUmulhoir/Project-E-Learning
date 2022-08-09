@@ -9,7 +9,7 @@
           <li><a href="">Subscribe</a></li>
           <li class="dropdown">
             <div class="dropprofil">
-              <a href="">Profil</a>
+              <a href="">User Name</a>
             </div>
               <ul>
                 <div class="dropprofil1">

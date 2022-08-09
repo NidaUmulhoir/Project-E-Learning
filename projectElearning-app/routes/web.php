@@ -52,4 +52,8 @@ Route::get('/profilpage', function () {
 Route::get('/landing-page', function () {
     return view('landing-page');
 });
+
+Route::get('/subscribepage', function () {
+    return view('subscribepage');
+});
 // Route::get('/')
