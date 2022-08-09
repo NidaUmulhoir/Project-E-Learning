@@ -77,5 +77,4 @@
     })
   </script>
 </body>
-@include('footer')
 </html>
