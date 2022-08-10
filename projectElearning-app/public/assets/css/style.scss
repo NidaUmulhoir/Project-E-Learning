@@ -148,6 +148,8 @@ section{
 }
 
 //  footer
+@import url('https://fonts.googleapis.com/css?family=Poppins:400,500,600,700');
+
 .container-2{
     background-color: rgba(232, 170, 66, 1);
     width: auto; 
@@ -156,5 +158,44 @@ section{
         width: 90px;
         height: 90px;
         margin-left: 30px;
+    }
+    .sosmed{
+        display: flex;
+        gap: 20px;
+        float: right;
+        margin-top: 15px;
+        margin-right: 50px;
+        .button{
+            display: inline-block;
+            height: 60px;
+            width: 60px;
+            margin: 0 5px;
+            overflow: hidden;
+            background: rgba(245, 230, 201, 0.893);
+            border-radius: 50px;
+            cursor: pointer;
+            box-shadow: 0px 10px 10px rgbe(0,0,0,0.1);
+            transition: all 0.3s ease-out;
+            .icon{
+                display: inline-block;
+                height: 60px;
+                width: 60px;
+                text-align: center;
+                border-radius: 50px;
+                box-sizing: border-box;
+                line-height: 60px;
+                transition: all 0.3s ease-out;
+                font-size: 45px;
+            }
+        }
+        .button:nth-child(1):hover .icon{
+            background:#e77f67 ;
+        }
+        .button:nth-child(2):hover .icon{
+            background:#e77f67 ;
+        }
+        .button:nth-child(3):hover .icon{
+            background: #e77f67;
+        }
     }
 }

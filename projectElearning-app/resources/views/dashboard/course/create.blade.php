@@ -2,7 +2,7 @@
     <div class="close-btn">
         &times;
     </div>
-    <form class="form" method="POST" action="store-form" enctype="multipart/form-data">
+    <form class="form" method="POST" action="course" enctype="multipart/form-data">
         @csrf
         <h2>Add New Course</h2>
         <div class="form-element">

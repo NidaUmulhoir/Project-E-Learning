@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\DashboardCourseController;
+use App\Http\Controllers\HomeController;
 use Illuminate\Support\Facades\Route;
 
 Route::get('/mainpage', function () {
@@ -18,26 +19,23 @@ Route::get('/pay', function () {
 Route::get('/success_pay', function () {
     return view('success_pay');
 });
-Route::get('/dashboard', function () {
-    return view('dashboard');
-})->name('dashboard');
 
-// Route::get('course', function() {
-//     return view('course');
-// })->name('course');
-
-
-Route::get('/memberList', function () {
-    return view('memberList');
-});
-// Route::post('course', 'DashboardCourseController@store');
-// Route::resource('store-form', DashboardCourseController::class);
-Route::resource('course', DashboardCourseController::class);
-
-Route::get('/homepage', function () {
-    return view('homepage');
+Route::prefix('/admin')->group(function(){
+    Route::get('/dashboard', function () {
+        return view('dashboard');
+    })->name('dashboard');
+    
+    Route::resource('course', DashboardCourseController::class);
+    
+    Route::get('/memberList', function () {
+        return view('memberList');
+    });
 });
 
+
+Route::get('/', [HomeController::class, 'homepage']);
+Route::get('/subscribe', [HomeController::class, 'subscribe']);
+Route::get('/profile', [HomeController::class, 'profile']);
 
 Route::get('/profilpage', function () {
     return view('profilpage');

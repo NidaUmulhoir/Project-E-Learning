@@ -19,7 +19,7 @@
             <div class="member-pre">
                 <h1>150</h1>
                 <h4>Member Premium</h4>
-                <img src="./asset/user-ico.png" alt="">
+                <img src="/asset/user-ico.png" alt="">
                 <button class="info">More Info <i class='bx bx-right-arrow-circle'></i></button>
             </div>
             <div class="member-reg">

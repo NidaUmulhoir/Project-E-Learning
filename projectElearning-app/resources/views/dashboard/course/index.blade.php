@@ -56,12 +56,12 @@
     </div>
 </body>
 <script>
-    // document.querySelector(".add-data").addEventListener("click",function(){
-    //     document.querySelector(".pop-up.add").classList.add("active");
-    // });
-    // document.querySelector(".pop-up.add .close-btn").addEventListener("click",function(){
-    //     document.querySelector(".pop-up.add").classList.remove("active");
-    // });
+    document.querySelector(".add-data").addEventListener("click",function(){
+        document.querySelector(".pop-up.add").classList.add("active");
+    });
+    document.querySelector(".pop-up.add .close-btn").addEventListener("click",function(){
+        document.querySelector(".pop-up.add").classList.remove("active");
+    });
     document.querySelector(".edit-data").addEventListener("click",function(){
         document.querySelector(".pop-up.edit").classList.add("active");
     });

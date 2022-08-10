@@ -12,8 +12,8 @@
     <title>Document</title>
 </head>
 <body>
-    @include('layouts.sidebar')
-    @include('layouts.header')
+    @include('dashboard.layouts.sidebar')
+    @include('dashboard.layouts.header')
     <div class="main-content">
         <div class="title-member">
             <img src="./asset/user2-ico.png">
