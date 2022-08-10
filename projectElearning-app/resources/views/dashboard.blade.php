@@ -11,8 +11,8 @@
     <title>Document</title>
 </head>
 <body>
-    @include('layouts.sidebar')
-    @include('layouts.header')
+    @include('dashboard.layouts.sidebar')
+    @include('dashboard.layouts.header')
     <div class="main-content">
         <h2>Dashboards Users</h2>
         <div class="member">

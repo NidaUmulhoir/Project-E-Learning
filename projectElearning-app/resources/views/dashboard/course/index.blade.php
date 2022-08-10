@@ -30,15 +30,20 @@
                     </tr>
                 </thead>
                 <tbody>
-                    @foreach ($posts as $post)
+                    @foreach ($courses as $course)
                     <tr>
                         <td>{{ $loop->iteration }}</td>
-                        <td>{{ $post->courseName }}</td>
-                        <td>{{ $post->module }}</td>
-                        <td>{{ $post->description }}</td>
+                        <td>{{ $course->courseName }}</td>
+                        <td>{{ $course->module }}</td>
+                        <td>{{ $course->description }}</td>
                         <td class="action">
                             <button class="edit-data"><i class='bx bxs-edit'></i></button>
-                            <button class="delete-data"><i class='bx bxs-x-square'></i></button>
+                            <form action="course/{{$course->id}}" method="post" class="d-inline">
+                                @method('delete')
+                                @csrf
+                                <button class="delete-data" onclick="return confirm('Are you sure?')"><i class='bx bxs-x-square'></i></button>
+                              </form>
+                            {{-- <button class="delete-data"><i class='bx bxs-x-square'></i></button> --}}
                         </td>
                     </tr>
                     @endforeach
@@ -63,12 +68,12 @@
     document.querySelector(".pop-up.edit .close-btn").addEventListener("click",function(){
         document.querySelector(".pop-up.edit").classList.remove("active");
     });
-    document.querySelector(".pop-up.del").addEventListener("click",function(){
-        document.querySelector(".pop-up.del").classList.add("active");
-    });
-    document.querySelector(".pop-up.del").addEventListener("click",function(){
-        document.querySelector(".pop-up.del").classList.add("active");
-    });
+    // document.querySelector(".pop-up.del").addEventListener("click",function(){
+    //     document.querySelector(".pop-up.del").classList.add("active");
+    // });
+    // document.querySelector(".pop-up.del").addEventListener("click",function(){
+    //     document.querySelector(".pop-up.del").classList.add("active");
+    // });
     
 </script>
 
