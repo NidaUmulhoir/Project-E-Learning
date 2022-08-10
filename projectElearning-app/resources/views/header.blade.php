@@ -4,15 +4,15 @@
       <img class="image" src="/assets/img/logo.png"/>
       <nav id="navbar" class="navbar">
         <ul>
-          <li><a href="">Home</a></li>
-          <li><a href="">Subscribe</a></li>
+          <li><a href="/">Home</a></li>
+          <li><a href="/subscribe">Subscribe</a></li>
           <li class="dropdown">
             <div class="dropprofil">
               <a>User Name</a>
             </div>
               <ul>
                 <div class="dropprofil1">
-                  <li><a href="">Profile</a></li>
+                  <li><a href="/profile">Profile</a></li>
                 </div>
                 <div class="dropprofil1">
                   <li><a href="">Logout</a></li>

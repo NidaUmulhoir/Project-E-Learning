@@ -92,7 +92,7 @@ class DashboardCourseController extends Controller
         Course::where('id', $course->id)
             ->update($validatedData);
 
-        return redirect('store-form')->with('success', 'New post has been added!');
+        return redirect('course')->with('success', 'New post has been added!');
     }
 
     /**
