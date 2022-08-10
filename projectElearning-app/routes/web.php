@@ -13,8 +13,8 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
+Route::get('/mainpage', function () {
+    return view('mainpage');
 });
 
 Route::get('/payment_dashboard', function () {
@@ -50,22 +50,7 @@ Route::get('/profilpage', function () {
     return view('profilpage');
 });
 
-
-Route::get('/landing-page', function () {
-    return view('landing-page');
-});
-
 Route::get('/subscribepage', function () {
     return view('subscribepage');
 });
-// Route::get('/')
-
-Route::get('/profilpage', function () {
-    return view('profilpage');
-});
-
-Route::get('/subscribepage', function () {
-    return view('subscribepage');
-});
-// Route::get('/')
 
