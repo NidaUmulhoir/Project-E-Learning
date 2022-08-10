@@ -15,7 +15,7 @@ class DashboardCourseController extends Controller
     public function index()
     {
         return view('dashboard.course.index', [
-            'posts'=>Course::all()
+            'courses'=>Course::all()
         ]);
     }
 
@@ -56,7 +56,7 @@ class DashboardCourseController extends Controller
     public function show(Course $course)
     {
         return view('course', [
-            'post' => $course
+            'course' => $course
         ]);
     }
 
@@ -69,8 +69,8 @@ class DashboardCourseController extends Controller
     public function edit(Course $course)
     {
         return view('course', [
-            'post' => $course,
-            'posts'=>Course::all()
+            'course' => $course,
+            'courses'=>Course::all()
         ]);
     }
 
@@ -103,6 +103,8 @@ class DashboardCourseController extends Controller
      */
     public function destroy(Course $course)
     {
-        //
+        Course::destroy($course->id);
+
+        return redirect('course')->with('success', 'Post has been deleted!');
     }
 }

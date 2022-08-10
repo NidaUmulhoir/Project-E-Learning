@@ -8,15 +8,15 @@
         <h2>Edit Course</h2>
         <div class="form-element">
             <label for="courseName">Course Name</label> 
-            <input type="text" id="courseName" name="courseName" value="{{ old('courseName', $post->courseName) }}">
+            <input type="text" id="courseName" name="courseName" value="{{ old('courseName', $course->courseName) }}">
         </div>
         <div class="form-element">
             <label for="module" class="form-label">Modul</label>
-            <input type="text" id="modul" name="module" value="{{ old('module', $post->module) }}">
+            <input type="text" id="modul" name="module" value="{{ old('module', $course->module) }}">
         </div>
         <div class="form-element">
             <label for="description" class="form-label">Description</label>
-            <input type="text" id="desk" name="description" value="{{ old('description', $post->description) }}">
+            <input type="text" id="desk" name="description" value="{{ old('description', $course->description) }}">
         </div>
 
         <div class="form-element">
