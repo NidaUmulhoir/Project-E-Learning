@@ -33,3 +33,17 @@ Route::get('/memberList', function () {
 // Route::post('course', 'DashboardCourseController@store');
 // Route::resource('store-form', DashboardCourseController::class);
 Route::resource('course', DashboardCourseController::class);
+
+Route::get('/homepage', function () {
+    return view('homepage');
+});
+
+
+Route::get('/profilpage', function () {
+    return view('profilpage');
+});
+
+Route::get('/subscribepage', function () {
+    return view('subscribepage');
+});
+
