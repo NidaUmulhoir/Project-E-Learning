@@ -50,8 +50,8 @@
                 </tbody>
             </table>
         </div>
-        {{-- @include('dashboard.course.create') --}}
-        @include('dashboard.course.edit')
+        @include('dashboard.course.create')
+        {{-- @include('dashboard.course.edit') --}}
         {{-- @include('dahsboard.course.delete') --}}
     </div>
 </body>
