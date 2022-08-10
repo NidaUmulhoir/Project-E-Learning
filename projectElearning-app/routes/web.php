@@ -41,4 +41,16 @@ Route::get('/memberList', function () {
     return view('memberList');
 });
 
-// Route::get('/')
+Route::get('/homepage', function () {
+    return view('homepage');
+});
+
+
+Route::get('/profilpage', function () {
+    return view('profilpage');
+});
+
+Route::get('/subscribepage', function () {
+    return view('subscribepage');
+});
+
