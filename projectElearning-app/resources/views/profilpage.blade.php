@@ -26,7 +26,7 @@
 <body>
 @include('header')
 
-  <img class="profil" src="/assets/img/profilfoto.jpeg"/>
+  <img class="profil" src="/assets/img/profilakun.png"/>
   <h2>Nama User</h2>
   <div class="container mt-3">
     <button class="btn"> <a href="">Logout</button></a> 
@@ -38,9 +38,21 @@
     <div class="status"></div>
     <h3>Lastest Course </h3>
     <div class="percentCourse"></div>
-    <h3>Lastest Sertificate</h3>
+    <div class="sertif">
+      <h3>Lastest Sertificate</h3>
+      <div class="pro">
+        <img src="/assets/img/crown.png" alt="">
+        Pro
+      </div>
+    </div> 
     <h4><a href="">Upgrade to Pro</a> to Begin Earn Sertificates</h4>
-  
+  </div>
+
+  <div class="showsertif">
+    <img src="/assets/img/foldericon.png" alt="">
+    <h4>This feed shows sertificate that can be downloaded</h4>
+    <h6>Are there sertificate you miss? <a href="">Reload the page.</a></h6>
+    <button class="btn"> <a href="">Browse All Course</button></a> 
   </div>
 </body>
 @include('footer')

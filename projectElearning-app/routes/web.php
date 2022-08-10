@@ -36,6 +36,7 @@ Route::get('course', function() {
     return view('course');
 })->name('course');
 
+
 Route::get('/memberList', function () {
     return view('memberList');
 });
@@ -44,6 +45,7 @@ Route::get('/homepage', function () {
     return view('homepage');
 });
 
+
 Route::get('/profilpage', function () {
     return view('profilpage');
 });
@@ -51,4 +53,4 @@ Route::get('/profilpage', function () {
 Route::get('/subscribepage', function () {
     return view('subscribepage');
 });
-// Route::get('/')
+
