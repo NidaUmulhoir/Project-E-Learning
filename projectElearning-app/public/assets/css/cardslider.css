@@ -2,14 +2,13 @@
 .course-slider {
     position: relative;
     overflow: hidden;
-    /* padding: 20px; */
+    padding-top: 0px;
   }
   
   .course-category {
     padding: 0 30vw;
     font-size: 40px;
     font-weight: 700;
-    /* margin-bottom: 40px; */
     text-transform: capitalize;
     height: fit-content;
     text-align: center;
