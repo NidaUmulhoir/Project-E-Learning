@@ -33,7 +33,7 @@ Route::prefix('/admin')->group(function(){
 });
 
 
-Route::get('/', [HomeController::class, 'homepage']);
+Route::get('/homepage', [HomeController::class, 'homepage']);
 Route::get('/subscribe', [HomeController::class, 'subscribe']);
 Route::get('/profile', [HomeController::class, 'profile']);
 

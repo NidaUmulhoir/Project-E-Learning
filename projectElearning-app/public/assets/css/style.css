@@ -6,6 +6,10 @@ body {
   color: #444444;
 }
 
+.latest-activity .container > h3 {
+  font-weight: 650;
+}
+
 a {
   text-decoration: none;
 }
