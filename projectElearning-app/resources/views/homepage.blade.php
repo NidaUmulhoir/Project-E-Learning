@@ -33,29 +33,20 @@
         <div class="boxlast-activity" style="width: auto; height: 6cm;  border-radius:15px; background-color:rgba(226, 225, 225, 0.53) ">
           <div class="col content" data-aos="fade-left" data-aos-delay="100" style="margin-left: 50px; margin-right: 50px; margin-top:10px">
             <h3>Latest Activity</h3>
-            <p class="fst-italic"></p>
-            <ul style="list-style: none"></ul>
             <h6 style="text-align: center">Belum ada aktivitas baru nih dari kamu, yuk pelajari modul modul yang kamu miliki </h6>
-          </div>
-
+          </div>  
         </div>
-
       </div>
     </section>
     <!-- End Latest Activity Section -->
 
-  <!-- ======= Services Section ======= -->
   @include('cardslider')
-  <!-- End Sevices Section -->
   </main><!-- End #main -->
 
-  <!-- Vendor JS Files -->
   <script src="assets/vendor/aos/aos.js"></script>
   <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
   <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
   <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
-
-  <!-- Main JS File -->
   <script src="assets/js/main.js"></script>
 
   <script>
@@ -70,7 +61,7 @@
         nextBtn[i].addEventListener('click', () => {
             item.scrollLeft += containerWidth;
         })
-    
+
         preBtn[i].addEventListener('click', () => {
             item.scrollLeft -= containerWidth;
         })

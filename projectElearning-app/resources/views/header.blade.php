@@ -4,7 +4,7 @@
       <img class="image" src="/assets/img/logo.png"/>
       <nav id="navbar" class="navbar">
         <ul>
-          <li><a href="/">Home</a></li>
+          <li><a href="/homepage">Home</a></li>
           <li><a href="/subscribe">Subscribe</a></li>
           <li class="dropdown">
             <div class="dropprofil">
