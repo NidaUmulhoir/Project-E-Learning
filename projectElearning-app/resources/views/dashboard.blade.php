@@ -11,15 +11,15 @@
     <title>Document</title>
 </head>
 <body>
-    @include('layouts.sidebar')
-    @include('layouts.header')
+    @include('dashboard.layouts.sidebar')
+    @include('dashboard.layouts.header')
     <div class="main-content">
         <h2>Dashboards Users</h2>
         <div class="member">
             <div class="member-pre">
                 <h1>150</h1>
                 <h4>Member Premium</h4>
-                <img src="./asset/user-ico.png" alt="">
+                <img src="/asset/user-ico.png" alt="">
                 <button class="info">More Info <i class='bx bx-right-arrow-circle'></i></button>
             </div>
             <div class="member-reg">

@@ -1,17 +1,8 @@
 <?php
 
+use App\Http\Controllers\DashboardCourseController;
+use App\Http\Controllers\HomeController;
 use Illuminate\Support\Facades\Route;
-
-/*
-|--------------------------------------------------------------------------
-| Web Routes
-|--------------------------------------------------------------------------
-|
-| Here is where you can register web routes for your application. These
-| routes are loaded by the RouteServiceProvider within a group which
-| contains the "web" middleware group. Now create something great!
-|
-*/
 
 Route::get('/mainpage', function () {
     return view('mainpage');
@@ -32,23 +23,23 @@ Route::get('/pay', function () {
 Route::get('/success_pay', function () {
     return view('success_pay');
 });
-Route::get('/dashboard', function () {
-    return view('dashboard');
-})->name('dashboard');
 
-Route::get('course', function() {
-    return view('course');
-})->name('course');
-
-
-Route::get('/memberList', function () {
-    return view('memberList');
+Route::prefix('/admin')->group(function(){
+    Route::get('/dashboard', function () {
+        return view('dashboard');
+    })->name('dashboard');
+    
+    Route::resource('course', DashboardCourseController::class);
+    
+    Route::get('/memberList', function () {
+        return view('memberList');
+    });
 });
 
-Route::get('/homepage', function () {
-    return view('homepage');
-});
 
+Route::get('/', [HomeController::class, 'homepage']);
+Route::get('/subscribe', [HomeController::class, 'subscribe']);
+Route::get('/profile', [HomeController::class, 'profile']);
 
 Route::get('/profilpage', function () {
     return view('profilpage');

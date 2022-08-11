@@ -43,12 +43,6 @@ table tbody tr td.action button {
   font-size: 35px;
 }
 
-.pop-up-back {
-  width: 100%;
-  height: 500px;
-  background-color: rgba(217, 217, 217, 0.6);
-}
-
 .pop-up {
   position: absolute;
   top: 10px;
@@ -96,8 +90,14 @@ table tbody tr td.action button {
   width: 100%;
   padding: 10px;
   outline: none;
+<<<<<<< HEAD
   background-color: rgb(34, 87, 126);
   border: 1px solid rgb(34, 87, 126);
+=======
+  color: white;
+  background-color: #22577e;
+  border: 1px solid #22577e;
+>>>>>>> 6017bdf7fdd7cf31e15c09e3ac6ea8c7348b112f
   border-radius: 30px;
 }
 .pop-up .form .form-element input[type=confirm-password] {
