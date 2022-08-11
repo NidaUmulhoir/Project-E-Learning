@@ -9,9 +9,10 @@
             <label for="courseName">Course Name</label> 
             <input type="text" id="courseName" name="courseName" placeholder="">
         </div>
-        <div class="form-element">
-            <label for="module" class="form-label">Modul</label>
-            <input type="text" id="modul" name="module" placeholder="">
+        <div class="form-element mb-3">
+            <label for="image" class="form-label">Image</label>
+            <img class="img-preview img-fluid">
+            <input class="form-control" type="file" id="image" name="image" onchange="previewImage()">
         </div>
         <div class="form-element">
             <label for="description" class="form-label">Description</label>

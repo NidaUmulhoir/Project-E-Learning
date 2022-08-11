@@ -106,8 +106,8 @@ table tbody tr td.action button {
   padding: 10px;
   outline: none;
   color: white;
-  background-color: rgb(34, 87, 126);
-  border: 1px solid rgb(34, 87, 126);
+  background-color: #22577e;
+  border: 1px solid #22577e;
   border-radius: 30px;
 }
 
@@ -170,4 +170,4 @@ table tbody tr td.action button {
   transition: top 0ms ease-in-out 200ms,  opacity 200ms ease-in-out 0ms, transform 20ms ease-in-out 0ms;
   transition: top 0ms ease-in-out 200ms,  opacity 200ms ease-in-out 0ms, transform 20ms ease-in-out 0ms,  -webkit-transform 20ms ease-in-out 0ms;
 }
-/*# sourceMappingURL=course.css.map */
+/*# sourceMappingURL=module.css.map */

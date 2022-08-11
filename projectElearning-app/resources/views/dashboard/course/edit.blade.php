@@ -10,9 +10,9 @@
             <label for="courseName">Course Name</label> 
             {{-- <input type="text" id="courseName" name="courseName" value="{{ old('courseName', $course->courseName) }}"> --}}
         </div>
-        <div class="form-element">
-            <label for="module" class="form-label">Modul</label>
-            {{-- <input type="text" id="modul" name="module" value="{{ old('module', $course->module) }}"> --}}
+        <div class="form-element mb-3">
+            <label for="formFile" class="form-label">Image</label>
+            <input class="form-control" type="file" id="formFile">
         </div>
         <div class="form-element">
             <label for="description" class="form-label">Description</label>
