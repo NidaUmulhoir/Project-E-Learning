@@ -51,7 +51,7 @@
   <div class="showsertif">
     <img src="/assets/img/foldericon.png" alt="">
     <h4>This feed shows sertificate that can be downloaded</h4>
-    <h6>Are there sertificate you miss? <a href="">Reload the page.</a></h6>
+    <h6>Are there sertificate you miss? <a href="/profilpage">Reload the page.</a></h6>
     <button class="btn"> <a href="/mainpage">Browse All Course</button></a> 
   </div>
 </body>

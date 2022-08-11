@@ -19,7 +19,6 @@
     display: flex;
     overflow-x: auto;
     scroll-behavior: smooth;
-  
   }
   
   .course-container::-webkit-scrollbar{
