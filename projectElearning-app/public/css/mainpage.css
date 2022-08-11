@@ -52,7 +52,6 @@ body {
   margin-top: 20px;
 }
 
-<<<<<<< HEAD
 .accordion{
     width: 90%;
     max-width: 1000px;
@@ -113,7 +112,6 @@ body {
         font-size: 14px;
     }
 }
-=======
 .container {
   width: 100%;
   -webkit-box-align: center;
@@ -164,4 +162,4 @@ body {
   overflow-y: auto;
 }
 /*# sourceMappingURL=mainpage.css.map */
->>>>>>> 6017bdf7fdd7cf31e15c09e3ac6ea8c7348b112f
+

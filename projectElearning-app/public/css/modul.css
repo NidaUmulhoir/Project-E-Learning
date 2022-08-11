@@ -43,8 +43,7 @@ body {
 
 .sidebar-modul {
   width: 7cm;
-  z-index: 1;
-  height: 100vh;
+  height: 450px;
   position: fixed;
   overflow: hidden;
   overflow-y: auto;
@@ -52,7 +51,7 @@ body {
 }
 .sidebar-modul h2 {
   font-size: medium;
-  margin: 25px 0px 0px 45px;
+  margin: 5px 0px 0px 42px;
 }
 .sidebar-modul .sidebar-menu {
   padding-right: 30px;

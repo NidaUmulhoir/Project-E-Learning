@@ -40,19 +40,7 @@
                 </li>
                 <li>
                     <div class="nama-modul">
-                        <h3>Module 3</h3>
-                    </div>
-                    </a>
-                </li>
-                <li>
-                    <div class="nama-modul">
-                        <h3>Module 3</h3>
-                    </div>
-                    </a>
-                </li>
-                <li>
-                    <div class="nama-modul">
-                        <h3>Module 3</h3>
+                        <h3>Module 4</h3>
                     </div>
                     </a>
                 </li>
@@ -64,13 +52,31 @@
                 </li>
                 <li>
                     <div class="nama-modul">
-                        <h3>Module 5</h3>
+                        <h3>Module 6</h3>
                     </div>
                     </a>
                 </li>
                 <li>
                     <div class="nama-modul">
                         <h3>Module 7</h3>
+                    </div>
+                    </a>
+                </li>
+                <li>
+                    <div class="nama-modul">
+                        <h3>Module 8</h3>
+                    </div>
+                    </a>
+                </li>
+                <li>
+                    <div class="nama-modul">
+                        <h3>Module 9</h3>
+                    </div>
+                    </a>
+                </li>
+                <li>
+                    <div class="nama-modul">
+                        <h3>Module 10</h3>
                     </div>
                     </a>
                 </li>

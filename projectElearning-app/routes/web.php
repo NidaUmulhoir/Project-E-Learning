@@ -49,3 +49,6 @@ Route::get('/subscribepage', function () {
     return view('subscribepage');
 });
 
+Route::get('/landingpage', function () {
+    return view('landingpage');
+});
