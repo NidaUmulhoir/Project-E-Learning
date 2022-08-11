@@ -2,20 +2,22 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Module;
 use App\Models\Course;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Storage;
 
-class DashboardCourseController extends Controller
+class DashboardModuleController extends Controller
 {
     /**
      * Display a listing of the resource.
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+    public function index(Request $request)
     {
-        return view('dashboard.course.index', [
-            'courses'=>Course::all()
+        return view('dashboard.module.index', [
+            'modules'=>Module::where('idCourse', request()->courseId)->get()
         ]);
     }
 
@@ -37,26 +39,16 @@ class DashboardCourseController extends Controller
      */
     public function store(Request $request)
     {
-        // return $request->file('image')->store('post-images');
-        $validatedData = $request->validate([
-            'courseName' => 'required|max:255',
-            'image' => 'image|file|max:3072',
-            'description' => 'required|max:255'
-        ]);
-        
-        if($request->file('image')){
-            $validatedData['image'] = $request->file('image')->store('post-images');
-        }
 
-        Course::create($$validatedData);
+        $post = new Module;
+        $post->moduleName = $request->moduleName;
+        $post->materi = $request->materi;
+        $post->idCourse = $request->idCourse;
+        $post->type = $request->type;
+        $post->isSubscribe = $request->input('isSubscribe') ? true : false;
+        $post->save();
 
-        // $post = new Course;
-        // $post->courseName = $request->courseName;
-        // $post->module = $request->module;
-        // $post->description = $request->description;
-        // $post->save();
-
-        return redirect('course')->with('success', 'New post has been added!');
+        return redirect('/admin/course-detail/module')->with('success', 'New post has been added!');
     }
 
     /**
@@ -67,7 +59,7 @@ class DashboardCourseController extends Controller
      */
     public function show(Course $course)
     {
-        return view('course', [
+        return view('module', [
             'course' => $course
         ]);
     }
@@ -78,11 +70,11 @@ class DashboardCourseController extends Controller
      * @param  \App\Models\course  $course
      * @return \Illuminate\Http\Response
      */
-    public function edit(Course $course)
+    public function edit(Module $module)
     {
-        return view('course', [
-            'course' => $course,
-            'courses'=>Course::all()
+        return view('module', [
+            'module' => $module,
+            'modules'=>Module::all()
         ]);
     }
 
@@ -93,18 +85,18 @@ class DashboardCourseController extends Controller
      * @param  \App\Models\course  $course
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Course $course)
+    public function update(Request $request, Module $module)
     {
         $validatedData = $request->validate([
-            'courseName' => 'required|max:255',
-            'module' => 'required|max:255',
-            'description' => 'required|max:255'
+            'moduleName' => 'required|max:255',
+            'materi' => 'reuqired',
+            'type' => 'required'
         ]);
 
-        Course::where('id', $course->id)
+        Module::where('id', $module->id)
             ->update($validatedData);
 
-        return redirect('course')->with('success', 'New post has been added!');
+        return redirect('/admin/course-detail/module')->with('success', 'New post has been added!');
     }
 
     /**
@@ -113,10 +105,13 @@ class DashboardCourseController extends Controller
      * @param  \App\Models\course  $course
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Course $course)
+    public function destroy(Module $module)
     {
-        Course::destroy($course->id);
+        if($module->image){
+            Storage::delete($module->image);
+        }
+        Module::destroy($module->id);
 
-        return redirect('course')->with('success', 'Post has been deleted!');
+        return redirect('/admin/course/module')->with('success', 'Post has been deleted!');
     }
 }

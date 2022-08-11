@@ -16,34 +16,32 @@
     @include('dashboard.layouts.sidebar')
     @include('dashboard.layouts.header')
     <div class="main-content">
-        <h2>Add New Course</h2>
+        <h2>Add New Module</h2>
         <button class="add-data">Add New</button>
         <div class="table-course">
             <table>
                 <thead>
                     <tr>
                         <td class="title id">ID</td>
-                        <td class="title pass">Course</td>
-                        <td class="title description">Description</td>
-                        <td class="title action">Action</td>
+                        <td class="title pass">Module</td>
+                        <td class="title course">Materi</td>
+                        <td class="title description">Type</td>
                     </tr>
                 </thead>
                 <tbody>
-                    @foreach ($courses as $course)
+                    @foreach ($modules as $module)
                     <tr>
                         <td>{{ $loop->iteration }}</td>
-                        <td>{{ $course->courseName }}</td>
-                        <td>{{ $course->description }}</td>
+                        <td>{{ $module->moduleName }}</td>
+                        <td>{{ $module->materi }}</td>
+                        <td>{{ $module->type }}</td>
                         <td class="action">
                             <button class="edit-data"><i class='bx bxs-edit'></i></button>
-                            <form action="course/{{$course->id}}" method="post" class="d-inline">
+                            <form action="course/{{$module->id}}" method="post" class="d-inline">
                                 @method('delete')
                                 @csrf
                                 <button class="delete-data" onclick="return confirm('Are you sure?')"><i class='bx bxs-x-square'></i></button>
-                            </form>
-                            <a href="{{route('module.index')}}?courseId={{ $course->id}}">
-                                <button class="list-module"><i class='bx bx-plus-circle'></i></button>
-                            </a>
+                              </form>
                             {{-- <button class="delete-data"><i class='bx bxs-x-square'></i></button> --}}
                         </td>
                     </tr>
@@ -51,9 +49,9 @@
                 </tbody>
             </table>
         </div>
-        @include('dashboard.course.create')
-        {{-- @include('dashboard.course.edit') --}}
-        {{-- @include('dahsboard.course.delete') --}}
+        @include('dashboard.module.create')
+        {{-- @include('dashboard.module.edit') --}}
+        {{-- @include('dahsboard.module.delete') --}}
     </div>
 </body>
 <script>
@@ -75,21 +73,6 @@
     // document.querySelector(".pop-up.del").addEventListener("click",function(){
     //     document.querySelector(".pop-up.del").classList.add("active");
     // });
-
-    function previewImage(){
-    const image = document.querySelector('#image');
-    const imgPreview = document.querySelector('.img-preview');
-
-    imgPreview.style.display = 'block';
-
-    const ofReader = new FileReader();
-    ofReader.readAsDataURL(image.files[0]);
-
-    ofReader.onload = function(oFREvent){
-      imgPreview.src = oFREvent.target.result;
-    }
-
-  }
     
 </script>
 

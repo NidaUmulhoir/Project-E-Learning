@@ -13,11 +13,14 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('courses', function (Blueprint $table) {
+        Schema::create('modules', function (Blueprint $table) {
             $table->id();
-            $table->string('courseName')->nullable;
-            $table->string('description');
-            $table->string('image');
+            $table->string('moduleName');
+            $table->longText('materi');
+            $table->unsignedBigInteger('idCourse');
+            $table->string('type');
+            $table->boolean('isSubscribe');
+            $table->timestamps();
         });
     }
 
@@ -28,6 +31,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('courses');
+        Schema::dropIfExists('modules');
     }
 };

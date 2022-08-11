@@ -35,7 +35,9 @@
     <h3 >Subscribe Status</h3>
     <div class="status"></div>
     <h3>Lastest Course </h3>
-    <div class="percentCourse"></div>
+    <div class="percentCourse">
+      <p>Course</p>
+    </div>
     <div class="sertif">
       <h3>Lastest Sertificate</h3>
       <div class="pro">
@@ -49,8 +51,8 @@
   <div class="showsertif">
     <img src="/assets/img/foldericon.png" alt="">
     <h4>This feed shows sertificate that can be downloaded</h4>
-    <h6>Are there sertificate you miss? <a href="">Reload the page.</a></h6>
-    <button class="btn"> <a href="">Browse All Course</button></a> 
+    <h6>Are there sertificate you miss? <a href="/profilpage">Reload the page.</a></h6>
+    <button class="btn"> <a href="/mainpage">Browse All Course</button></a> 
   </div>
 </body>
 @include('footer')
