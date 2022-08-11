@@ -56,7 +56,7 @@ class DashboardCourseController extends Controller
         // $post->description = $request->description;
         // $post->save();
 
-        return redirect('course')->with('success', 'New post has been added!');
+        return redirect('admin/course')->with('success', 'New post has been added!');
     }
 
     /**
@@ -104,7 +104,7 @@ class DashboardCourseController extends Controller
         Course::where('id', $course->id)
             ->update($validatedData);
 
-        return redirect('course')->with('success', 'New post has been added!');
+        return redirect('admin/course')->with('success', 'New post has been added!');
     }
 
     /**
