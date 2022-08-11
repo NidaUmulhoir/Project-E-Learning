@@ -4,11 +4,12 @@
     <button class="pre-btn"><img src="assets/arrow.png" alt=""></button>
     <button class="next-btn"><img src="assets/arrow.png" alt=""></button>
     
-    @foreach($courses as $course)
+    
     <div class="course-container">
+      @foreach($courses as $course)
       <div class="course-card">
         <div class="course-image">
-          <img src="assets/algorithmProgram.png" class="course-thumb" alt="">
+          <img src="{{ asset('storage/' . $course->image)}}" class="course-thumb" alt="">
           <button class="card-btn">View More</button>
         </div>
         <div class="course-info">
