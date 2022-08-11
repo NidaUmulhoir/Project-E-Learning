@@ -1,12 +1,12 @@
-<!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" type="text/css" href="css/mainpage.css">
-    <title>Main Page Section</title>
-  </head>
-  <body>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="css/mainpage.css">
+    <title>mainpage</title>
+</head>
+<body>
     <div class="header">
         <div class="header-brand">
             <img src="./asset/logo.png" alt="">
@@ -17,47 +17,122 @@
         </div>
     </div>
     <hr>
-    <div class="container">
-        <div class="matakuliah">
-            <div class="matkul">Programming Algorithm</div>
-            <div class="content">
-                <p>hallo ini kai!</p>
+    <div class="accordion"> 
+        <div class="accordion-item">
+            <div class="accordion-item-header">
+                Algoritma Pemrograman
+            </div>
+            <div class="accordion-item-body">
+                <div class="accordion-item-body-content">
+                    Module 1 : Tipe Data & Intruksi Dasar
+                </div>
+                <div class="accordion-item-body-content">
+                    Module 2 : Bentuk Perulangan
+                    <img src="./asset/lock.png" alt="">
+                </div>
+                <div class="accordion-item-body-content">
+                    Module 3 : Bentuk Percabangan
+                    <img src="./asset/lock.png" alt="">
+                </div>
             </div>
         </div>
-    </div>
-    <div class="container">
-        <div class="matakuliah">
-            <div class="matkul">Machine Learning</div>
-            <div class="content">
-                <p>hallo ini kai!</p>
-            </div>
-        </div>
-    </div>
-    <div class="container">
-        <div class="matakuliah">
-            <div class="matkul">Structure Data</div>
-            <div class="content">
-                <p>hallo ini kai!</p>
-            </div>
-        </div>
-    </div>
-    <div class="container">
-        <div class="matakuliah">
-            <div class="matkul">Reccomender System</div>
-            <div class="content">
-                <p>Hallo ini kai!</p>
-            </div>
-        </div>
-    </div>
-    <script>
-        const container = document.getElementsByClassName
-        ('matakuliah');
 
-        for (i = 0; i<container.length; i++){
-            container[i].addEventListener('click', function(){
-                this.classList.toggle('active')
-            })
-        }
-    </script>
-  </body>
+        <div class="accordion-item">
+            <div class="accordion-item-header">
+                Representasi Pengetahuan
+            </div>
+            <div class="accordion-item-body">
+                <div class="accordion-item-body-content">
+                    Module 1 : Running Modul
+                </div>
+                <div class="accordion-item-body-content">
+                    Module 2 : HTML & GIT
+                    <img src="./asset/lock.png" alt="">
+                </div>
+                <div class="accordion-item-body-content">
+                    Module 3 : Cascading Style Sheet (CSS)
+                    <img src="./asset/lock.png" alt="">
+                </div>
+            </div>
+        </div>
+
+        <div class="accordion-item">
+            <div class="accordion-item-header">
+                Aplikasi Berbasis Platform
+            </div>
+            <div class="accordion-item-body">
+                <div class="accordion-item-body-content">
+                    Module 1 : Running Modul
+                </div>
+                <div class="accordion-item-body-content">
+                    Module 2 : HTML & GIT
+                    <img src="./asset/lock.png" alt="">
+                </div>
+                <div class="accordion-item-body-content">
+                    Module 3 : Cascading Style Sheet (CSS)
+                    <img src="./asset/lock.png" alt="">
+                </div>
+            </div>
+        </div>
+
+        <div class="accordion-item">
+            <div class="accordion-item-header">
+                RPL : Desain dan Implementasi
+            </div>
+            <div class="accordion-item-body">
+                <div class="accordion-item-body-content">
+                    Module 1 : Running Modul
+                </div>
+                <div class="accordion-item-body-content">
+                    Module 2 : HTML & GIT
+                    <img src="./asset/lock.png" alt="">
+                </div>
+                <div class="accordion-item-body-content">
+                    Module 3 : Cascading Style Sheet (CSS)
+                    <img src="./asset/lock.png" alt="">
+                </div>
+            </div>
+        </div>
+
+        <div class="accordion-item">
+            <div class="accordion-item-header">
+                Pembelajaran Mesin
+            </div>
+            <div class="accordion-item-body">
+                <div class="accordion-item-body-content">
+                    Module 1 : Running Modul
+                </div>
+                <div class="accordion-item-body-content">
+                    Module 2 : HTML & GIT
+                    <img src="./asset/lock.png" alt="">
+                </div>
+                <div class="accordion-item-body-content">
+                    Module 3 : Cascading Style Sheet (CSS)
+                    <img src="./asset/lock.png" alt="">
+                </div>
+            </div>
+        </div>
+
+        <div class="accordion-item">
+            <div class="accordion-item-header">
+                Sistem Pemberi Rekomendasi
+            </div>
+            <div class="accordion-item-body">
+                <div class="accordion-item-body-content">
+                    Module 1 : Running Modul
+                </div>
+                <div class="accordion-item-body-content">
+                    Module 2 : HTML & GIT
+                    <img src="./asset/lock.png" alt="">
+                </div>
+                <div class="accordion-item-body-content">
+                    Module 3 : Cascading Style Sheet (CSS)
+                    <img src="./asset/lock.png" alt="">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/mainpage.js"></script>
+</body>
 </html>

@@ -9,6 +9,10 @@ Route::get('/mainpage', function () {
     return view('mainpage');
 });
 
+Route::get('/modul', function () {
+    return view('modul');
+});
+
 Route::get('/payment_dashboard', function () {
     return view('payment_dashboard');
 });
