@@ -19,12 +19,15 @@ h2 {
   display: block;
   margin-left: auto;
   margin-right: auto;
-  background-color: rgb(34, 87, 126);
-  justify-content: center;
+  background-color: #22577e;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   width: 130px;
   border-radius: 20px;
   font-weight: bold;
 }
+
 .container .btn a {
   color: white;
 }
@@ -41,7 +44,7 @@ h4 {
 }
 
 .container .status {
-  background-color: rgb(34, 87, 126);
+  background-color: #22577e;
   display: block;
   margin-left: auto;
   margin-right: auto;
@@ -50,8 +53,9 @@ h4 {
   border-radius: 30px;
   margin-bottom: 30px;
 }
+
 .container .percentCourse {
-  background-color: rgb(34, 87, 126);
+  background-color: #22577e;
   display: block;
   margin-left: auto;
   margin-right: auto;
@@ -60,14 +64,18 @@ h4 {
   border-radius: 30px;
   margin-bottom: 30px;
 }
+
 .container .sertif {
   width: auto;
   height: auto;
   margin-bottom: 30px;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
 }
+
 .container .sertif .pro {
-  background-color: rgb(12, 39, 58);
+  background-color: #0c273a;
   display: block;
   margin-left: 5px;
   width: 80px;
@@ -75,6 +83,7 @@ h4 {
   border-radius: 30px;
   color: aliceblue;
 }
+
 .container .sertif .pro img {
   width: 30px;
   height: 30px;
@@ -91,6 +100,7 @@ h4 {
   height: 300px;
   border-radius: 30px;
 }
+
 .showsertif img {
   width: 80px;
   height: 80px;
@@ -99,20 +109,26 @@ h4 {
   margin-right: auto;
   margin-bottom: 10px;
 }
+
 .showsertif h4, .showsertif h6 {
   text-align: center;
 }
+
 .showsertif .btn {
   display: block;
   margin-top: 25px;
   margin-left: auto;
   margin-right: auto;
-  background-color: rgb(34, 87, 126);
-  justify-content: center;
+  background-color: #22577e;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   width: 200px;
   border-radius: 20px;
   font-weight: bold;
 }
+
 .showsertif .btn a {
   color: white;
-}/*# sourceMappingURL=profil.css.map */
+}
+/*# sourceMappingURL=profil.css.map */

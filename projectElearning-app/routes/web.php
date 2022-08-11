@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\DashboardCourseController;
+use App\Http\Controllers\DashboardModuleController;
 use App\Http\Controllers\HomeController;
 use Illuminate\Support\Facades\Route;
 
@@ -26,6 +27,10 @@ Route::prefix('/admin')->group(function(){
     })->name('dashboard');
     
     Route::resource('course', DashboardCourseController::class);
+    // Route::get('/course/module', function () {
+    //     return view('dashboard.module');
+    // });
+    Route::resource('/course-detail/module', DashboardModuleController::class);
     
     Route::get('/memberList', function () {
         return view('memberList');
@@ -36,12 +41,4 @@ Route::prefix('/admin')->group(function(){
 Route::get('/', [HomeController::class, 'homepage']);
 Route::get('/subscribe', [HomeController::class, 'subscribe']);
 Route::get('/profile', [HomeController::class, 'profile']);
-
-Route::get('/profilpage', function () {
-    return view('profilpage');
-});
-
-Route::get('/subscribepage', function () {
-    return view('subscribepage');
-});
 
