@@ -48,7 +48,7 @@ class DashboardCourseController extends Controller
             $validatedData['image'] = $request->file('image')->store('post-images');
         }
 
-        Course::create($$validatedData);
+        Course::create($validatedData);
 
         // $post = new Course;
         // $post->courseName = $request->courseName;
