@@ -24,14 +24,14 @@
             </div>
             <div class="accordion-item-body">
                 <div class="accordion-item-body-content">
-                    BAB 1 : Tipe Data & Intruksi Dasar
+                    Module 1 : Tipe Data & Intruksi Dasar
                 </div>
                 <div class="accordion-item-body-content">
-                    BAB 2 : Bentuk Perulangan
+                    Module 2 : Bentuk Perulangan
                     <img src="./asset/lock.png" alt="">
                 </div>
                 <div class="accordion-item-body-content">
-                    BAB 3 : Bentuk Percabangan
+                    Module 3 : Bentuk Percabangan
                     <img src="./asset/lock.png" alt="">
                 </div>
             </div>
@@ -43,14 +43,14 @@
             </div>
             <div class="accordion-item-body">
                 <div class="accordion-item-body-content">
-                    BAB 1 : Running Modul
+                    Module 1 : Running Modul
                 </div>
                 <div class="accordion-item-body-content">
-                    BAB 2 : HTML & GIT
+                    Module 2 : HTML & GIT
                     <img src="./asset/lock.png" alt="">
                 </div>
                 <div class="accordion-item-body-content">
-                    BAB 3 : Cascading Style Sheet (CSS)
+                    Module 3 : Cascading Style Sheet (CSS)
                     <img src="./asset/lock.png" alt="">
                 </div>
             </div>
@@ -62,14 +62,14 @@
             </div>
             <div class="accordion-item-body">
                 <div class="accordion-item-body-content">
-                    BAB 1 : Running Modul
+                    Module 1 : Running Modul
                 </div>
                 <div class="accordion-item-body-content">
-                    BAB 2 : HTML & GIT
+                    Module 2 : HTML & GIT
                     <img src="./asset/lock.png" alt="">
                 </div>
                 <div class="accordion-item-body-content">
-                    BAB 3 : Cascading Style Sheet (CSS)
+                    Module 3 : Cascading Style Sheet (CSS)
                     <img src="./asset/lock.png" alt="">
                 </div>
             </div>
@@ -81,14 +81,14 @@
             </div>
             <div class="accordion-item-body">
                 <div class="accordion-item-body-content">
-                    BAB 1 : Running Modul
+                    Module 1 : Running Modul
                 </div>
                 <div class="accordion-item-body-content">
-                    BAB 2 : HTML & GIT
+                    Module 2 : HTML & GIT
                     <img src="./asset/lock.png" alt="">
                 </div>
                 <div class="accordion-item-body-content">
-                    BAB 3 : Cascading Style Sheet (CSS)
+                    Module 3 : Cascading Style Sheet (CSS)
                     <img src="./asset/lock.png" alt="">
                 </div>
             </div>
@@ -100,14 +100,14 @@
             </div>
             <div class="accordion-item-body">
                 <div class="accordion-item-body-content">
-                    BAB 1 : Running Modul
+                    Module 1 : Running Modul
                 </div>
                 <div class="accordion-item-body-content">
-                    BAB 2 : HTML & GIT
+                    Module 2 : HTML & GIT
                     <img src="./asset/lock.png" alt="">
                 </div>
                 <div class="accordion-item-body-content">
-                    BAB 3 : Cascading Style Sheet (CSS)
+                    Module 3 : Cascading Style Sheet (CSS)
                     <img src="./asset/lock.png" alt="">
                 </div>
             </div>
@@ -119,14 +119,14 @@
             </div>
             <div class="accordion-item-body">
                 <div class="accordion-item-body-content">
-                    BAB 1 : Running Modul
+                    Module 1 : Running Modul
                 </div>
                 <div class="accordion-item-body-content">
-                    BAB 2 : HTML & GIT
+                    Module 2 : HTML & GIT
                     <img src="./asset/lock.png" alt="">
                 </div>
                 <div class="accordion-item-body-content">
-                    BAB 3 : Cascading Style Sheet (CSS)
+                    Module 3 : Cascading Style Sheet (CSS)
                     <img src="./asset/lock.png" alt="">
                 </div>
             </div>
