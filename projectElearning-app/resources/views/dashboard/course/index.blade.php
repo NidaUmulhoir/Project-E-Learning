@@ -60,23 +60,25 @@
 </body>
 <script>
     document.querySelector(".add-data").addEventListener("click",function(){
+        document.querySelector(".pop-up.edit").classList.remove("active");
+        document.getElementById("add").style.display = "block"; 
+        document.getElementById("edit").style.display = "none"; 
         document.querySelector(".pop-up.add").classList.add("active");
     });
     document.querySelector(".pop-up.add .close-btn").addEventListener("click",function(){
+        document.getElementById("add").style.display = "none"; 
         document.querySelector(".pop-up.add").classList.remove("active");
     });
     document.querySelector(".edit-data").addEventListener("click",function(){
+        document.querySelector(".pop-up.add").classList.remove("active");
+        document.getElementById("edit").style.display = "block"; 
+        document.getElementById("add").style.display = "none"; 
         document.querySelector(".pop-up.edit").classList.add("active");
     });
     document.querySelector(".pop-up.edit .close-btn").addEventListener("click",function(){
+        document.getElementById("edit").style.display = "none"; 
         document.querySelector(".pop-up.edit").classList.remove("active");
     });
-    // document.querySelector(".pop-up.del").addEventListener("click",function(){
-    //     document.querySelector(".pop-up.del").classList.add("active");
-    // });
-    // document.querySelector(".pop-up.del").addEventListener("click",function(){
-    //     document.querySelector(".pop-up.del").classList.add("active");
-    // });
 
     function previewImage(){
     const image = document.querySelector('#image');

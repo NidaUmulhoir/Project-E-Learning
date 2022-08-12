@@ -5,6 +5,10 @@ use App\Http\Controllers\DashboardModuleController;
 use App\Http\Controllers\HomeController;
 use Illuminate\Support\Facades\Route;
 
+Route::get('/', function () {
+    return view('landing-page');
+});
+
 Route::get('/mainpage', function () {
     return view('mainpage');
 });
