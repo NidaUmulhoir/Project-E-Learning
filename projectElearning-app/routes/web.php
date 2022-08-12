@@ -36,9 +36,13 @@ Route::prefix('/admin')->group(function(){
     // });
     Route::resource('/course-detail/module', DashboardModuleController::class);
     
-    Route::get('/memberList', function () {
-        return view('memberList');
-    });
+    Route::get('memberReg', function () {
+        return view('memberReg');
+    })->name('memberReg');
+
+    Route::get('memberPre', function () {
+        return view('memberPre');
+    })->name('memberPre');
 });
 
 

@@ -52,7 +52,7 @@ table tbody tr td.action button {
   position: absolute;
   top: 10px;
   left: 50%;
-  opacity: 0;
+  opacity: 0.4;
   -webkit-transform: translate(-50%, 50%) scale(1.25);
           transform: translate(-50%, 50%) scale(1.25);
   width: 580px;
