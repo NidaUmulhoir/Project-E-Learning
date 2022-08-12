@@ -1,0 +1,97 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100;400;600;700&display=swap");
+:root {
+  --main-color: rgba(232, 170, 66, 0.7);
+  --color-dark: #22577E;
+  --text-color: #FFFFFF;
+}
+
+body {
+  margin: 0;
+  font-family: "Inter";
+}
+
+.header .header-brand img {
+  width: 3cm;
+  margin-left: 30px;
+}
+.header .header-brand .profile {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 200px;
+  height: 50px;
+  background-color: var(--main-color);
+  gap: 18px;
+  float: right;
+  border-radius: 20px;
+  margin-top: 30px;
+  margin-right: 28px;
+}
+.header .header-brand .profile img {
+  width: 40px;
+  margin-right: 11px;
+}
+.header .header-brand .profile h3 {
+  font-size: 14.3px;
+  margin-left: 20px;
+  margin-top: 15px;
+}
+.header hr {
+  width: 100%;
+  margin-top: 20px;
+}
+
+.sidebar-modul {
+  width: 7cm;
+  height: 450px;
+  position: fixed;
+  overflow: hidden;
+  overflow-y: auto;
+  padding: 2rem 0;
+}
+.sidebar-modul h2 {
+  font-size: medium;
+  margin: 5px 0px 0px 42px;
+}
+.sidebar-modul .sidebar-menu {
+  padding-right: 30px;
+}
+.sidebar-modul .sidebar-menu ul {
+  list-style: none;
+  justify-content: center;
+  align-items: center;
+}
+.sidebar-modul .sidebar-menu ul a:link {
+  text-decoration: none;
+}
+.sidebar-modul .sidebar-menu ul a:visited {
+  text-decoration: none;
+}
+.sidebar-modul .sidebar-menu ul a:hover {
+  text-decoration: none;
+}
+.sidebar-modul .sidebar-menu ul a:active {
+  text-decoration: none;
+}
+.sidebar-modul .sidebar-menu ul .nama-modul {
+  background-color: var(--main-color);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 50px;
+  margin-top: 30px;
+  border-radius: 8px;
+}
+.sidebar-modul .sidebar-menu ul .nama-modul img {
+  width: 30px;
+  height: 30px;
+}
+.sidebar-modul .sidebar-menu ul .nama-modul h3 {
+  color: black;
+}
+.sidebar-modul .sidebar-menu ul .nama-modul.active, .sidebar-modul .sidebar-menu ul .nama-modul:hover {
+  background-color: var(--color-dark);
+}
+.sidebar-modul .sidebar-menu ul .nama-modul.active h3, .sidebar-modul .sidebar-menu ul .nama-modul:hover h3 {
+  color: rgb(217, 217, 217);
+}/*# sourceMappingURL=modul.css.map */

@@ -61,10 +61,19 @@ table tbody tr td.action button {
   -webkit-box-shadow: 2px 2px 5px 5px rgba(0, 0, 0, 0.15);
           box-shadow: 2px 2px 5px 5px rgba(0, 0, 0, 0.15);
   border-radius: 10px;
-  -webkit-transition: top 0ms ease-in-out 200ms,  opacity 200ms ease-in-out 0ms, -webkit-transform 200ms ease-in-out 0ms;
-  transition: top 0ms ease-in-out 200ms,  opacity 200ms ease-in-out 0ms, -webkit-transform 200ms ease-in-out 0ms;
-  transition: top 0ms ease-in-out 200ms,  opacity 200ms ease-in-out 0ms, transform 200ms ease-in-out 0ms;
-  transition: top 0ms ease-in-out 200ms,  opacity 200ms ease-in-out 0ms, transform 200ms ease-in-out 0ms,  -webkit-transform 200ms ease-in-out 0ms;
+  -webkit-transition: top 0ms ease-in-out 200ms, 
+ opacity 200ms ease-in-out 0ms,
+ -webkit-transform 200ms ease-in-out 0ms;
+  transition: top 0ms ease-in-out 200ms, 
+ opacity 200ms ease-in-out 0ms,
+ -webkit-transform 200ms ease-in-out 0ms;
+  transition: top 0ms ease-in-out 200ms, 
+ opacity 200ms ease-in-out 0ms,
+ transform 200ms ease-in-out 0ms;
+  transition: top 0ms ease-in-out 200ms, 
+ opacity 200ms ease-in-out 0ms,
+ transform 200ms ease-in-out 0ms, 
+ -webkit-transform 200ms ease-in-out 0ms;
 }
 
 .pop-up .close-btn {
@@ -165,9 +174,18 @@ table tbody tr td.action button {
   opacity: 1;
   -webkit-transform: translate(-50%, 10%) scale(1);
           transform: translate(-50%, 10%) scale(1);
-  -webkit-transition: top 0ms ease-in-out 200ms,  opacity 200ms ease-in-out 0ms, -webkit-transform 20ms ease-in-out 0ms;
-  transition: top 0ms ease-in-out 200ms,  opacity 200ms ease-in-out 0ms, -webkit-transform 20ms ease-in-out 0ms;
-  transition: top 0ms ease-in-out 200ms,  opacity 200ms ease-in-out 0ms, transform 20ms ease-in-out 0ms;
-  transition: top 0ms ease-in-out 200ms,  opacity 200ms ease-in-out 0ms, transform 20ms ease-in-out 0ms,  -webkit-transform 20ms ease-in-out 0ms;
+  -webkit-transition: top 0ms ease-in-out 200ms, 
+ opacity 200ms ease-in-out 0ms,
+ -webkit-transform 20ms ease-in-out 0ms;
+  transition: top 0ms ease-in-out 200ms, 
+ opacity 200ms ease-in-out 0ms,
+ -webkit-transform 20ms ease-in-out 0ms;
+  transition: top 0ms ease-in-out 200ms, 
+ opacity 200ms ease-in-out 0ms,
+ transform 20ms ease-in-out 0ms;
+  transition: top 0ms ease-in-out 200ms, 
+ opacity 200ms ease-in-out 0ms,
+ transform 20ms ease-in-out 0ms, 
+ -webkit-transform 20ms ease-in-out 0ms;
 }
 /*# sourceMappingURL=course.css.map */
