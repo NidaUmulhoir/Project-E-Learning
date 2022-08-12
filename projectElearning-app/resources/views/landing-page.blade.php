@@ -7,181 +7,43 @@
   <title>Landing Page</title>
   <link href="https://fonts.googleapis.com/css2?family=Inter&family=Padauk&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="{{asset('/css/landing-page.css')}}">
-  
+  <link rel="stylesheet" href="{{asset('/css/login.css')}}">
+  <link rel="stylesheet" href="{{asset('/css/sign-up.css')}}">
+  <link rel="stylesheet" href="{{asset('/css/email-verification.css')}}">
+  <link rel="stylesheet" href="{{asset('/css/form-forgot-password.css')}}">
+  <link rel="stylesheet" href="{{asset('/css/email-verf-fp.css')}}">
 </head>
 <body>
+  
   <nav class="navbar">
     <h1>E-Learning</h1>
     <div class="nav-menu">
       <p>Subscription</p>
       <p>Service</p>
-      {{-- <a href="#" class=signup-btn>Sign-In</a> --}}
       <button id="show-signup">Sign-Up</button>
+      <button id="show-login">Login</button>
     </div>
   </nav>
-  <div class="pop-up">
-    <div class="close-btn">
-        &times;
-    </div>
-    <div class="form">
-        <h2>Sign-Up</h2>
-        <div class="form-element">
-            <label for="name">Name</label>
-            <input type="text" id="name" placeholder="Type Here">
-        </div>
-        <div class="form-element">
-            <label for="email">Email</label>
-            <input type="email" id="email" placeholder="Enter Email">
-        </div>
-        <div class="form-element">
-            <label for="password">Password</label>
-            <input type="text" id="password" placeholder="Enter Password">
-        </div>
-        <div class="form-element">
-            <label for="confirm-password">Confirm Password</label>
-            <input type="text" id="confirm-password" placeholder="Confirm Password">
-        </div>
-        
-        <div class="form-element">
-            <button>Sign-Up</button>
-        </div>
-        
-        <div class="form-element">
-            <h4>Or</h4>
-            <hr>
-            <!-- <h4>New Around Here?</h4> -->
-            <b href="/Login/login.html">Already Have Account? Login</b>
-        </div>
-    </div>
-</div>
+  @include ('register')
+  @include ('login')
+  @include ('email-verification')
+  @include ('form-forgot-password')
+  @include ('email-verf-fp')
+
 
   <section class="hero-container">
-    <div>
-      <div>
-        <h1>Welcome!!</h1>
-        <p>Let's Find Something Interesting</p>
-      </div>
-    </div>
       <img src="assets/elearn.png" alt="">
+      <div>
+        <div>
+          <h1>Welcome!!</h1>
+          <p>Let's Find Something Interesting</p>
+        </div>
+      </div>
   </section>
 
   <hr>
   <h2 class="course-category">Service That We Provide</h2>
-  <section class="course-slider">
-    <button class="pre-btn"><img src="assets/arrow.png" alt=""></button>
-    <button class="next-btn"><img src="assets/arrow.png" alt=""></button>
-    <div class="course-container">
-      <div class="course-card">
-        <div class="course-image">
-          <img src="assets/algorithmProgram.png" class="course-thumb" alt="">
-          <button class="card-btn">View More</button>
-        </div>
-        <div class="course-info">
-          <h2 class="course-name">Programming Algorithm</h2>
-          <p class="course-short-description">a short line about the cloth..</p>
-        </div>
-      </div>
-
-      <div class="course-card">
-        <div class="course-image">
-          <img src="assets/algorithmProgram.png" class="course-thumb" alt="">
-          <button class="card-btn">View More</button>
-        </div>
-        <div class="course-info">
-          <h2 class="course-name">Programming Algorithm</h2>
-          <p class="course-short-description">a short line about the cloth..</p>
-        </div>
-      </div>
-
-      <div class="course-card">
-        <div class="course-image">
-          <img src="assets/machineLearning.png" class="course-thumb" alt="">
-          <button class="card-btn">View More</button>
-        </div>
-        <div class="course-info">
-          <h2 class="course-name">Machine Learning</h2>
-          <p class="course-short-description">a short line about the cloth..</p>
-        </div>
-      </div>
-
-      <div class="course-card">
-        <div class="course-image">
-          <img src="assets/dataStructure.png" class="course-thumb" alt="">
-          <button class="card-btn">View More</button>
-        </div>
-        <div class="course-info">
-          <h2 class="course-name">Structured Data</h2>
-          <p class="course-short-description">a short line about the cloth..</p>
-        </div>
-      </div>
-
-      <div class="course-card">
-        <div class="course-image">
-          <img src="assets/recomsystem.png" class="course-thumb" alt="">
-          <button class="card-btn">View More</button>
-        </div>
-        <div class="course-info">
-          <h2 class="course-name">Recommeder System</h2>
-          <p class="course-short-description">a short line about the cloth..</p>
-        </div>
-      </div>
-
-      <div class="course-card">
-        <div class="course-image">
-          <img src="assets/digital.png" class="course-thumb" alt="">
-          <button class="card-btn">View More</button>
-        </div>
-        <div class="course-info">
-          <h2 class="course-name">System Digital</h2>
-          <p class="course-short-description">a short line about the cloth..</p>
-        </div>
-      </div>
-
-      <div class="course-card">
-        <div class="course-image">
-          <img src="assets/algorithmProgram.png" class="course-thumb" alt="">
-          <button class="card-btn">View More</button>
-        </div>
-        <div class="course-info">
-          <h2 class="course-name">Programming Algorithm</h2>
-          <p class="course-short-description">a short line about the cloth..</p>
-        </div>
-      </div>
-
-      <div class="course-card">
-        <div class="course-image">
-          <img src="assets/machineLearning.png" class="course-thumb" alt="">
-          <button class="card-btn">View More</button>
-        </div>
-        <div class="course-info">
-          <h2 class="course-name">Machine Learning</h2>
-          <p class="course-short-description">a short line about the cloth..</p>
-        </div>
-      </div>
-
-      <div class="course-card">
-        <div class="course-image">
-          <img src="assets/dataStructure.png" class="course-thumb" alt="">
-          <button class="card-btn">View More</button>
-        </div>
-        <div class="course-info">
-          <h2 class="course-name">Structured Data</h2>
-          <p class="course-short-description">a short line about the cloth..</p>
-        </div>
-      </div>
-
-      <div class="course-card">
-        <div class="course-image">
-          <img src="assets/recomsystem.png" class="course-thumb" alt="">
-          <button class="card-btn">View More</button>
-        </div>
-        <div class="course-info">
-          <h2 class="course-name">Recommeder System</h2>
-          <p class="course-short-description">a short line about the cloth..</p>
-        </div>
-      </div>
-    </div> 
-  </section>
+  @include ('card-slider')
 </body>
 
 <script>
@@ -201,11 +63,72 @@ courseContainers.forEach((item, i) => {
         item.scrollLeft -= containerWidth;
     })
 })
+
   document.querySelector("#show-signup").addEventListener("click",function(){
     document.querySelector(".pop-up").classList.add("active");
+    document.getElementById("pop-up").style.display = "block";  
+        document.getElementById("pop-up-login").style.display = "none";
+        document.getElementById("pop-up-fp").style.display = "none";
+        document.getElementById("verify-cont").style.display = "none";
+        document.getElementById("notif-cont").style.display = "none";
   });
+
+  document.querySelector(".pop-up-login .form .form-element .btn-fp").addEventListener("click",function(){
+    document.querySelector(".pop-up-login").classList.remove("active");
+    document.querySelector(".pop-up-fp").classList.add("active");
+    document.getElementById("pop-up-fp").style.display ="block";
+      document.getElementById("pop-up-login").style.display = "none";
+      document.getElementById("pop-up").style.display = "none";
+      document.getElementById("verify-cont").style.display = "none";
+      document.getElementById("notif-cont").style.display = "none";
+  });
+
+  document.querySelector(".pop-up-fp .close-btn").addEventListener("click", function(){
+    document.querySelector(".pop-up-fp .close-btn").classList.remove("active");
+  });
+
+  document.querySelector("#show-login").addEventListener("click",function(){
+    document.querySelector(".pop-up-login").classList.add("active");
+  });
+
+  document.querySelector(".pop-up-login .close-btn").addEventListener("click",function(){
+      document.querySelector(".pop-up-login").classList.remove("active");
+  });
+
+  document.querySelector(".pop-up .form .form-element .btn-signup").addEventListener("click",function(){
+      document.querySelector(".pop-up").classList.remove("active");
+      document.querySelector(".verify-cont").classList.add("active");
+      document.querySelector(".verify-cont .close-btn").addEventListener("click",function(){
+        document.querySelector(".verify-cont").classList.remove("active");
+      });
+    });
+
   document.querySelector(".pop-up .close-btn").addEventListener("click",function(){
       document.querySelector(".pop-up").classList.remove("active");
   });
+  
+  document.querySelector(".pop-up .form .form-element .btn-login").addEventListener("click",function(){
+      document.querySelector(".pop-up").classList.remove("active");
+      document.querySelector(".pop-up-login").classList.add("active");
+  });
+
+  document.querySelector(".pop-up-login .form .form-element .btn-signup2").addEventListener("click",function(){
+    document.querySelector(".pop-up-login").classList.remove("active");
+    document.querySelector(".pop-up").classList.add("active");
+    document.querySelector(".pop-up .close-btn").classList.addEventListener("click", function(){
+      document.querySelector(".pop-up").classList.remove("active");
+    });
+  });
+
+  document.querySelector(".pop-up-fp .form-fp .form-element .rtn-login").addEventListener("click",function(){
+    document.querySelector(".pop-up-fp").classList.remove("active");
+    document.querySelector(".pop-up-login").classList.add("active");
+  });
+
+  document.querySelector(".pop-up-fp .form-fp .form-element .send-email").addEventListener("click",function(){
+    document.querySelector(".pop-up-fp").classList.remove("active");
+    document.querySelector(".notif-cont").classList.add("active");
+  });
+  
 </script>
 </html>
