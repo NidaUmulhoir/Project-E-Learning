@@ -52,8 +52,7 @@
             </table>
         </div>
         @include('dashboard.course.create')
-        {{-- @include('dashboard.course.edit') --}}
-        {{-- @include('dahsboard.course.delete') --}}
+        @include('dashboard.course.edit')
     </div>
 </body>
 <script>
