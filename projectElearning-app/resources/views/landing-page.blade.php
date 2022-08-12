@@ -43,7 +43,7 @@
 
   <hr>
   <h2 class="course-category">Service That We Provide</h2>
-  @include ('card-slider')
+  @include ('card-slider-b')
 </body>
 
 <script>
@@ -67,20 +67,12 @@ courseContainers.forEach((item, i) => {
   document.querySelector("#show-signup").addEventListener("click",function(){
     document.querySelector(".pop-up").classList.add("active");
     document.getElementById("pop-up").style.display = "block";  
-        document.getElementById("pop-up-login").style.display = "none";
-        document.getElementById("pop-up-fp").style.display = "none";
-        document.getElementById("verify-cont").style.display = "none";
-        document.getElementById("notif-cont").style.display = "none";
   });
 
   document.querySelector(".pop-up-login .form .form-element .btn-fp").addEventListener("click",function(){
     document.querySelector(".pop-up-login").classList.remove("active");
     document.querySelector(".pop-up-fp").classList.add("active");
     document.getElementById("pop-up-fp").style.display ="block";
-      document.getElementById("pop-up-login").style.display = "none";
-      document.getElementById("pop-up").style.display = "none";
-      document.getElementById("verify-cont").style.display = "none";
-      document.getElementById("notif-cont").style.display = "none";
   });
 
   document.querySelector(".pop-up-fp .close-btn").addEventListener("click", function(){

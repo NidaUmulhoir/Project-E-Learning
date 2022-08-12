@@ -1,4 +1,4 @@
-<div class="pop-up add">
+<div class="pop-up add" id="add">
     <div class="close-btn">
         &times;
     </div>
