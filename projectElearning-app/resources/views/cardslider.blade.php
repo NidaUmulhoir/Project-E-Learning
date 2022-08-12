@@ -10,7 +10,7 @@
       <div class="course-card">
         <div class="course-image">
           <img src="{{ asset('storage/' . $course->image)}}" class="course-thumb" alt="">
-          <button class="card-btn">View More</button>
+          <a href="/mainpage"><button class="card-btn">View More</button></a>
         </div>
         <div class="course-info">
           <h2 class="course-name">{{ $course->courseName }}</h2>
