@@ -89,7 +89,7 @@ class DashboardModuleController extends Controller
     {
         $validatedData = $request->validate([
             'moduleName' => 'required|max:255',
-            'materi' => 'reuqired',
+            'materi' => 'required',
             'type' => 'required'
         ]);
 

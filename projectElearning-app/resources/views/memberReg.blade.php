@@ -16,8 +16,8 @@
     @include('dashboard.layouts.header')
     <div class="main-content">
         <div class="title-member">
-            <img src="./asset/user2-ico.png">
-            <h2>Member Premium List</h2>
+            <img src="/asset/user2-ico.png">
+            <h2>Member Reguler List</h2>
         </div>
         <div class="table-member">
             <table>

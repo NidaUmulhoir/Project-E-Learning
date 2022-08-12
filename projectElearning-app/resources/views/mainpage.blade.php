@@ -4,10 +4,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="css/mainpage.css">
+    <link rel="stylesheet" href="assets/css/style.css">
     <title>mainpage</title>
 </head>
 <body>
-    <div class="header">
+    @include('header')
+    {{-- <div class="header">
         <div class="header-brand">
             <img src="./asset/logo.png" alt="">
             <div class="profile">
@@ -15,7 +17,7 @@
                 <img src="./asset/profile.png" alt="">
             </div>
         </div>
-    </div>
+    </div> --}}
     <hr>
     <div class="accordion"> 
         <div class="accordion-item">
@@ -132,7 +134,10 @@
             </div>
         </div>
     </div>
+    
 
     <script src="js/mainpage.js"></script>
+    
 </body>
+@include('footer')
 </html>

@@ -97,7 +97,7 @@ class DashboardCourseController extends Controller
     {
         $validatedData = $request->validate([
             'courseName' => 'required|max:255',
-            'module' => 'required|max:255',
+            'image' => 'image|file|max:3072',
             'description' => 'required|max:255'
         ]);
 
@@ -117,6 +117,6 @@ class DashboardCourseController extends Controller
     {
         Course::destroy($course->id);
 
-        return redirect('course')->with('success', 'Post has been deleted!');
+        return redirect('admin/course')->with('success', 'Post has been deleted!');
     }
 }

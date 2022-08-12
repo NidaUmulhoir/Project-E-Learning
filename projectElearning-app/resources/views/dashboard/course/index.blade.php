@@ -11,6 +11,8 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link href='https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css' rel='stylesheet'>
     <title>Document</title>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 </head>
 <body>
     @include('dashboard.layouts.sidebar')
@@ -35,7 +37,7 @@
                         <td>{{ $course->courseName }}</td>
                         <td>{{ $course->description }}</td>
                         <td class="action">
-                            <button class="edit-data"><i class='bx bxs-edit'></i></button>
+                            <button class="edit-data" onclick="edit_partner(this)" data-target="#edit_partner" data-toggle="modal-{{ $course->id }}" data-id="{{$course->id}}" data-courseName="{{$course->courseName}}" data-image="{{$course->image}}" data-description="{{$course->description}}"><i class='bx bxs-edit'></i></button>
                             <form action="course/{{$course->id}}" method="post" class="d-inline">
                                 @method('delete')
                                 @csrf
@@ -44,6 +46,7 @@
                             <a href="{{route('module.index')}}?courseId={{ $course->id}}">
                                 <button class="list-module"><i class='bx bx-plus-circle'></i></button>
                             </a>
+                            
                             {{-- <button class="delete-data"><i class='bx bxs-x-square'></i></button> --}}
                         </td>
                     </tr>
@@ -90,6 +93,21 @@
 
   }
     
+</script>
+
+<script>
+    function edit_partner(el) {
+        var link = $(el) //refer `a` tag which is clicked
+        var modal = $("#edit_partner") //your modal
+        var courseName = link.data('courseName')
+        var id = link.data('id')
+        var image = link.data('image')
+        var description = link.data('description')
+        modal.find('#courseName').val(courseName);
+        modal.find('#id').val(id);
+        modal.find('#image').val(image);
+        modal.find('#description').val(description);
+    }
 </script>
 
 </html>
