@@ -13,6 +13,6 @@
     </div>
     <h4>If the email doesn’t show up soon, check your spam folder. 
         We sent it from login@admin.com.</h4>
-    <button>I Have Already Click The Link.</button>
+    <button class="btn-done">I Have Already Click The Link.</button>
     <button class="btn-resend">Resend Verification Email</button>
 </div>

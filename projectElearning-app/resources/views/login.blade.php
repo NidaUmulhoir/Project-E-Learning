@@ -18,7 +18,7 @@
         </div>
 
         <div class="form-element">
-            <button class="btn-login">Login</button>
+            <button class="btn-login"><a href="homepage">Login</a></button>
         </div>
         
         <div class="form-element">
