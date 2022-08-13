@@ -15,7 +15,7 @@
                   <li><a href="/profile">Profile</a></li>
                 </div>
                 <div class="dropprofil1">
-                  <li><a href="">Logout</a></li>
+                  <li><a href="/">Logout</a></li>
                 </div>
               </ul>
           </li>
