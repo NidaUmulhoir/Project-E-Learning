@@ -1,5 +1,4 @@
-
-.verify-cont {
+.done-signup {
     position:absolute;
     top: 5%;
     left: 50%;
@@ -16,14 +15,14 @@
                 transform 200ms ease-in-out 0ms;
 }
 
-.verify-cont h2{
+.done-signup h2{
     text-align: center;
     color:black;
     margin: 20px 0px 20px;
     font-size: 20px;
 }
 
-.verify-cont.active {
+.done-signup.active {
     top: 5%;
     opacity: 1;
     transform: translate(-50%, 50%) scale(1);
@@ -33,7 +32,7 @@
                 transform 20ms ease-in-out 0ms;
 }
 
-.verify-cont .close-btn {
+.done-signup .close-btn {
     position:absolute;
     top:10px;
     right:10px;
@@ -47,7 +46,7 @@
     cursor: pointer;
   }
 
-.verify-cont .send-cont img{
+.done-signup .done2 img{
     align-items: center;
     justify-content: center;
     margin-left: 6rem;
@@ -58,20 +57,20 @@
     /* background-color: blueviolet; */
 }
 
-.verify-cont .notification {
-    height: 60px;
+.done-signup .notification2 {
+    height: 30px;
     display: flex;
-    width: 320px;
-    padding-bottom: 20px;
+    width: 280px;
+    padding-bottom: 40px;
     background-color: #22577E;
-    border-radius: 30px;
+    border-radius: 5px;
     align-items: flex;
     flex-direction: row;
-    /* flex-direction: row; */
+    margin-left: 1.7rem;
 }
 
 
-.verify-cont .notification h3 {
+.done-signup .notification2 h3 {
     padding-left: 10px;
     margin-top: 0.75rem;
     margin-bottom: 0.6rem;
@@ -82,25 +81,17 @@
     color: white;
 }
 
-.verify-cont h4{
-    text-align: start;
-    font-size: 10px;
-    font-weight: 300;
-    color: grey;
-    margin-top: 10px;
-}
-
-.verify-cont .notification img {
+.done-signup .notification2 img {
     margin-left: 10px;
     align-items: center;
-    width: 40px;
-    height: 40px;
+    width: 20px;
+    height: 20px;
     justify-content: center;
     margin-top: 0.65rem;
     /* margin-bottom: 0.6rem; */
 }
 
-.verify-cont .btn-login {
+.done-signup > button {
     margin-top: 1rem;
     margin-left: 3rem;
     width:70%;
@@ -108,47 +99,26 @@
     border: none;
     outline: none;
     font-size: 12px;
-    font-weight: 600;
+    font-weight: 500;
     background: #22577E;
     color: white;
     border-radius: 50px;
     cursor: pointer;
 }
 
-.verify-cont > button {
-    margin-top: 1rem;
-    margin-left: 3rem;
-    width:70%;
-    height: 30px;
-    border: none;
-    outline: none;
-    font-size: 12px;
-    font-weight: 600;
-    background: #22577E;
-    color: white;
-    border-radius: 50px;
-    cursor: pointer;
-}
-
-.verify-cont .btn-resend,
-.verify-cont .btn-done {
-    margin-top: 0.4rem;
+.done-signup .btn-done2 {
+    margin-top: 0.7rem;
     margin-left: 4rem;
-    width:60%;
     height: 30px;
     border: none;
     outline: none;
-    font-size: 12px;
+    font-size: 14px;
     font-weight: 600;
-    background: white;
+    align-items: center;
+    background-color: white;
     color: black;
+    width: 50%;
+    padding-left: 50px;
     border-radius: 50px;
     cursor: pointer;
-}
-
-.verify-cont .btn-done {
-    background-color: #22577E;
-    color: #eee;
-    width: 70%;
-    padding-left: 10px;
 }

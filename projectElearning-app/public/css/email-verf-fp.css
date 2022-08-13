@@ -15,6 +15,20 @@
                 transform 200ms ease-in-out 0ms;
 }
 
+.notif-cont .close-btn {
+    position:absolute;
+    top:10px;
+    right:10px;
+    width:15px;
+    height:15px;
+    background: #888;
+    color: #eee;
+    text-align: center;
+    line-height: 15px;
+    border-radius: 15px;
+    cursor: pointer;
+}
+
 .notif-cont.active {
     top: 5%;
     opacity: 1;

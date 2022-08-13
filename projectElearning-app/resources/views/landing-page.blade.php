@@ -12,14 +12,15 @@
   <link rel="stylesheet" href="{{asset('/css/email-verification.css')}}">
   <link rel="stylesheet" href="{{asset('/css/form-forgot-password.css')}}">
   <link rel="stylesheet" href="{{asset('/css/email-verf-fp.css')}}">
+  <link rel="stylesheet" href="{{asset('/css/done-signup.css')}}">
 </head>
 <body>
   
   <nav class="navbar">
-    <h1>E-Learning</h1>
+    <img src="./asset/logo.png" alt="">
     <div class="nav-menu">
-      <p>Subscription</p>
-      <p>Service</p>
+      <p><a href="subscribe">Subscription</a></p>
+      <p><a href="card-slider-b">Service</a></p>
       <button id="show-signup">Sign-Up</button>
       <button id="show-login">Login</button>
     </div>
@@ -29,6 +30,7 @@
   @include ('email-verification')
   @include ('form-forgot-password')
   @include ('email-verf-fp')
+  @include ('done-signup')
 
 
   <section class="hero-container">
@@ -45,6 +47,7 @@
   <h2 class="course-category">Service That We Provide</h2>
   @include ('card-slider')
 </body>
+@include ('footer')
 
 <script>
 const courseContainers = [...document.querySelectorAll('.course-container')];
@@ -112,6 +115,14 @@ courseContainers.forEach((item, i) => {
       document.querySelector(".pop-up-login").classList.add("active");
   });
 
+  document.querySelector(".pop-up-fp .close-btn").addEventListener("click", function(){
+    document.querySelector(".pop-up-fp").classList.remove("active");
+  });
+
+  document.querySelector(".notif-cont .close-btn").addEventListener("click",function(){
+    document.querySelector(".notif-cont").classList.remove("active");
+  });
+
   document.querySelector(".pop-up-login .form .form-element .btn-signup2").addEventListener("click",function(){
     document.querySelector(".pop-up-login").classList.remove("active");
     document.querySelector(".pop-up").classList.add("active");
@@ -128,6 +139,20 @@ courseContainers.forEach((item, i) => {
   document.querySelector(".pop-up-fp .form-fp .form-element .send-email").addEventListener("click",function(){
     document.querySelector(".pop-up-fp").classList.remove("active");
     document.querySelector(".notif-cont").classList.add("active");
+  });
+
+  document.querySelector(".verify-cont .btn-done").addEventListener("click", function(){
+    document.querySelector(".verify-cont").classList.remove("active");
+    document.querySelector(".done-signup").classList.add("active");
+  });
+
+  document.querySelector(".done-signup .btn-done2").addEventListener("click", function(){
+    document.querySelector(".done-signup").classList.remove("active");
+    document.querySelector(".pop-up-login").classList.add("active");
+  });
+
+  document.querySelector(".done-signup .close-btn").addEventListener("click", function(){
+    document.querySelector(".done-signup").classList.remove("active");
   });
   
 </script>

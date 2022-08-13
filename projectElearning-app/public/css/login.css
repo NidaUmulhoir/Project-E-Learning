@@ -4,30 +4,6 @@
     box-sizing: border-box;
 }
 
-/* body {
-    background:linear-gradient(to right, white, whitesmoke);
-    font-family: "Raleway", sans-serif;
-    height:5px;
-} */
-
-/* .center {
-    position:absolute;
-    top:50%;
-    left:50%;
-    transform:translate(-50%,-50%);
-}
-
-.center button {
-    padding:10px;
-    font-size:15px;
-    font-weight:600;
-    color: black;
-    border: none;
-    outline: none;
-    cursor:pointer;
-    border-radius:5px;
-} */
-
 .pop-up-login {
     position:absolute;
     top:5%;
