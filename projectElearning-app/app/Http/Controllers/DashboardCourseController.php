@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Course;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Storage;
 
 class DashboardCourseController extends Controller
 {
@@ -115,6 +116,10 @@ class DashboardCourseController extends Controller
      */
     public function destroy(Course $course)
     {
+        if($course->image){
+            Storage::delete($course->image);
+        }
+
         Course::destroy($course->id);
 
         return redirect('admin/course')->with('success', 'Post has been deleted!');
