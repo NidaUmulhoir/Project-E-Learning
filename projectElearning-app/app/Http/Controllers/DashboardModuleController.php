@@ -112,6 +112,6 @@ class DashboardModuleController extends Controller
         }
         Module::destroy($module->id);
 
-        return redirect('/admin/course/module')->with('success', 'Post has been deleted!');
+        return redirect('/admin/course')->with('success', 'Post has been deleted!');
     }
 }
