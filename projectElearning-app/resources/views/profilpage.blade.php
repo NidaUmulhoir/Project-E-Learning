@@ -31,12 +31,6 @@
   </div>
   @endauth
 
-  <img class="profil" src="/assets/img/profilakun.png"/>
-  <h2>Nama User</h2>
-  <div class="container mt-3">
-    <button class="btn"> <a href="/">Logout</button></a> 
-  </div>
-
 
   <div class="container">
     <h3 >Subscribe Status</h3>

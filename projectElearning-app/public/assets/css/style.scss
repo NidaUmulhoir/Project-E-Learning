@@ -48,6 +48,7 @@ h1,h2,h3,h4,h5,h6 {
         list-style: none;
         align-items: initial;
         width: 5%;
+
         .dropprofil1{
             margin-left: 10px;
             width: 150px; 
@@ -82,6 +83,7 @@ h1,h2,h3,h4,h5,h6 {
 
     .dropdown{
         background-color:rgba(232, 170, 66, 1); 
+        width: auto;
         ul{
             display: block;
             position: absolute;
