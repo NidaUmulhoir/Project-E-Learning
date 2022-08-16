@@ -59,7 +59,7 @@
   }
   
   .pop-up .form .form-element input[type="email"],
-  .pop-up .form .form-element input[type="text"],
+  .pop-up .form .form-element input[type="name"],
   .pop-up .form .form-element input[type="password"] {
     margin-top:5px;
     display:block;
