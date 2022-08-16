@@ -20,9 +20,8 @@ class RegisterController extends Controller
         $request['password'] = Hash::make($request['password']);
         User::create($request->all());
         // dd($data);  
-        return redirect('/mainpage');  
+        return redirect('/')->with('regis-success', "Registered successfully, please login.!");
     }
-
     public function login(Request $request){
         // return("test");
         $cek=$request->validate([
@@ -31,7 +30,7 @@ class RegisterController extends Controller
         ]);
         if(Auth::attempt($cek)){
             $request -> session() ->regenerate();
-            return redirect('/mainpage');
+            return redirect('/homepage');
         };
         return redirect('/') -> with('login-error', "ulang lagiii");
     }

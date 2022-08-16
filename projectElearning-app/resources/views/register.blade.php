@@ -1,3 +1,8 @@
+@if(session()->has('regis-success'))
+<div class="alert alert-success col-lg-8" role="alert">
+    {{session('regis-success')}}
+  </div>
+@endif
 
 <div class="pop-up" id="pop-up">
     <div class="close-btn">
