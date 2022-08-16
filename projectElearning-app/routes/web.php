@@ -66,9 +66,16 @@ Route::get('/', function () {
     return view('landing-page');
 });
 
+Route::get('/login', function(){
+    return view('homepage');
+})->name('pop-up-login');
+
 Route::post('/sign-up', [RegisterController::class, 'register']);
 Route::post('/login-to', [RegisterController::class, 'login']);
-
+Route::get('/logout', [RegisterController::class, 'logout'])->name('logout');
+Route::group(['middleware' => ['auth']], function(){
+    Route::get('/homepage', 'RegisterController@index');
+});
 
 Route::get('/homepage', [HomeController::class, 'homepage']);
 Route::get('/subscribe', [HomeController::class, 'subscribe']);

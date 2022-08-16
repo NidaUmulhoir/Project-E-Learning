@@ -35,4 +35,9 @@ class RegisterController extends Controller
         };
         return redirect('/') -> with('login-error', "ulang lagiii");
     }
+
+    public function logout(Request $request){
+        Auth::logout();
+        return redirect('/');
+    }
 }
