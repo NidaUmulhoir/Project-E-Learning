@@ -16,6 +16,7 @@ class DashboardModuleController extends Controller
      */
     public function index(Request $request)
     {
+        session(["data"=>request()->courseId]);
         return view('dashboard.module.index', [
             'modules'=>Module::where('idCourse', request()->courseId)->get()
         ]);
@@ -28,7 +29,10 @@ class DashboardModuleController extends Controller
      */
     public function create()
     {
-        return view('dashboard');
+        // dd(session("data"));
+        return view('dashboard.module.create', [
+            'modules'=>Module::where('idCourse', request()->courseId)->get()
+        ]);
     }
 
     /**
@@ -40,6 +44,7 @@ class DashboardModuleController extends Controller
     public function store(Request $request)
     {
 
+        // return('hai');
         $post = new Module;
         $post->moduleName = $request->moduleName;
         $post->materi = $request->materi;
@@ -48,7 +53,7 @@ class DashboardModuleController extends Controller
         $post->isSubscribe = $request->input('isSubscribe') ? true : false;
         $post->save();
 
-        return redirect('/admin/course-detail/module')->with('success', 'New post has been added!');
+        return redirect('/admin/course-detail/module?courseId='. session('data'))->with('success', 'New post has been added!');
     }
 
     /**
@@ -72,7 +77,7 @@ class DashboardModuleController extends Controller
      */
     public function edit(Module $module)
     {
-        return view('module', [
+        return view('dashboard.module.edit', [
             'module' => $module,
             'modules'=>Module::all()
         ]);
@@ -89,14 +94,13 @@ class DashboardModuleController extends Controller
     {
         $validatedData = $request->validate([
             'moduleName' => 'required|max:255',
-            'materi' => 'required',
-            'type' => 'required'
+            'type' => 'required|max:255'
         ]);
 
         Module::where('id', $module->id)
             ->update($validatedData);
 
-        return redirect('/admin/course-detail/module')->with('success', 'New post has been added!');
+        return redirect('/admin/course-detail/module?courseId='. session('data'))->with('success', 'New post has been added!');
     }
 
     /**
@@ -112,6 +116,6 @@ class DashboardModuleController extends Controller
         }
         Module::destroy($module->id);
 
-        return redirect('/admin/course')->with('success', 'Post has been deleted!');
+        return redirect('/admin/course-detail/module?courseId='. session('data'))->with('success', 'Post has been deleted!');
     }
 }

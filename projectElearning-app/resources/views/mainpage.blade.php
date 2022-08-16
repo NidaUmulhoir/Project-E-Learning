@@ -26,17 +26,43 @@
                 {{ $course->courseName }}
             </div>
             <div class="accordion-item-body">
-                <div class="accordion-item-body-content">
-                    Module 1 : Tipe Data & Intruksi Dasar
-                </div>
-                <div class="accordion-item-body-content">
+                @foreach ($modules as $module)
+                    @if (($module->idCourse) == ($course->id))
+                        @if (($module->isSubscribe == 0))
+                            @if ($module->type == 'link')
+                                <div class="accordion-item-body-content">
+                                    @php $content = strip_tags($module->materi); @endphp
+                                    <a href="{{ $content }}">{{ $module->moduleName}}</a>
+                                    <img src="./asset/lock.png" alt="">
+                                </div>
+                            @else
+                                <div class="accordion-item-body-content">
+                                    <a href="/homepage">{{ $module->moduleName}}</a>
+                                    <img src="./asset/lock.png" alt="">
+                                </div>
+                            @endif
+                        @else
+                            @if ($module->type == 'link')
+                                <div class="accordion-item-body-content">
+                                    @php $content = strip_tags($module->materi); @endphp
+                                    <a href="{{ $content }}">{{ $module->moduleName}}</a>
+                                </div>
+                            @else
+                                <div class="accordion-item-body-content">
+                                    <a href="/homepage">{{ $module->moduleName}}</a>
+                                </div>
+                            @endif
+                        @endif
+                    @endif
+                @endforeach
+                {{-- <div class="accordion-item-body-content">
                     Module 2 : Bentuk Perulangan
                     <img src="./asset/lock.png" alt="">
                 </div>
                 <div class="accordion-item-body-content">
                     Module 3 : Bentuk Percabangan
                     <img src="./asset/lock.png" alt="">
-                </div>
+                </div> --}}
             </div>
         </div>
 

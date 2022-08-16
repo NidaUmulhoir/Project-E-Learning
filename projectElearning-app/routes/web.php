@@ -5,6 +5,7 @@ use App\Http\Controllers\DashboardModuleController;
 use App\Http\Controllers\HomeController;
 use Illuminate\Support\Facades\Route;
 
+
 Route::get('/', function () {
     return view('landing-page');
 });
@@ -29,24 +30,34 @@ Route::get('/success_pay', function () {
     return view('success_pay');
 });
 
+// Route::get('admin/dashboard', function () {
+//     return view('dashboard.layouts.main');
+// });
+
 Route::prefix('/admin')->group(function(){
     Route::get('/dashboard', function () {
-        return view('dashboard');
-    })->name('dashboard');
+        return view('dashboard.index');
+    });
+
+    Route::get('/user', function () {
+        return view('dashboard.user.index');
+    });
     
     Route::resource('course', DashboardCourseController::class);
-    // Route::get('/course/module', function () {
-    //     return view('dashboard.module');
-    // });
+    Route::get('/course/module', function () {
+        return view('dashboard.module');
+    });
     Route::resource('/course-detail/module', DashboardModuleController::class);
     
-    Route::get('memberReg', function () {
-        return view('memberReg');
-    })->name('memberReg');
-
-    Route::get('memberPre', function () {
-        return view('memberPre');
-    })->name('memberPre');
+    Route::prefix('/user')->group(function(){
+        Route::get('/user-premium', function () {
+            return view('dashboard.user.userPremium.index');
+        });
+    
+        Route::get('/user-reguler', function () {
+            return view('dashboard.user.userReguler.index');
+        });
+    });
 });
 
 

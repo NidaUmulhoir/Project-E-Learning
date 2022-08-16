@@ -1,33 +1,61 @@
-<div class="pop-up add" id="add">
-    <div class="close-btn">
-        &times;
-    </div>
-    <form class="form" method="POST" action="module" enctype="multipart/form-data">
-        @csrf
-        <h2>Add New Course</h2>
-        <div class="form-element">
-            <label for="moduleName">Module Name</label> 
-            <input type="text" id="moduleName" name="moduleName" placeholder="">
-        </div>
-        <div class="form-element">
-            <label for="idCourse">ID Course</label> 
-            <input type="text" id="idCourse" name="idCourse" value="{{ request()->courseId }}">
-        </div>
-        <div class="form-element">
-            <label for="type" class="form-label">Type</label>
-            <input type="text" id="type" name="type" placeholder="">
-        </div>
-        <div class="form-element">
-            <label for="materi" class="form-label">Materi</label>
-            <input type="text" id="materi" name="materi" placeholder="">
-        </div>
-        <div class="form-element">
-            <label for="courseName">Status Subscribe</label> 
-            <input type="checkbox" name="isSubscribe">
-        </div>
+@extends('dashboard.layouts.main')
 
-        <div class="form-element">
-            <button type="submit">Add New</button>
+@section('container')
+<div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
+    <h1 class="h2">Create New Course</h1>
+  </div>
+
+<div class="col-lg-8">
+  <form method="post" action="/admin/course-detail/module" enctype="multipart/form-data">
+    @csrf
+    <div class="mb-3">
+        <label for="idCourse" class="form-label">ID Course</label>
+        <input type="text" class="form-control @error('idCourse') is-invalid @enderror" id="idCourse" name="idCourse" value="{{ session('data') }}">
+        @error('idCourse')
+          <div class="invalid-feedback">
+              {{ $message }}
+          </div>
+        @enderror
+      </div>
+    <div class="mb-3">
+      <label for="moduleName" class="form-label">Module Name</label>
+      <input type="text" class="form-control @error('moduleName') is-invalid @enderror" id="moduleName" name="moduleName" value="{{ old('moduleName') }}">
+      @error('moduleName')
+        <div class="invalid-feedback">
+            {{ $message }}
         </div>
-    </form>
+      @enderror
+    </div>
+    <div class="mb-3">
+        <label for="type" class="form-label">Type</label>
+        <input type="text" class="form-control @error('type') is-invalid @enderror" id="type" name="type" value="{{ old('type') }}">
+        @error('type')
+          <div class="invalid-feedback">
+              {{ $message }}
+          </div>
+        @enderror
+      </div>
+    <div class="mb-3">
+        <label for="materi" class="form-label">Materi</label>
+        @error('materi')
+            <p class="text-danger"> {{ $message }}</p>
+        </div>
+        @enderror
+        <input id="materi" type="hidden" name="materi" value="{{ old('materi') }}">
+        <trix-editor input="materi"></trix-editor>
+    </div>
+    <div class="mb-3">
+        <label for="checkbox" class="form-label">Subsribe</label>
+        @error('checkbox')
+            <p class="text-danger"> {{ $message }}</p>
+        </div>
+        @enderror
+        <input type="checkbox" name="isSubscribe">
+        <input id="checkbox" type="hidden" name="checkbox" value="{{ old('checkbox') }}">
+    </div>
+
+    
+    <button type="submit" class="btn btn-primary">Create</button>
+  </form>
 </div>
+@endsection
