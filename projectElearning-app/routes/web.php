@@ -4,6 +4,8 @@ use App\Http\Controllers\DashboardCourseController;
 use App\Http\Controllers\DashboardModuleController;
 use App\Http\Controllers\HomeController;
 use Illuminate\Support\Facades\Route;
+// use App\Http\Controllers\Register;
+use App\Http\Controllers\RegisterController;
 
 
 Route::get('/', function () {
@@ -59,6 +61,13 @@ Route::prefix('/admin')->group(function(){
         });
     });
 });
+
+Route::get('/', function () {
+    return view('landing-page');
+});
+
+Route::post('/sign-up', [RegisterController::class, 'register']);
+Route::post('/login-to', [RegisterController::class, 'login']);
 
 
 Route::get('/homepage', [HomeController::class, 'homepage']);

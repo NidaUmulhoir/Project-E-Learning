@@ -6,10 +6,10 @@
 
 .pop-up-login {
     position:absolute;
-    top:5%;
+    top:2%;
     left: 50%;
     opacity:0;
-    transform:translate(-50%,10%) scale(1.25);
+    transform:translate(-50%,30%) scale(1.25);
     width:380px;
     padding:20px 30px;
     background: #22577E;
@@ -22,7 +22,7 @@
 .pop-up-login.active {
     top: 5%;
     opacity: 1;
-    transform: translate(-50%, 50%) scale(1);
+    transform: translate(-50%, 30%) scale(1);
     z-index: 100;
     transition: top 0ms ease-in-out 200ms, 
                 opacity 200ms ease-in-out 0ms,
@@ -60,6 +60,7 @@
     color: white;
 }
 
+.pop-up-login .form .form-element input[type="name"],
 .pop-up-login .form .form-element input[type="text"],
 .pop-up-login .form .form-element input[type="password"] {
     margin-top:5px;
