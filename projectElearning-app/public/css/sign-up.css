@@ -1,39 +1,9 @@
-* {
-    margin:0px;
-    padding:0px;
-    box-sizing: border-box;
-}
-
-body {
-    background:linear-gradient(to right, white, whitesmoke);
-    font-family: "Raleway", sans-serif;
-    height:5px;
-}
-
-.center {
-    position:absolute;
-    top:50%;
-    left:50%;
-    transform:translate(-50%,-50%);
-}
-
-.center signup-button {
-    padding:10px;
-    font-size:15px;
-    font-weight:600;
-    color: black;
-    border: none;
-    outline: none;
-    cursor:pointer;
-    border-radius:5px;
-}
-
 .pop-up {
     position:absolute;
-    top:50%;
+    top:5%;
     left: 50%;
     opacity:0;
-    transform:translate(-50%,50%) scale(1.25);
+    transform:translate(-50%,10%) scale(1.25);
     width:380px;
     padding:20px 30px;
     background: #22577E;
@@ -42,21 +12,22 @@ body {
     transition: top 0ms ease-in-out 200ms, 
                 opacity 200ms ease-in-out 0ms,
                 transform 200ms ease-in-out 0ms;
-}
-
-.pop-up.active {
-    top: 50%;
+  }
+  
+  .pop-up.active {
+    top: 5%;
     opacity: 1;
-    transform: translate(-50%, 50%) scale(1);
+    transform: translate(-50%, 10%) scale(1);
     transition: top 0ms ease-in-out 200ms, 
                 opacity 200ms ease-in-out 0ms,
                 transform 20ms ease-in-out 0ms;
-}
-
-.pop-up .close-btn {
+    z-index: 5;
+  }
+  
+  .pop-up .close-btn {
     position:absolute;
     top:10px;
-    right: 10px;
+    right:10px;
     width:15px;
     height:15px;
     background: #888;
@@ -65,27 +36,31 @@ body {
     line-height: 15px;
     border-radius: 15px;
     cursor: pointer;
-}
-
-.pop-up .form h2{
+  }
+  
+  .pop-up .form h2{
     text-align: center;
     color:white;
     margin: 10px 0px 20px;
     font-size: 25px;
-}
-
-.pop-up .form .form-element {
-    margin: 15px 0px;
+  }
+  
+  .pop-up .form .form-element {
+    margin: 20px 10px;
+    padding-right: 20px;
+    /* display: flex; */
+    /* justify-content: center; */
     color: white;
-}
-
-.pop-up .form .form-element .label {
+  }
+  
+  .pop-up .form .form-element .label {
     font-size: 14px;
     color: white;
-}
-
-.pop-up .form .form-element input[type="text"],
-.pop-up .form .form-element input[type="password"] {
+  }
+  
+  .pop-up .form .form-element input[type="email"],
+  .pop-up .form .form-element input[type="name"],
+  .pop-up .form .form-element input[type="password"] {
     margin-top:5px;
     display:block;
     width: 100%;
@@ -93,8 +68,8 @@ body {
     outline: none;
     border: 1px solid #aaa;
     border-radius: 5px;
-}
-.pop-up .form .form-element input[type="confirm-password"] {
+  }
+  .pop-up .form .form-element input[type="confirm-password"] {
     margin-top:5px;
     display:block;
     width: 100%;
@@ -102,8 +77,8 @@ body {
     outline: none;
     border: 1px solid #aaa;
     border-radius: 5px;
-}
-.pop-up .form .form-element button {
+  }
+  .pop-up .form .form-element .btn-signup {
     margin-left: 35%;
     width:30%;
     height: 30px;
@@ -114,18 +89,18 @@ body {
     color:#222;
     border-radius: 50px;
     cursor: pointer;
-}
-
-.pop-up .form .form-element a{
+  }
+  
+  .pop-up .form .form-element a{
     display: block;
     text-align: right;
     font-size: 10px;
     color:white;
     text-decoration: none;
     font-weight:600;
-}
-
-.pop-up .form .form-element b{
+  }
+  
+  .pop-up .form .form-element b{
     display: block;
     padding-bottom: 15px;
     text-align: center;
@@ -135,9 +110,9 @@ body {
     font-weight:600;
     cursor: pointer;
     padding-top: 15px;
-}
-
-.pop-up .form .form-element h4{
+  }
+  
+  .pop-up .form .form-element h4{
     display: block;
     padding-bottom: 15px;
     text-align: center;
@@ -147,4 +122,15 @@ body {
     font-weight:600;
     cursor: pointer;
     /* padding-top: 15px; */
-}
+  }
+
+  .pop-up .form .form-element .btn-login {
+    text-align: center;
+    font-size: 15px;
+    background-color: #22577E;
+    color: whitesmoke;
+    border: none;
+    margin-left:3rem;
+    margin-top: 0.8rem;
+    justify-items: center;
+  }

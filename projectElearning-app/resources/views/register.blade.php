@@ -3,6 +3,7 @@
     {{session('regis-success')}}
   </div>
 @endif
+
 <div class="pop-up" id="pop-up">
     <div class="close-btn">
         &times;

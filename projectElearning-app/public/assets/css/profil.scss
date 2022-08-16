@@ -1,0 +1,132 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;400;600;700&display=swap');
+$inika : 'Inter', serif;
+
+.profil{
+    margin-top: 200px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 50%;
+    width: 150px;
+    height: 150px;
+}
+
+h2{
+    text-align: center;
+    margin-top: 15px;
+    font-size: 25px;
+}
+
+.container{
+    .btn{
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        background-color: rgba(34, 87, 126, 1);
+        justify-content: center;
+        width: 130px;
+        border-radius: 20px;
+        font-weight: bold;
+        a{
+            color: white;
+        }
+    }
+}
+
+h3{
+    font-size: 20px;
+    font-weight: bold;
+}
+h4{
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.container{
+    .status{
+        background-color: rgba(34, 87, 126, 1);
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        width: auto; 
+        height: 50px;  
+        border-radius:30px;
+        margin-bottom: 30px;
+    }
+
+    .percentCourse{
+        background-color: rgba(34, 87, 126, 1);
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        width: auto; 
+        height: 80px;  
+        border-radius:30px;
+        margin-bottom: 30px;
+        p{
+            color:aliceblue;
+            margin-left: 30px;
+            font-size: 20px;
+            font-weight: 500;
+        }
+    }
+
+    .sertif{
+        width: auto; 
+        height: auto;  
+        margin-bottom: 30px;
+        display: flex;
+        .pro{
+            background-color: rgb(12, 39, 58);
+            display: block;;
+            margin-left: 5px;
+            width: 80px;
+            height: 30px; 
+            border-radius:30px;
+            color: aliceblue;
+            img{
+                width: 30px;
+                height: 30px;
+            }
+        }   
+    }
+}
+    
+.showsertif{
+    background-color: rgba(217, 217, 217, 0.6);
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 100px;
+    padding-top: 50px;
+    width: 80%; 
+    height: 300px;  
+    border-radius:30px;
+    img{
+        width: 80px;
+        height: 80px;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        margin-bottom: 10px;
+    }
+    h4,h6 {
+        text-align: center;
+    } 
+
+    .btn{
+        display: block;
+        margin-top: 25px;
+        margin-left: auto;
+        margin-right: auto;
+        background-color: rgba(34, 87, 126, 1);
+        justify-content: center;
+        width: 200px;
+        border-radius: 20px;
+        font-weight: bold;
+        a{
+            color: white;
+        }
+    }
+}

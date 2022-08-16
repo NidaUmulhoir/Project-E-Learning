@@ -2,7 +2,9 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Course;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Storage;
 
 class DashboardCourseController extends Controller
 {
@@ -13,7 +15,9 @@ class DashboardCourseController extends Controller
      */
     public function index()
     {
-        //
+        return view('dashboard.course.index', [
+            'courses'=>Course::all()
+        ]);
     }
 
     /**
@@ -23,7 +27,7 @@ class DashboardCourseController extends Controller
      */
     public function create()
     {
-        //
+        return view('dashboard.course.create');
     }
 
     /**
@@ -34,51 +38,91 @@ class DashboardCourseController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        // return $request->file('image')->store('post-images');
+        $validatedData = $request->validate([
+            'courseName' => 'required|max:255',
+            'image' => 'image|file|max:3072',
+            'description' => 'required|max:255'
+        ]);
+        
+        if($request->file('image')){
+            $validatedData['image'] = $request->file('image')->store('post-images');
+        }
+
+        Course::create($validatedData);
+
+        return redirect('admin/course')->with('success', 'New post has been added!');
     }
 
     /**
      * Display the specified resource.
      *
-     * @param  int  $id
+     * @param  \App\Models\course  $course
      * @return \Illuminate\Http\Response
      */
-    public function show($id)
+    public function show(Course $course)
     {
-        //
+        return view('course', [
+            'course' => $course
+        ]);
     }
 
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  int  $id
+     * @param  \App\Models\course  $course
      * @return \Illuminate\Http\Response
      */
-    public function edit($id)
+    public function edit(Course $course)
     {
-        //
+        return view('dashboard.course.edit', [
+            'course' => $course,
+            'courses'=>Course::all()
+        ]);
     }
 
     /**
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  int  $id
+     * @param  \App\Models\course  $course
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(Request $request, Course $course)
     {
-        //
+        $validatedData = $request->validate([
+            'courseName' => 'required|max:255',
+            'image' => 'image|file|max:3072',
+            'description' => 'required|max:255'
+        ]);
+
+        if($request->file('image')){
+            if($request->oldImage){
+                Storage::delete($request->oldImage);
+            }
+            $validatedData['image'] = $request->file('image')->store('post-images');
+        }
+
+        Course::where('id', $course->id)
+            ->update($validatedData);
+
+        return redirect('admin/course')->with('success', 'New post has been added!');
     }
 
     /**
      * Remove the specified resource from storage.
      *
-     * @param  int  $id
+     * @param  \App\Models\course  $course
      * @return \Illuminate\Http\Response
      */
-    public function destroy($id)
+    public function destroy(Course $course)
     {
-        //
+        if($course->image){
+            Storage::delete($course->image);
+        }
+
+        Course::destroy($course->id);
+
+        return redirect('admin/course')->with('success', 'Post has been deleted!');
     }
 }
