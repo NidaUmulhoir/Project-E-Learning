@@ -10,64 +10,77 @@ body{
     margin: 0;
     font-family: 'Inter';
 }
-.header{
-    .header-brand{
-        img{
-            width: 3cm;
-            margin-left: 30px;
-        }
-        .profile{
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            width: 200px;
-            height: 50px;
-            background-color: var(--main-color);
-            gap: 18px;
-            float: right;
-            border-radius: 20px;
-            margin-top: 30px;
-            margin-right: 28px;
-            img{
-                width: 40px;
-                margin-right: 11px;
-            }
-            h3{
-                font-size: 14.3px;
-                margin-left: 20px;
-                margin-top: 15px;
-            }
-        }
-    }
-    hr{
-        width: 100%;
-        margin-top: 20px;
-    }
+.space{
+    margin-top: 150px;
 }
+// .header{
+//     .header-brand{
+//         img{
+//             width: 3cm;
+//             margin-left: 30px;
+//         }
+//         .profile{
+//             display: flex;
+//             justify-content: center;
+//             align-items: center;
+//             width: 200px;
+//             height: 50px;
+//             background-color: var(--main-color);
+//             gap: 18px;
+//             float: right;
+//             border-radius: 20px;
+//             margin-top: 30px;
+//             margin-right: 28px;
+//             img{
+//                 width: 40px;
+//                 margin-right: 11px;
+//             }
+//             h3{
+//                 font-size: 14.3px;
+//                 margin-left: 20px;
+//                 margin-top: 15px;
+//             }
+//         }
+//     }
+//     hr{
+//         width: 100%;
+//         margin-top: 20px;
+//     }
+// }
 .payment-content{
     background-color: var(--text-color);
     position: relative;
     h2{
         margin-left: 65px;
+        font-size: 30px;
+        font-weight: 700;
     }
    .amount{
         .pay{
             background: rgba(226, 225, 225, 0.2);
             margin-top: 30px;
             margin-left: 65px;
+            margin-bottom: 50px;
             width: 1000px;
-            height: 430px;
+            height: 410px;
+            border-radius: 20px;
+            border-style: groove;
             h3{
-                margin-left: 75px;
+                margin-left: 88px;
                 padding-top: 15px;
+                font-size: 20px;
+                font-weight: 700;
             }
             h4{
                 margin-left: 88px;
+                font-size: 20px;
+                font-weight: 700;
+
             }
             h5{
                 margin-left: 88px;
                 font-weight: 400;
-                
+                font-size: 15px;
             }
             hr{
                 width: 100%;
@@ -82,16 +95,33 @@ body{
                     height: 40px;
                     padding-left: 13px;
                 }
-                .submit-btn{
-                    background-color: var(--color-dark);
-                    color: var(--text-color);
-                    border-radius: 5px;
-                    border: var(--text-color);
-                    width: 100px;
-                    height: 40px;
+                .input-code{
+                    display: flex;
+                    .submit-btn{
+                        background-color: var(--color-dark);
+                        color: var(--text-color);
+                        border-radius: 5px;
+                        border: var(--text-color);
+                        width: 100px;
+                        height: 40px;
+                        font-size: medium;
+                        font-weight: 600;
+                        margin-left: 30px;
+                        margin-bottom: 10px;
+                        margin-right: 20px;
+                    }
+                }
+                
+            }
+            .tagihan{
+                display: flex;
+                justify-content: space-between;
+                padding-right: 20px;
+                h4{
+                    margin-left: 88px;
+                }
+                h6{
                     font-size: medium;
-                    font-weight: 600;
-                    margin-left: 10px;
                 }
             }
             .pay-btn{
@@ -103,8 +133,7 @@ body{
                 height: 40px;
                 font-size: medium;
                 font-weight: 600;
-                margin-left: 88px;
-                margin-bottom: 15px;
+                margin-top: 15px;
                 float: right;
                 margin-right: 20px;
             }

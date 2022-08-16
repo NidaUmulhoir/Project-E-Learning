@@ -4,19 +4,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" type="text/css" href="css/payment_dashboard.css">
+    <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
     <title>Payment</title>
 </head>
 <body>
-    <div class="header">
-        <div class="header-brand">
-            <img src="./asset/logo.png" alt="">
-            <div class="profile">
-                <h3>Kim Jongin</h3>
-                <img src="./asset/profile.png" alt="">
-            </div>
-        </div>
-    </div>
-    <hr>
+    @include('header')
+
+    <div class="space"></div>
     <div class="payment-content">
         <h2>Pembayaran untuk Paket Langganan</h2>
         <div class="amount">
@@ -35,12 +30,16 @@
                     </div>
                 </div>
                 <hr>
-                <h4>Jumlah Tagihan</h4>
+                <div class="tagihan"> 
+                    <h4>Jumlah Tagihan</h4>
+                    <h6>RP 250.000,00</h6>
+                </div>
                 <div class="bayar">
                     <button type="submit" class="pay-btn">Bayar</button>
                 </div>
             </div>
         </div>
     </div>
+    @include('footer')
 </body>
 </html>
