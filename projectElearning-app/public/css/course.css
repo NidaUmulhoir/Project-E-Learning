@@ -7,6 +7,7 @@
   font-weight: 700;
   border-radius: 8px;
   border-style: solid;
+  cursor: pointer;
 }
 
 table {
@@ -43,18 +44,14 @@ table tbody tr td.action button {
   font-size: 35px;
 }
 
-.pop-up-back {
-  width: 100%;
-  height: 500px;
-  background-color: rgba(217, 217, 217, 0.6);
-}
-
-.pop-up {
+.pop-up.add {
   position: absolute;
+  display: none;
   top: 10px;
   left: 50%;
-  opacity: 0;
-  transform: translate(-50%, 50%) scale(1.25);
+  opacity: 0.3;
+  -webkit-transform: translate(-50%, 50%) scale(1.25);
+          transform: translate(-50%, 50%) scale(1.25);
   width: 580px;
   padding: 20px 30px;
   background: #FFFFFF;
@@ -62,7 +59,8 @@ table tbody tr td.action button {
   border-radius: 10px;
   transition: top 0ms ease-in-out 200ms, opacity 200ms ease-in-out 0ms, transform 200ms ease-in-out 0ms;
 }
-.pop-up .close-btn {
+
+.pop-up.add .close-btn {
   position: absolute;
   top: 10px;
   right: 10px;
@@ -75,32 +73,38 @@ table tbody tr td.action button {
   border-radius: 15px;
   cursor: pointer;
 }
-.pop-up .form h2 {
+
+.pop-up.add .form h2 {
   text-align: center;
   color: black;
   margin: 10px 0px 20px;
   font-size: 25px;
 }
-.pop-up .form .form-element {
+
+.pop-up.add .form .form-element {
   margin: 15px 0px;
   color: black;
   font-size: 16px;
   font-weight: 700;
 }
-.pop-up .form .form-element .label {
+
+.pop-up.add .form .form-element .label {
   color: black;
 }
-.pop-up .form .form-element input[type=text], .pop-up .form .form-element input[type=password] {
+
+.pop-up.add .form .form-element input[type="text"], .pop-up.add .form .form-element input[type="password"] {
   margin-top: 5px;
   display: block;
   width: 100%;
   padding: 10px;
   outline: none;
-  background-color: rgb(34, 87, 126);
-  border: 1px solid rgb(34, 87, 126);
+  color: white;
+  background-color: #22577e;
+  border: 1px solid #22577e;
   border-radius: 30px;
 }
-.pop-up .form .form-element input[type=confirm-password] {
+
+.pop-up.add .form .form-element input[type="confirm-password"] {
   margin-top: 5px;
   display: block;
   width: 100%;
@@ -109,7 +113,8 @@ table tbody tr td.action button {
   border: 1px solid #aaa;
   border-radius: 5px;
 }
-.pop-up .form .form-element button {
+
+.pop-up.add .form .form-element button {
   margin-top: 30px;
   margin-left: 35%;
   width: 30%;
@@ -123,7 +128,8 @@ table tbody tr td.action button {
   border-radius: 50px;
   cursor: pointer;
 }
-.pop-up .form .form-element b {
+
+.pop-up.add .form .form-element b {
   display: block;
   padding-bottom: 15px;
   text-align: center;
@@ -134,7 +140,8 @@ table tbody tr td.action button {
   cursor: pointer;
   padding-top: 15px;
 }
-.pop-up .form .form-element h4 {
+
+.pop-up.add .form .form-element h4 {
   display: block;
   padding-bottom: 15px;
   text-align: center;
@@ -146,7 +153,149 @@ table tbody tr td.action button {
   /* padding-top: 15px; */
 }
 
-.pop-up.active {
+.pop-up.edit {
+  position: absolute;
+  display: none;
+  top: 10px;
+  left: 50%;
+  opacity: 0.3;
+  -webkit-transform: translate(-50%, 50%) scale(1.25);
+          transform: translate(-50%, 50%) scale(1.25);
+  width: 580px;
+  padding: 20px 30px;
+  background: #FFFFFF;
+  -webkit-box-shadow: 2px 2px 5px 5px rgba(0, 0, 0, 0.15);
+          box-shadow: 2px 2px 5px 5px rgba(0, 0, 0, 0.15);
+  border-radius: 10px;
+  -webkit-transition: top 0ms ease-in-out 200ms, 
+ opacity 200ms ease-in-out 0ms,
+ -webkit-transform 200ms ease-in-out 0ms;
+  transition: top 0ms ease-in-out 200ms, 
+ opacity 200ms ease-in-out 0ms,
+ -webkit-transform 200ms ease-in-out 0ms;
+  transition: top 0ms ease-in-out 200ms, 
+ opacity 200ms ease-in-out 0ms,
+ transform 200ms ease-in-out 0ms;
+  transition: top 0ms ease-in-out 200ms, 
+ opacity 200ms ease-in-out 0ms,
+ transform 200ms ease-in-out 0ms, 
+ -webkit-transform 200ms ease-in-out 0ms;
+}
+
+.pop-up.edit .close-btn {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  width: 25px;
+  height: 25px;
+  background: #888;
+  color: #eee;
+  text-align: center;
+  line-height: 25px;
+  border-radius: 15px;
+  cursor: pointer;
+}
+
+.pop-up.edit .form h2 {
+  text-align: center;
+  color: black;
+  margin: 10px 0px 20px;
+  font-size: 25px;
+}
+
+.pop-up.edit .form .form-element {
+  margin: 15px 0px;
+  color: black;
+  font-size: 16px;
+  font-weight: 700;
+}
+
+.pop-up.edit .form .form-element .label {
+  color: black;
+}
+
+.pop-up.edit .form .form-element input[type="text"], .pop-up.edit .form .form-element input[type="password"] {
+  margin-top: 5px;
+  display: block;
+  width: 100%;
+  padding: 10px;
+  outline: none;
+  color: white;
+  background-color: #22577e;
+  border: 1px solid #22577e;
+  border-radius: 30px;
+}
+
+.pop-up.edit .form .form-element input[type="confirm-password"] {
+  margin-top: 5px;
+  display: block;
+  width: 100%;
+  padding: 10px;
+  outline: none;
+  border: 1px solid #aaa;
+  border-radius: 5px;
+}
+
+.pop-up.edit .form .form-element button {
+  margin-top: 30px;
+  margin-left: 35%;
+  width: 30%;
+  height: 30px;
+  border: none;
+  outline: none;
+  font-size: 14px;
+  background: #e8aa42;
+  color: black;
+  font-weight: 700;
+  border-radius: 50px;
+  cursor: pointer;
+}
+
+.pop-up.edit .form .form-element b {
+  display: block;
+  padding-bottom: 15px;
+  text-align: center;
+  font-size: 10px;
+  color: white;
+  text-decoration: none;
+  font-weight: 600;
+  cursor: pointer;
+  padding-top: 15px;
+}
+
+.pop-up.edit .form .form-element h4 {
+  display: block;
+  padding-bottom: 15px;
+  text-align: center;
+  font-size: 10px;
+  color: white;
+  text-decoration: none;
+  font-weight: 600;
+  cursor: pointer;
+  /* padding-top: 15px; */
+}
+
+.pop-up.add.active {
+  top: 10px;
+  opacity: 1;
+  -webkit-transform: translate(-50%, 10%) scale(1);
+          transform: translate(-50%, 10%) scale(1);
+  -webkit-transition: top 0ms ease-in-out 200ms, 
+ opacity 200ms ease-in-out 0ms,
+ -webkit-transform 20ms ease-in-out 0ms;
+  transition: top 0ms ease-in-out 200ms, 
+ opacity 200ms ease-in-out 0ms,
+ -webkit-transform 20ms ease-in-out 0ms;
+  transition: top 0ms ease-in-out 200ms, 
+ opacity 200ms ease-in-out 0ms,
+ transform 20ms ease-in-out 0ms;
+  transition: top 0ms ease-in-out 200ms, 
+ opacity 200ms ease-in-out 0ms,
+ transform 20ms ease-in-out 0ms, 
+ -webkit-transform 20ms ease-in-out 0ms;
+}
+
+.pop-up.edit.active {
   top: 10px;
   opacity: 1;
   transform: translate(-50%, 10%) scale(1);

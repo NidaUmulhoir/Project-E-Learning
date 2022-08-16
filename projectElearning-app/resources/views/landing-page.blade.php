@@ -72,21 +72,29 @@ courseContainers.forEach((item, i) => {
 
   document.querySelector("#show-signup").addEventListener("click",function(){
     document.querySelector(".pop-up").classList.add("active");
+<<<<<<< HEAD
     // document.getElementById("pop-up").style.display = "block";  
     //     document.getElementById("pop-up-login").style.display = "none";
     //     document.getElementById("pop-up-fp").style.display = "none";
     //     document.getElementById("verify-cont").style.display = "none";
     //     document.getElementById("notif-cont").style.display = "none";
+=======
+    document.getElementById("pop-up").style.display = "block";  
+>>>>>>> 80def1409522aa3d268ee300b79a8d9b734e4295
   });
 
   document.querySelector(".pop-up-login .form .form-element .btn-fp").addEventListener("click",function(){
     document.querySelector(".pop-up-login").classList.remove("active");
     document.querySelector(".pop-up-fp").classList.add("active");
+<<<<<<< HEAD
     // document.getElementById("pop-up-fp").style.display ="block";
     //   document.getElementById("pop-up-login").style.display = "none";
     //   document.getElementById("pop-up").style.display = "none";
     //   document.getElementById("verify-cont").style.display = "none";
     //   document.getElementById("notif-cont").style.display = "none";
+=======
+    document.getElementById("pop-up-fp").style.display ="block";
+>>>>>>> 80def1409522aa3d268ee300b79a8d9b734e4295
   });
 
   document.querySelector(".pop-up-fp .close-btn").addEventListener("click", function(){

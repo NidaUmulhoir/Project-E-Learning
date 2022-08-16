@@ -1,0 +1,141 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100;400;600;700&display=swap");
+.profil {
+  margin-top: 200px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  border-radius: 50%;
+  width: 150px;
+  height: 150px;
+}
+
+h2 {
+  text-align: center;
+  margin-top: 15px;
+  font-size: 25px;
+}
+
+.container .btn {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: #22577e;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 130px;
+  border-radius: 20px;
+  font-weight: bold;
+}
+
+.container .btn a {
+  color: white;
+}
+
+h3 {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+h4 {
+  font-size: 20px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.container .status {
+  background-color: #22577e;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: auto;
+  height: 50px;
+  border-radius: 30px;
+  margin-bottom: 30px;
+}
+
+.container .percentCourse {
+  background-color: #22577e;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: auto;
+  height: 80px;
+  border-radius: 30px;
+  margin-bottom: 30px;
+}
+
+.container .percentCourse p {
+  color: aliceblue;
+  margin-left: 30px;
+  font-size: 20px;
+  font-weight: 500;
+}
+
+.container .sertif {
+  width: auto;
+  height: auto;
+  margin-bottom: 30px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.container .sertif .pro {
+  background-color: #0c273a;
+  display: block;
+  margin-left: 5px;
+  width: 80px;
+  height: 30px;
+  border-radius: 30px;
+  color: aliceblue;
+}
+
+.container .sertif .pro img {
+  width: 30px;
+  height: 30px;
+}
+
+.showsertif {
+  background-color: rgba(217, 217, 217, 0.6);
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 100px;
+  padding-top: 50px;
+  width: 80%;
+  height: 300px;
+  border-radius: 30px;
+}
+
+.showsertif img {
+  width: 80px;
+  height: 80px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 10px;
+}
+
+.showsertif h4, .showsertif h6 {
+  text-align: center;
+}
+
+.showsertif .btn {
+  display: block;
+  margin-top: 25px;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: #22577e;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 200px;
+  border-radius: 20px;
+  font-weight: bold;
+}
+
+.showsertif .btn a {
+  color: white;
+}
+/*# sourceMappingURL=profil.css.map */
