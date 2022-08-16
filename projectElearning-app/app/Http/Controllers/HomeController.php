@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 
 use App\Models\Course;
 use Illuminate\Http\Request;
+use App\Models\Module;
+use Illuminate\Support\Facades\DB;
 
 class HomeController extends Controller
 {
@@ -44,7 +46,15 @@ class HomeController extends Controller
     public function mainPage()
     {
         return view('mainpage', [
-            'courses'=>Course::all()
+            'courses'=>Course::all(),
+            'modules'=>Module::all()
         ]);
+
+        // $course = Course::get();
+        // $module = Module::get();
+        // $data = $course->concat($module);
+        // return view('mainpage', [
+        //         'courses'=>$data
+        // ]);
     }
 }

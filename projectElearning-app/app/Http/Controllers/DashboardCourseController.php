@@ -27,7 +27,7 @@ class DashboardCourseController extends Controller
      */
     public function create()
     {
-        return view('dashboard');
+        return view('dashboard.course.create');
     }
 
     /**
@@ -50,12 +50,6 @@ class DashboardCourseController extends Controller
         }
 
         Course::create($validatedData);
-
-        // $post = new Course;
-        // $post->courseName = $request->courseName;
-        // $post->module = $request->module;
-        // $post->description = $request->description;
-        // $post->save();
 
         return redirect('admin/course')->with('success', 'New post has been added!');
     }
@@ -81,7 +75,7 @@ class DashboardCourseController extends Controller
      */
     public function edit(Course $course)
     {
-        return view('course', [
+        return view('dashboard.course.edit', [
             'course' => $course,
             'courses'=>Course::all()
         ]);
@@ -101,6 +95,13 @@ class DashboardCourseController extends Controller
             'image' => 'image|file|max:3072',
             'description' => 'required|max:255'
         ]);
+
+        if($request->file('image')){
+            if($request->oldImage){
+                Storage::delete($request->oldImage);
+            }
+            $validatedData['image'] = $request->file('image')->store('post-images');
+        }
 
         Course::where('id', $course->id)
             ->update($validatedData);

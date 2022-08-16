@@ -1,35 +1,24 @@
-<div class="sidebar">
-    <div class="sidebar-brand">
-       <img src="/asset/logo.png">
+<nav id="sidebarMenu" class="col-md-3 col-lg-2 d-md-block bg-light sidebar collapse">
+    <div class="position-sticky pt-3">
+      <ul class="nav flex-column">
+        <li class="nav-item">
+          <a class="nav-link {{Request::is('dashboard')? 'active' : ''}}" aria-current="page" >
+            <span data-feather="home"></span>
+            Dashboard
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link {{Request::is('dashboard/course*')? 'active' : ''}}" href="/admin/user">
+            <span data-feather="file"></span>
+            User
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link {{Request::is('dashboard/course*')? 'active' : ''}}" href="/admin/course">
+            <span data-feather="file"></span>
+            Course
+          </a>
+        </li>
+      </ul>
     </div>
-
-    <div class="sidebar-menu">
-        <ul>
-            <li>
-                <a href="{{route('dashboard')}}">
-                    <div class="menu {{ Request::is('dashboard') ? 'active' : ''}}">
-                            <img src="/asset/icon-1.png" alt="">
-                            <h3>Users</h3>
-                    </div>
-                </a>
-            </li>
-            <li>
-                {{-- <a href="{{route('payment')}}"> --}}
-                    <div class="menu">
-                        <img src="/asset/icon-2.png" alt="">
-                        <h3>Payment</h3>
-                    </div>
-                {{-- </a> --}}
-            </li>
-            <li>
-                <a href="{{route('course.index')}}">
-                    <div class="menu {{ Request::is('course') ? 'active' : ''}}">
-                        <img src="/asset/icon-3.png" alt="">
-                        <h3>Course</h3>
-                    </div>
-                </a>
-            </li>
-        </ul>
-    </div>
-</div>
-
+  </nav>
