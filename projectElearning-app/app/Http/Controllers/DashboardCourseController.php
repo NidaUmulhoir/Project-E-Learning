@@ -16,7 +16,7 @@ class DashboardCourseController extends Controller
     public function index()
     {
         return view('dashboard.course.index', [
-            'courses'=>Course::all()
+            'courses'=>Course::latest()->get()
         ]);
     }
 

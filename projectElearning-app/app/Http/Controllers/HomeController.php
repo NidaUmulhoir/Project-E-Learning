@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Course;
+use App\Models\Activity;
 use Illuminate\Http\Request;
 use App\Models\Module;
 use Illuminate\Support\Facades\DB;
@@ -17,7 +18,8 @@ class HomeController extends Controller
     public function homepage()
     {
         return view('homepage',[
-            'courses'=>Course::all()
+            'courses'=>Course::all(),
+            'activities' => Activity::with(['user', 'course', 'module'])->latest()->take(3)->get()->unique('idModule'),
         ]);
 
     }
@@ -57,4 +59,18 @@ class HomeController extends Controller
         //         'courses'=>$data
         // ]);
     }
+
+    public function modul($id){
+        $modul = Module::find($id);
+        Activity::create([
+            'idUser' => auth('member')->user()->id,
+            'idCourse' => $modul->course->id,
+            'idModule' => $modul->id
+        ]);
+        return view('modul', [
+           'modul' => $modul 
+        ]);
+    }
+
+    
 }

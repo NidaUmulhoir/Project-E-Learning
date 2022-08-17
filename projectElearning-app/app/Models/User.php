@@ -23,6 +23,8 @@ class User extends Authenticatable
         'password',
         // 'level',
         'confirm-password',
+        'role',
+        'subscription'
     ];
 
     /**
@@ -43,4 +45,13 @@ class User extends Authenticatable
     protected $casts = [
         'email_verified_at' => 'datetime',
     ];
+
+    public function isSubscribe(){
+        if($this->subscription){
+            if(date('Y-m-d') < date('Y-m-d', strtotime($this->subscription))){
+                return true;
+            }
+        }
+        return false;
+    }
 }

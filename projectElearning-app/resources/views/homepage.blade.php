@@ -33,7 +33,10 @@
         <div class="boxlast-activity" style="width: auto; height: 6cm;  border-radius:15px; background-color:rgba(226, 225, 225, 0.53) ">
           <div class="col content" data-aos="fade-left" data-aos-delay="100" style="margin-left: 50px; margin-right: 50px; margin-top:10px">
             <h3>Latest Activity</h3>
-            <h6 style="text-align: center">Belum ada aktivitas baru nih dari kamu, yuk pelajari modul modul yang kamu miliki </h6>
+            @foreach ($activities as $activity)
+            <h6 style="text-align: center">{{$activity->course->courseName}}</h6>
+            <h6 style="text-align: center">{{$activity->module->moduleName}}</h6>
+            @endforeach
           </div>  
         </div>
       </div>
