@@ -7,16 +7,8 @@
     <title>Modul</title>
 </head>
 <body>
-    <div class="header">
-        <div class="header-brand">
-            <img src="./asset/logo.png" alt="">
-            <div class="profile">
-                <h3>Kim Jongin</h3>
-                <img src="./asset/profile.png" alt="">
-            </div>
-        </div>
-    </div>
-    <hr>
+    @include('header')
+    <div></div>
     <div class="sidebar-modul">
         <h2>Algoritma Pemrograman</h2>
         <div class="sidebar-menu">

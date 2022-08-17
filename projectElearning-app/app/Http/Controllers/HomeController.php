@@ -57,4 +57,11 @@ class HomeController extends Controller
         //         'courses'=>$data
         // ]);
     }
+
+    public function modul($id){
+        $modul = Module::find($id);
+        return view('modul', [
+           'modul' => $modul 
+        ]);
+    }
 }

@@ -12,31 +12,14 @@ Route::get('/', function () {
     return view('landing-page');
 });
 
-Route::get('/mainpage', function () {
-    return view('mainpage');
-});
-
-Route::get('/modul', function () {
-    return view('modul');
-});
-
-Route::get('/payment_dashboard', function () {
-    return view('payment_dashboard');
-});
-
-Route::get('/pay', function () {
-    return view('pay');
-});
-
-Route::get('/success_pay', function () {
-    return view('success_pay');
-});
 
 // Route::get('admin/dashboard', function () {
 //     return view('dashboard.layouts.main');
 // });
 
-Route::prefix('/admin')->group(function(){
+Route::middleware(['auth'])->prefix('/admin')->group(function(){
+    Route::get('/logout', [RegisterController::class, 'logoutAdmin']);
+
     Route::get('/dashboard', function () {
         return view('dashboard.index');
     });
@@ -70,7 +53,36 @@ Route::post('/sign-up', [RegisterController::class, 'register']);
 Route::post('/login-to', [RegisterController::class, 'login']);
 
 
-Route::get('/homepage', [HomeController::class, 'homepage']);
-Route::get('/subscribe', [HomeController::class, 'subscribe']);
-Route::get('/profile', [HomeController::class, 'profile']);
-Route::get('/mainpage', [HomeController::class, 'mainPage']);
+
+
+Route::middleware(['member'])->group(function(){
+    Route::get('/logout', [RegisterController::class, 'logoutMember']);
+
+    Route::get('/mainpage', function () {
+        return view('mainpage');
+    });
+    
+    
+    Route::get('/modul', function () {
+        return view('modul');
+    });
+    
+    Route::get('/payment_dashboard', function () {
+        return view('payment_dashboard');
+    });
+    
+    Route::get('/pay', function () {
+        return view('pay');
+    });
+    
+    Route::get('/success_pay', function () {
+        return view('success_pay');
+    });
+
+    Route::get('/homepage', [HomeController::class, 'homepage']);
+    Route::get('/modul/{id}', [HomeController::class, 'modul']);
+    Route::get('/subscribe', [HomeController::class, 'subscribe']);
+    Route::get('/profile', [HomeController::class, 'profile']);
+    Route::get('/mainpage', [HomeController::class, 'mainPage']);
+
+});

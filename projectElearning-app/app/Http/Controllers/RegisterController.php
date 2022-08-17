@@ -16,7 +16,7 @@ class RegisterController extends Controller
             'password' => 'required',
             'confirm-password' => 'required',
         ]);
-
+        $request->request->add(['role' => 'user']);
         $request['password'] = Hash::make($request['password']);
         User::create($request->all());
         // dd($data);  
@@ -28,10 +28,33 @@ class RegisterController extends Controller
             'email' => 'required|email',
             'password' => 'required'
         ]);
-        if(Auth::attempt($cek)){
-            $request -> session() ->regenerate();
-            return redirect('/homepage');
-        };
+        $user = User::where('email', $request->email)->first();
+        if($user){
+            if(Hash::check($request->password, $user->password)){
+                if($user->role == 'admin'){
+                    if(Auth::attempt($cek)){
+                        $request -> session() ->regenerate();
+                        return redirect('/admin/course');
+                    };
+                }else{
+                    if(Auth::guard('member')->attempt($cek)){
+                        $request -> session() ->regenerate();
+                        return redirect('/homepage');
+                    };
+                }
+            }
+        }
         return redirect('/') -> with('login-error', "ulang lagiii");
+    }
+
+    public function logoutAdmin(){
+        Auth::logout();
+        return redirect('/');
+    }
+
+    public function logoutMember(){
+        Auth::guard('member')->logout();
+
+        return redirect('/');
     }
 }
