@@ -4,8 +4,9 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\Relations\HasMany;
 
-class course extends Model
+class Course extends Model
 {
     use HasFactory;
 
@@ -13,4 +14,8 @@ class course extends Model
     // public $timestamps = false;
     protected $fillable = [
         'courseName', 'module', 'description', 'image'];
+
+    public function modules(){
+        return $this->HasMany(Module::class, 'idCourse', 'id');
+    }
 }
