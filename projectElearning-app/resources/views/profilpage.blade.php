@@ -23,17 +23,23 @@
   </head>
 <body>
 @include('header')
-  @auth
+  @auth('member')
   <img class="profil" src="/assets/img/profilakun.png"/>
-  <h2>{{ auth()->user()->name}}</h2>
+  <h2>{{ auth('member')->user()->name}}</h2>
   <div class="container mt-3">
     <button class="btn"> <a href="/">Logout</button></a> 
   </div>
-  @endauth
+  
 
   <div class="container">
-    <h3 >Subscribe Status</h3>
-    <div class="status"></div>
+    <h3>Subscribe Status</h3>
+    <div class="status">
+      @if (auth('member')->user()->subscription == NULL)
+        <h5>Your account is not premium</h5>
+      @else
+        <h5>Account Premium</h5>
+      @endif
+    </div>
     <h3>Lastest Course </h3>
     <div class="percentCourse">
       <p>Course</p>
@@ -47,6 +53,7 @@
     </div> 
     <h4><a href="/subscribe">Upgrade to Pro</a> to Begin Earn Sertificates</h4>
   </div>
+  @endauth
 
   <div class="showsertif">
     <img src="/assets/img/foldericon.png" alt="">
