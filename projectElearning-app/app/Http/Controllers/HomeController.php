@@ -6,6 +6,8 @@ use App\Models\Course;
 use App\Models\Activity;
 use Illuminate\Http\Request;
 use App\Models\Module;
+use App\Models\Payment;
+use App\Models\Pricelist;
 use Illuminate\Support\Facades\DB;
 
 class HomeController extends Controller
@@ -31,7 +33,9 @@ class HomeController extends Controller
      */
     public function subscribe()
     {
-        return view('subscribepage');
+        return view('subscribepage',[
+            'pricelists'=>Pricelist::all()
+        ]);
     }
 
     /**
@@ -72,5 +76,25 @@ class HomeController extends Controller
         ]);
     }
 
-    
+    public function payment($id)
+    {
+        $pricelist = Pricelist::find($id);
+        return  view('payment_dashboard',[
+            'price' => $pricelist
+        ]);
+    }
+
+    public function paymentStore($id)
+    {
+        $payment = Pricelist::find($id);
+        Payment::create([
+            'idUser' => auth('member')->user()->id,
+            'idPacket' => $payment->id,
+            'price' =>  $payment->price,
+            'approve' => 'waiting'
+        ]);
+        return  view('payment_dashboard',[
+            'price' => $payment
+        ]);
+    }
 }

@@ -14,7 +14,8 @@
         </div>
         <div class="course-info">
           <h2 class="course-name">{{ $course->courseName }}</h2>
-          <p class="course-short-description">{{ $course->description }}</p>
+          @php $content = strip_tags($course->description); @endphp
+          <p class="course-short-description">{{ $content }}</p>
         </div>
       </div>
     @endforeach

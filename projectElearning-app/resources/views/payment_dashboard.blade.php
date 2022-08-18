@@ -3,8 +3,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" type="text/css" href="css/payment_dashboard.css">
-    <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="/css/payment_dashboard.css">
+    <link href="/assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
 
     <title>Payment</title>
 </head>
@@ -18,24 +18,34 @@
             <div class="pay">
                 <h3> Harga Langganan</h3>
                 <hr>
-                <h5>Hemat 0%</h5>
-                <h5>1 Bulan (30 Hari)</h5>
+                <h5>Paket</h5>
+                <h5>{{$price->packet}}</h5>
                 <hr>
                 <div class="promo">
-                    <h4>Kode Promo</h4>
-                    <h5>Bayar Lebih Hemat dengan Promo</h5>
+                    <h4>BNI : 07289023 a.n Balqis Sayyidahtul Atiqah</h4>
+                    <h4>Masukkan bukti pembayaran</h4>
                     <div class="input-code">
-                      <input type="text" class="form-control" id="formInputCode" placeholder="Input Code Promo">
-                      <button type="submit" class="submit-btn">Terapkan</button>
+                        <form method="post" action="/payment" enctype="multipart/form-data">
+                            @csrf
+                            <div class="mb-3">
+                              {{-- <label for="image" class="form-label">Masukkan bukti pembayaran</label> --}}
+                              <img class="img-preview img-fluid mb-3 col-sm-5">
+                              <input class="form-control @error('image') is-invalid @enderror" type="file" id="image" name="image">
+                              @error('image') 
+                                <div class="invalid-feedback">
+                                  {{ $message }}
+                                </div>
+                             @enderror
+                          </form>
                     </div>
                 </div>
                 <hr>
                 <div class="tagihan"> 
                     <h4>Jumlah Tagihan</h4>
-                    <h6>RP 250.000,00</h6>
+                    <h6>{{$price->price}}</h6>
                 </div>
                 <div class="bayar">
-                    <button type="submit" class="pay-btn">Bayar</button>
+                    <button type="submit" class="pay-btn"> <a href="/payment/{{$price->id}}">Bayar</a></button>
                 </div>
             </div>
         </div>
