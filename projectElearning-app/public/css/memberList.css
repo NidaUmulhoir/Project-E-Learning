@@ -1,19 +1,14 @@
 .main-content .title-member {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
 }
-
 .main-content .title-member img {
   width: 40px;
   height: 40px;
 }
-
 .main-content .title-member h2 {
   margin-top: 5px;
   margin-left: 20px;
 }
-
 .main-content table {
   display: block;
   margin-left: 25%;
@@ -22,24 +17,20 @@
   margin-right: 30px;
   border-spacing: 70px 30px;
 }
-
 .main-content table .title {
   font-size: 20px;
   color: black;
   text-align: center;
   font-weight: 700;
 }
-
 .main-content table tbody tr {
-  background-color: #d9d9d9;
+  background-color: rgb(217, 217, 217);
   height: 60px;
 }
-
 .main-content table tbody tr td {
   text-align: center;
   margin-left: 20px;
   padding: 20px;
   font-weight: 700;
   color: rgba(0, 0, 0, 0.5);
-}
-/*# sourceMappingURL=memberList.css.map */
+}/*# sourceMappingURL=memberList.css.map */
