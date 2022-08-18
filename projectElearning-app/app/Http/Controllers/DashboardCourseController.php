@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Course;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Storage;
 
 class DashboardCourseController extends Controller
 {
@@ -15,7 +16,7 @@ class DashboardCourseController extends Controller
     public function index()
     {
         return view('dashboard.course.index', [
-            'courses'=>Course::all()
+            'courses'=>Course::latest()->get()
         ]);
     }
 
@@ -26,7 +27,7 @@ class DashboardCourseController extends Controller
      */
     public function create()
     {
-        return view('dashboard');
+        return view('dashboard.course.create');
     }
 
     /**
@@ -49,12 +50,6 @@ class DashboardCourseController extends Controller
         }
 
         Course::create($validatedData);
-
-        // $post = new Course;
-        // $post->courseName = $request->courseName;
-        // $post->module = $request->module;
-        // $post->description = $request->description;
-        // $post->save();
 
         return redirect('admin/course')->with('success', 'New post has been added!');
     }
@@ -80,7 +75,7 @@ class DashboardCourseController extends Controller
      */
     public function edit(Course $course)
     {
-        return view('course', [
+        return view('dashboard.course.edit', [
             'course' => $course,
             'courses'=>Course::all()
         ]);
@@ -97,9 +92,16 @@ class DashboardCourseController extends Controller
     {
         $validatedData = $request->validate([
             'courseName' => 'required|max:255',
-            'module' => 'required|max:255',
+            'image' => 'image|file|max:3072',
             'description' => 'required|max:255'
         ]);
+
+        if($request->file('image')){
+            if($request->oldImage){
+                Storage::delete($request->oldImage);
+            }
+            $validatedData['image'] = $request->file('image')->store('post-images');
+        }
 
         Course::where('id', $course->id)
             ->update($validatedData);
@@ -115,8 +117,12 @@ class DashboardCourseController extends Controller
      */
     public function destroy(Course $course)
     {
+        if($course->image){
+            Storage::delete($course->image);
+        }
+
         Course::destroy($course->id);
 
-        return redirect('course')->with('success', 'Post has been deleted!');
+        return redirect('admin/course')->with('success', 'Post has been deleted!');
     }
 }

@@ -7,6 +7,7 @@
     font-weight: 700;
     border-radius: 8px;
     border-style: solid;
+    cursor: pointer;
 }
 
 table{
@@ -50,11 +51,12 @@ table{
     }
 }
 
-.pop-up {
+.pop-up.add{
     position:absolute;
+    display: none;
     top: 10px;
     left: 50%;
-    opacity:0;
+    opacity:0.3;
     transform:translate(-50%,50%) scale(1.25);
     width:580px;
     padding:20px 30px;
@@ -159,7 +161,126 @@ table{
     }
 }
 
-.pop-up.active {
+.pop-up.edit{
+    position:absolute;
+    display: none;
+    top: 10px;
+    left: 50%;
+    opacity:0.3;
+    transform:translate(-50%,50%) scale(1.25);
+    width:580px;
+    padding:20px 30px;
+    background: #FFFFFF;
+    box-shadow:2px 2px 5px 5px rgba(0,0,0,0.15);
+    border-radius:10px;
+    transition: top 0ms ease-in-out 200ms, 
+                opacity 200ms ease-in-out 0ms,
+                transform 200ms ease-in-out 0ms;
+    .close-btn {
+        position:absolute;
+        top:10px;
+        right: 10px;
+        width:25px;
+        height:25px;
+        background: #888;
+        color: #eee;
+        text-align: center;
+        line-height: 25px;
+        border-radius: 15px;
+        cursor: pointer;
+    }
+
+    .form {
+        h2{
+        text-align: center;
+        color:black;
+        margin: 10px 0px 20px;
+        font-size: 25px;
+        }
+
+        .form-element {
+            margin: 15px 0px;
+            color: black;
+            font-size: 16px;
+            font-weight: 700;
+            .label {
+                color: black;
+            }
+
+            input[type="text"],input[type="password"] {
+                margin-top:5px;
+                display:block;
+                width: 100%;
+                padding: 10px;
+                outline: none;
+                color: white;
+                background-color: rgba(34, 87, 126, 1);
+                border: 1px solid rgba(34, 87, 126, 1);
+                border-radius: 30px;
+            }
+
+            input[type="confirm-password"] {
+                margin-top:5px;
+                display:block;
+                width: 100%;
+                padding: 10px;
+                outline: none;
+                border: 1px solid #aaa;
+                border-radius: 5px;
+            }
+
+            button {
+                margin-top: 30px;
+                margin-left: 35%;
+                width:30%;
+                height: 30px;
+                border: none;
+                outline: none;
+                font-size: 14px;
+                background: rgba(232, 170, 66, 1);
+                color: black;
+                font-weight: 700;
+                border-radius: 50px;
+                cursor: pointer;
+            }
+
+            b{
+                display: block;
+                padding-bottom: 15px;
+                text-align: center;
+                font-size: 10px;
+                color:white;
+                text-decoration: none;
+                font-weight:600;
+                cursor: pointer;
+                padding-top: 15px;
+            }
+
+            h4{
+                display: block;
+                padding-bottom: 15px;
+                text-align: center;
+                font-size: 10px;
+                color:white;
+                text-decoration: none;
+                font-weight:600;
+                cursor: pointer;
+                /* padding-top: 15px; */
+            }
+        }
+    }
+}
+
+.pop-up.add.active {
+    top: 10px;
+    opacity: 1;
+    transform: translate(-50%, 10%) scale(1);
+    transition: top 0ms ease-in-out 200ms, 
+                opacity 200ms ease-in-out 0ms,
+                transform 20ms ease-in-out 0ms;
+}
+
+.pop-up.edit.active {
     top: 10px;
     opacity: 1;
     transform: translate(-50%, 10%) scale(1);

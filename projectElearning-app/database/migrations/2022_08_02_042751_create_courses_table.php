@@ -18,6 +18,7 @@ return new class extends Migration
             $table->string('courseName')->nullable;
             $table->string('description');
             $table->string('image');
+            $table->timestamps();
         });
     }
 

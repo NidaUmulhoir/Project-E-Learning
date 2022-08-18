@@ -23,12 +23,13 @@
   </head>
 <body>
 @include('header')
-
+  @auth
   <img class="profil" src="/assets/img/profilakun.png"/>
-  <h2>Nama User</h2>
+  <h2>{{ auth()->user()->name}}</h2>
   <div class="container mt-3">
-    <button class="btn"> <a href="">Logout</button></a> 
+    <button class="btn"> <a href="/">Logout</button></a> 
   </div>
+  @endauth
 
 
   <div class="container">

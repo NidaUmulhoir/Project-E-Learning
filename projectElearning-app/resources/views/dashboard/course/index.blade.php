@@ -1,96 +1,45 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link href="/css/dashboard.css" rel="stylesheet">
-    <link href="/css/course.css" rel="stylesheet">
-    <link href='https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css' rel='stylesheet'>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link href='https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css' rel='stylesheet'>
-    <title>Document</title>
-</head>
-<body>
-    @include('dashboard.layouts.sidebar')
-    @include('dashboard.layouts.header')
-    <div class="main-content">
-        <h2>Add New Course</h2>
-        <button class="add-data">Add New</button>
-        <div class="table-course">
-            <table>
-                <thead>
-                    <tr>
-                        <td class="title id">ID</td>
-                        <td class="title pass">Course</td>
-                        <td class="title description">Description</td>
-                        <td class="title action">Action</td>
-                    </tr>
-                </thead>
-                <tbody>
-                    @foreach ($courses as $course)
-                    <tr>
-                        <td>{{ $loop->iteration }}</td>
-                        <td>{{ $course->courseName }}</td>
-                        <td>{{ $course->description }}</td>
-                        <td class="action">
-                            <button class="edit-data"><i class='bx bxs-edit'></i></button>
-                            <form action="course/{{$course->id}}" method="post" class="d-inline">
-                                @method('delete')
-                                @csrf
-                                <button class="delete-data" onclick="return confirm('Are you sure?')"><i class='bx bxs-x-square'></i></button>
-                            </form>
-                            <a href="{{route('module.index')}}?courseId={{ $course->id}}">
-                                <button class="list-module"><i class='bx bx-plus-circle'></i></button>
-                            </a>
-                            {{-- <button class="delete-data"><i class='bx bxs-x-square'></i></button> --}}
-                        </td>
-                    </tr>
-                    @endforeach
-                </tbody>
-            </table>
-        </div>
-        {{-- @include('dashboard.course.create') --}}
-        {{-- @include('dashboard.course.edit') --}}
-        {{-- @include('dahsboard.course.delete') --}}
-    </div>
-</body>
-<script>
-    document.querySelector(".add-data").addEventListener("click",function(){
-        document.querySelector(".pop-up.add").classList.add("active");
-    });
-    document.querySelector(".pop-up.add .close-btn").addEventListener("click",function(){
-        document.querySelector(".pop-up.add").classList.remove("active");
-    });
-    document.querySelector(".edit-data").addEventListener("click",function(){
-        document.querySelector(".pop-up.edit").classList.add("active");
-    });
-    document.querySelector(".pop-up.edit .close-btn").addEventListener("click",function(){
-        document.querySelector(".pop-up.edit").classList.remove("active");
-    });
-    // document.querySelector(".pop-up.del").addEventListener("click",function(){
-    //     document.querySelector(".pop-up.del").classList.add("active");
-    // });
-    // document.querySelector(".pop-up.del").addEventListener("click",function(){
-    //     document.querySelector(".pop-up.del").classList.add("active");
-    // });
+@extends('dashboard.layouts.main')
 
-    function previewImage(){
-    const image = document.querySelector('#image');
-    const imgPreview = document.querySelector('.img-preview');
+@section('container')
+<div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
+  <h1 class="h2">Courses</h1>
+</div>
 
-    imgPreview.style.display = 'block';
+@if(session()->has('success'))
+  <div class="alert alert-success col-lg-8" role="alert">
+    {{ session('success') }}
+  </div>
+@endif
 
-    const ofReader = new FileReader();
-    ofReader.readAsDataURL(image.files[0]);
-
-    ofReader.onload = function(oFREvent){
-      imgPreview.src = oFREvent.target.result;
-    }
-
-  }
-    
-</script>
-
-</html>
+<div class="table-responsive col-lg-10">
+  <a href="/admin/course/create" class="btn btn-primary mb-3">Create New Course</a>
+    <table class="table table-striped table-lg">
+      <thead>
+        <tr>
+          <th scope="col">No</th>
+          <th scope="col">Course Name</th>
+          <th scope="col">Description</th>
+          <th scope="col">Action</th>
+        </tr>
+      </thead>
+      <tbody>
+        @foreach ($courses as $course)
+        <tr>
+          <td>{{ $loop->iteration }}</td>
+          <td>{{ $course->courseName }}</td>
+          <td>{{ $course->description }}</td>
+          <td>
+            <a href="/admin/course/{{$course->id}}/edit" class="badge bg-warning"><span data-feather="edit"></span></a>
+            <form action="/admin/course/{{$course->id}}" method="post" class="d-inline">
+              @method('delete')
+              @csrf
+              <button class="badge bg-danger border-0" onclick="return confirm('Are you sure?')"><span data-feather="x-circle"></span></button>
+            </form>
+            <a href="{{route('module.index')}}?courseId={{ $course->id}}" class="badge bg-primary"><span data-feather="file-plus"></span></a>
+          </td>
+        </tr>
+        @endforeach
+      </tbody>
+    </table>
+  </div>
+@endsection

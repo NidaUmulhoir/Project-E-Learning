@@ -3,7 +3,10 @@
 namespace App\Http\Controllers;
 
 use App\Models\Course;
+use App\Models\Activity;
 use Illuminate\Http\Request;
+use App\Models\Module;
+use Illuminate\Support\Facades\DB;
 
 class HomeController extends Controller
 {
@@ -15,7 +18,8 @@ class HomeController extends Controller
     public function homepage()
     {
         return view('homepage',[
-            'courses'=>Course::all()
+            'courses'=>Course::all(),
+            'activities' => Activity::with(['user', 'course', 'module'])->latest()->take(3)->get()->unique('idModule'),
         ]);
 
     }
@@ -41,48 +45,32 @@ class HomeController extends Controller
         return  view('profilpage');
     }
 
-    /**
-     * Display the specified resource.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function show($id)
+    public function mainPage()
     {
-        //
+        return view('mainpage', [
+            'courses'=>Course::all(),
+            'modules'=>Module::all()
+        ]);
+
+        // $course = Course::get();
+        // $module = Module::get();
+        // $data = $course->concat($module);
+        // return view('mainpage', [
+        //         'courses'=>$data
+        // ]);
     }
 
-    /**
-     * Show the form for editing the specified resource.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function edit($id)
-    {
-        //
+    public function modul($id){
+        $modul = Module::find($id);
+        Activity::create([
+            'idUser' => auth('member')->user()->id,
+            'idCourse' => $modul->course->id,
+            'idModule' => $modul->id
+        ]);
+        return view('modul', [
+           'modul' => $modul 
+        ]);
     }
 
-    /**
-     * Update the specified resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function update(Request $request, $id)
-    {
-        //
-    }
-
-    /**
-     * Remove the specified resource from storage.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function destroy($id)
-    {
-        //
-    }
+    
 }

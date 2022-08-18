@@ -78,6 +78,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 .navbar .dropdown {
   background-color: rgb(232, 170, 66);
+  width: auto;
 }
 .navbar .dropdown ul {
   display: block;
@@ -176,13 +177,5 @@ section {
   line-height: 60px;
   transition: all 0.3s ease-out;
   font-size: 45px;
-}
-.container-2 .sosmed .button:nth-child(1):hover .icon {
-  background: #e77f67;
-}
-.container-2 .sosmed .button:nth-child(2):hover .icon {
-  background: #e77f67;
-}
-.container-2 .sosmed .button:nth-child(3):hover .icon {
-  background: #e77f67;
+  margin-top: 5px;
 }/*# sourceMappingURL=style.css.map */
