@@ -27,7 +27,9 @@
     <!-- ======= Latest Activity Section ======= -->
     <section id="latest-activity" class="latest-activity">
       <div class="container position-relative" data-aos="fade-up" data-aos-delay="100">
-        <h3 style="margin-top: 100px">Hi, User</h3>
+        @auth('member')
+          <h3 style="margin-top: 100px">Hi, {{ auth('member')->user()->name }}</h3>
+        @endauth
       </div>
       <div class="container" data-aos="fade-up">
         <div class="boxlast-activity" style="width: auto; height: 6cm;  border-radius:15px; background-color:rgba(226, 225, 225, 0.53) ">

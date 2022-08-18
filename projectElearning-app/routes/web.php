@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\DashboardCourseController;
 use App\Http\Controllers\DashboardModuleController;
+use App\Http\Controllers\DashboardPricelist;
 use App\Http\Controllers\HomeController;
 use Illuminate\Support\Facades\Route;
 // use App\Http\Controllers\Register;
@@ -43,6 +44,8 @@ Route::middleware(['auth'])->prefix('/admin')->group(function(){
             return view('dashboard.user.userReguler.index');
         });
     });
+
+    Route::resource('pricelist', DashboardPricelist::class);
 });
 
 Route::get('/', function () {
@@ -91,5 +94,7 @@ Route::middleware(['member'])->group(function(){
     Route::get('/subscribe', [HomeController::class, 'subscribe']);
     Route::get('/profile', [HomeController::class, 'profile']);
     Route::get('/mainpage', [HomeController::class, 'mainPage']);
+    Route::get('/payment_dashboard/{id}', [HomeController::class, 'payment']);
+    Route::get('/payment/{id}', [HomeController::class, 'paymentStore']);
 
 });

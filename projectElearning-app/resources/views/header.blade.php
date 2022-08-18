@@ -1,4 +1,4 @@
-<link href="assets/css/style.css" rel="stylesheet">
+<link href="/assets/css/style.css" rel="stylesheet">
 <header id="header" class="fixed-top border-bottom border-dark">
     <div class="container-1">
       <img class="image" src="/assets/img/logo.png"/>
