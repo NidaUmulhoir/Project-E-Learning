@@ -31,7 +31,6 @@
   </div>
   @endauth
 
-
   <div class="container">
     <h3 >Subscribe Status</h3>
     <div class="status"></div>
@@ -46,7 +45,7 @@
         Pro
       </div>
     </div> 
-    <h4><a href="">Upgrade to Pro</a> to Begin Earn Sertificates</h4>
+    <h4><a href="/subscribe">Upgrade to Pro</a> to Begin Earn Sertificates</h4>
   </div>
 
   <div class="showsertif">
