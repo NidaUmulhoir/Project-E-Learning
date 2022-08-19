@@ -27,7 +27,6 @@
                                 <div class="accordion-item-body-content">
                                     @php $content = strip_tags($module->materi); @endphp
                                     <a href="/modul/{{ $module->id }}">{{ $module->moduleName}}</a>
-                                    
                                 </div>
                             @else
                                 <div class="accordion-item-body-content">

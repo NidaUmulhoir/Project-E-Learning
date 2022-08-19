@@ -10,54 +10,23 @@ body{
     margin: 0;
     font-family: 'Inter';
 }
-// .header{
-//     .header-brand{
-//         img{
-//             width: 3cm;
-//             margin-left: 30px;
-//         }
-//         .profile{
-//             display: flex;
-//             justify-content: center;
-//             align-items: center;
-//             width: 200px;
-//             height: 50px;
-//             background-color: var(--main-color);
-//             gap: 18px;
-//             float: right;
-//             border-radius: 20px;
-//             margin-top: 30px;
-//             margin-right: 28px;
-//             img{
-//                 width: 40px;
-//                 margin-right: 11px;
-//             }
-//             h3{
-//                 font-size: 14.3px;
-//                 margin-left: 20px;
-//                 margin-top: 15px;
-//             }
-//         }
-//     }
-//     hr{
-//         width: 100%;
-//         margin-top: 20px;
-//     }
-// }
+
 .space{
     margin-top: 150px;
 }
 
 .sidebar-modul{
     width: 7cm;
-    height: 450px;
+    height: 70%;
     position: fixed;
     overflow: hidden;
     overflow-y: auto;
-    padding: 2rem 0;
+    margin-left: 3rem;
     h2{
-        font-size: medium;
+        font-size: 25px;
         margin: 5px 0px 0px 42px;
+        width: 90px;
+        font-weight: 600;
     }
     .sidebar-menu{
         padding-right: 30px;
@@ -84,7 +53,9 @@ body{
                     height: 30px;
                 }
                 h3{
-                    color: black;                  
+                    color: black;  
+                    font-size: large;
+                    padding: 10px;    
                 }
             }
             .nama-modul.active, .nama-modul:hover{
@@ -98,6 +69,11 @@ body{
 }
 
 .detail{
-    margin-left: 30%;
+    margin-left: 25%;
+    margin-right: 10%;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 20px;
+    text-align: justify;
+    font-weight: 400;
 }
 

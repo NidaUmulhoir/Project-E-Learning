@@ -39,7 +39,7 @@
             <div class="lastcourse">
               <p style="text-align: center">{{$activity->course->courseName}} </p>
               <div class="lastmodul">
-                <h6 style="text-align: center">{{$activity->module->moduleName}}</h6>
+                <h6 style="text-align: center"><a href="/modul/{{ $activity->module->id }}">{{$activity->module->moduleName}}</a></h6>
               </div>
             </div>
             @endforeach

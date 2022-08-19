@@ -30,13 +30,15 @@ body {
   height: 35px;
   width: 350px;
   background-color: rgb(232, 170, 66);
-  color: black;
   font-size: medium;
   align-items: center;
   border-radius: 20px;
   display: flex;
   justify-content: center;
   margin-top: 10px;
+}
+.latest-activity .container .boxlast-activity .col .lastcourse .lastmodul h6 a {
+  color: black;
 }
 
 a {
@@ -79,7 +81,7 @@ h1, h2, h3, h4, h5, h6 {
   width: 5%;
 }
 .navbar ul .dropprofil1 {
-  margin-left: 10px;
+  margin-left: 20px;
   width: 150px;
   height: 50px;
   border-radius: 20px;

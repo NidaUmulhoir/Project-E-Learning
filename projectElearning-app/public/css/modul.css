@@ -16,15 +16,17 @@ body {
 
 .sidebar-modul {
   width: 7cm;
-  height: 450px;
+  height: 70%;
   position: fixed;
   overflow: hidden;
   overflow-y: auto;
-  padding: 2rem 0;
+  margin-left: 3rem;
 }
 .sidebar-modul h2 {
-  font-size: medium;
+  font-size: 25px;
   margin: 5px 0px 0px 42px;
+  width: 90px;
+  font-weight: 600;
 }
 .sidebar-modul .sidebar-menu {
   padding-right: 30px;
@@ -61,6 +63,8 @@ body {
 }
 .sidebar-modul .sidebar-menu ul .nama-modul h3 {
   color: black;
+  font-size: large;
+  padding: 10px;
 }
 .sidebar-modul .sidebar-menu ul .nama-modul.active, .sidebar-modul .sidebar-menu ul .nama-modul:hover {
   background-color: var(--color-dark);
@@ -70,5 +74,10 @@ body {
 }
 
 .detail {
-  margin-left: 30%;
+  margin-left: 25%;
+  margin-right: 10%;
+  font-family: "Times New Roman", Times, serif;
+  font-size: 20px;
+  text-align: justify;
+  font-weight: 400;
 }/*# sourceMappingURL=modul.css.map */

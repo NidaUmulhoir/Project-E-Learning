@@ -46,7 +46,10 @@ class HomeController extends Controller
      */
     public function profile()
     {
-        return view('profilpage');
+        return view('profilpage',[
+            'activities' => Activity::with(['user', 'course', 'module'])->latest()->take(1)->get()->unique('idModule'),
+        ]);
+        
     }
 
     public function mainPage()
