@@ -23,13 +23,13 @@
       </thead>
       <tbody>
         @foreach ($users as $user)
-          @if ($user->subscription == NULL)
+          @if ($user->subscription == NULL || $user->subscription < date("Y-m-d"))
         <tr>
             <td>{{ $loop->iteration }}</td>
             <td>{{ $user->name }}</td>
             <td>{{ $user->email }}</td>
             <td>
-              <form action="" method="post" class="d-inline">
+              <form action="/admin/user/user-reguler/{{$user->id}}" method="post" class="d-inline">
                 @method('delete')
                 @csrf
                 <button class="badge bg-danger border-0" onclick="return confirm('Are you sure?')"><span data-feather="x-circle"></span></button>

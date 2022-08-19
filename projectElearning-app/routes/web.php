@@ -11,9 +11,11 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\RegisterController;
 
 
-Route::get('/', function () {
-    return view('landing-page');
-});
+// Route::get('/', function () {
+//     return view('landing-page');
+// });
+
+Route::get('/', [HomeController::class, 'landing']);
 
 Route::get('/login', function(){
     return view('homepage');
@@ -46,18 +48,10 @@ Route::middleware(['auth'])->prefix('/admin')->group(function(){
     Route::resource('/course-detail/module', DashboardModuleController::class);
     
     Route::prefix('/user')->group(function(){
-        // Route::get('/user-premium', function () {
-        //     return view('dashboard.user.userPremium.index');
-        // });
-    
-        // Route::get('/user-reguler', function () {
-        //     return view('dashboard.user.userReguler.index');
-        // });
-
-        Route::resource('user-premium', DashboardUserController::class);
-        // Route::get('/user-reguler', [DashboardUserController::class, 'indexReg']);
-        // Route::delete('/user-premium/{id}', [DashboardUserController::class, 'deletePre']);
-        // Route::delete('/user-reguler', [DashboardUserController::class, 'deleteReg']);
+        Route::get('/user-premium', [DashboardUserController::class, 'indexPre']);
+        Route::get('/user-reguler', [DashboardUserController::class, 'indexReg']);
+        Route::delete('user-premium/{id}', [DashboardUserController::class, 'destroyPre']);
+        Route::delete('user-reguler/{id}', [DashboardUserController::class, 'destroyReg']);
     });
 
     Route::resource('pricelist', DashboardPricelist::class);
