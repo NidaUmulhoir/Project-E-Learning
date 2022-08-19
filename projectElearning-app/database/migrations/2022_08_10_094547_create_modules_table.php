@@ -18,7 +18,6 @@ return new class extends Migration
             $table->string('moduleName');
             $table->longText('materi');
             $table->unsignedBigInteger('idCourse');
-            $table->string('type');
             $table->boolean('isSubscribe');
             $table->timestamps();
         });

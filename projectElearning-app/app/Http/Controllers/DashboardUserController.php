@@ -37,7 +37,7 @@ class DashboardUserController extends Controller
     {
         User::destroy($id);
 
-        return redirect('/admin/user/user-reguler')->with('success', 'Post has been deleted!');
+        return redirect('/admin/user/user-premium')->with('success', 'Post has been deleted!');
     }
 
     public function destroyReg($id)

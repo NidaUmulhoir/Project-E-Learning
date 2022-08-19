@@ -11,7 +11,7 @@ class Module extends Model
 
     public $table = "modules";
     protected $fillable = [
-        'moduleName', 'materi', 'idCourse', 'type', 'isSubscribe'];
+        'moduleName', 'materi', 'idCourse', 'isSubscribe'];
 
     public function course(){
         return $this->belongsTo(Course::class, 'idCourse', 'id');

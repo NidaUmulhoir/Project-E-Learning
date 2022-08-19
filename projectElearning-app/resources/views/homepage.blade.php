@@ -48,7 +48,7 @@
               @endif
             @endforeach
             @if (!$checker)
-            <h5>Kamu belum memiliki aktivitas hehe</h5>
+            <h5>Belum ada aktivitas baru nih dari kamu, yuk pelajari modul modul yang kamu miliki </h5>
             @endif
           </div>  
         </div>

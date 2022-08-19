@@ -48,13 +48,15 @@ body{
                 gap: 50px;
                 margin-top: 30px;
                 border-radius: 8px;
+                padding-bottom: 10px;
+                padding-left: 15px;
                 img{
                     width: 30px;
                     height: 30px;
                 }
                 h3{
                     color: black;  
-                    font-size: large;
+                    font-size: 15px;
                     padding: 10px;    
                 }
             }
@@ -69,7 +71,7 @@ body{
 }
 
 .detail{
-    margin-left: 20%;
+    margin-left: 28%;
     margin-right: 10%;
     font-family: 'Times New Roman', Times, serif;
     font-size: 20px;

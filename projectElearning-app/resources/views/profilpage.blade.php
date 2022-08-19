@@ -38,10 +38,10 @@
   <div class="container">
     <h3>Subscribe Status</h3>
     <div class="status">
-      @if (auth('member')->user()->subscription == NULL)
+      @if (auth('member')->user()->subscription == NULL || auth('member')->user()->subscription < date("Y-m-d"))
         <h5>Your account is not premium</h5>
       @else
-        <h5>Account Premium</h5>
+        <h5>Account premium until {{auth('member')->user()->subscription}}</h5>
       @endif
     </div>
     <h3>Lastest Course </h3>
@@ -52,7 +52,9 @@
        </div>
      @endforeach
     </div>
-    <div class="sertif">
+    @endauth
+  </div>
+    {{-- <div class="sertif">
       <h3>Lastest Sertificate</h3>
       <div class="pro">
         <img src="/assets/img/crown.png" alt="">
@@ -60,15 +62,15 @@
       </div>
     </div> 
     <h4><a href="/subscribe">Upgrade to Pro</a> to Begin Earn Sertificates</h4>
-  </div>
-  @endauth
+  
+  
 
   <div class="showsertif">
     <img src="/assets/img/foldericon.png" alt="">
     <h4>This feed shows sertificate that can be downloaded</h4>
     <h6>Are there sertificate you miss? <a href="/profile">Reload the page.</a></h6>
     <button class="btn"> <a href="/mainpage">Browse All Course</button></a> 
-  </div>
+  </div> --}}
 </body>
 @include('footer')
 </html>

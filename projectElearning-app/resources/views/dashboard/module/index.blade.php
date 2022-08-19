@@ -2,7 +2,7 @@
 
 @section('container')
 <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
-  <h1 class="h2">Courses</h1>
+  <h1 class="h2">Modules</h1>
 </div>
 
 @if(session()->has('success'))
@@ -29,13 +29,16 @@
         <tr>
           <td>{{ $loop->iteration }}</td>
           <td>{{ $module->moduleName }}</td>
-          <td>{{ $module->type }}</td>
           <td>
             @php $content = strip_tags($module->materi); @endphp
             {{Str::limit($content, 100, '...') }}
           </td>
-          <td>{{ $module->isSubscribe }}</td>
-          <td>
+          @if ($module->isSubscribe == 0)
+          <td> No </td>
+          @else
+          <td>Yes</td>
+          @endif
+          <td style="width:80px">
             <a href="/admin/course-detail/module/{{$module->id}}/edit" class="badge bg-warning"><span data-feather="edit"></span></a>
             <form action="/admin/course-detail/module/{{$module->id}}" method="post" class="d-inline">
               @method('delete')

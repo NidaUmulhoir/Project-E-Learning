@@ -29,13 +29,23 @@
       </div>
       <div class="mb-3">
         <label for="duration" class="form-label">Duration</label>
+        <div class="input-group">
+          <input type="text" class="form-control" id="validationCustomUsername" id="duration" name="duration" value="{{ old('duration', $pricelist->duration) }}" placeholder="" aria-describedby="inputGroupPrepend" required>
+          <div class="input-group-prepend">
+            <span class="input-group-text" id="inputGroupPrepend">Days</span>
+          </div>
+        </div>
+      </div>
+{{-- 
+      <div class="mb-3">
+        <label for="duration" class="form-label">Duration</label>
         <input type="text" class="form-control @error('duration') is-invalid @enderror" id="duration" name="duration" value="{{ old('duration', $pricelist->duration) }}">
         @error('duration')
           <div class="invalid-feedback">
               {{ $message }}
           </div>
         @enderror
-      </div>
+      </div> --}}
     
     <button type="submit" class="btn btn-primary">Update</button>
   </form>

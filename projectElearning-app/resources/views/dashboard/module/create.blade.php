@@ -10,7 +10,7 @@
     @csrf
     <div class="mb-3">
         <label for="idCourse" class="form-label">ID Course</label>
-        <input type="text" class="form-control @error('idCourse') is-invalid @enderror" id="idCourse" name="idCourse" value="{{ session('data') }}">
+        <input readonly type="text" class="form-control @error('idCourse') is-invalid @enderror" id="idCourse" name="idCourse" value="{{ session('data') }}">
         @error('idCourse')
           <div class="invalid-feedback">
               {{ $message }}
@@ -26,15 +26,7 @@
         </div>
       @enderror
     </div>
-    <div class="mb-3">
-        <label for="type" class="form-label">Type</label>
-        <input type="text" class="form-control @error('type') is-invalid @enderror" id="type" name="type" value="{{ old('type') }}">
-        @error('type')
-          <div class="invalid-feedback">
-              {{ $message }}
-          </div>
-        @enderror
-      </div>
+
     <div class="mb-3">
         <label for="materi" class="form-label">Materi</label>
         @error('materi')

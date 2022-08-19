@@ -27,8 +27,9 @@
         <tr>
           <td>{{ $loop->iteration }}</td>
           <td>{{ $course->courseName }}</td>
-          <td>{{ $course->description }}</td>
-          <td>
+          @php $content = strip_tags($course->description); @endphp
+          <td>{{ $content }}</td>
+          <td style=" width: 120px">
             <a href="/admin/course/{{$course->id}}/edit" class="badge bg-warning"><span data-feather="edit"></span></a>
             <form action="/admin/course/{{$course->id}}" method="post" class="d-inline">
               @method('delete')

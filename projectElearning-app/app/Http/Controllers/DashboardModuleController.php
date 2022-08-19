@@ -44,12 +44,11 @@ class DashboardModuleController extends Controller
     public function store(Request $request)
     {
 
-        // return('hai');
+        return $request;
         $post = new Module;
         $post->moduleName = $request->moduleName;
         $post->materi = $request->materi;
         $post->idCourse = $request->idCourse;
-        $post->type = $request->type;
         $post->isSubscribe = $request->input('isSubscribe') ? true : false;
         $post->save();
 
@@ -92,11 +91,14 @@ class DashboardModuleController extends Controller
      */
     public function update(Request $request, Module $module)
     {
+        // return $request;
+        // $post->isSubscribe = $request->input('isSubscribe') ? true : false;
+        $request->request->add(['isSubscribe' => $request->input('isSubscribe') ? true : false]);
+
         $validatedData = $request->validate([
             'moduleName' => 'required|max:255',
-            'type' => 'required|max:255'
         ]);
-
+// 
         Module::where('id', $module->id)
             ->update($validatedData);
 

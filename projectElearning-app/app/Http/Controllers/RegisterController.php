@@ -18,6 +18,7 @@ class RegisterController extends Controller
         ]);
         $request->request->add(['role' => 'user']);
         $request['password'] = Hash::make($request['password']);
+        $request['confirm-password'] = Hash::make($request['confirm-password']);
         User::create($request->all());
         // dd($data);  
         return redirect('/')->with('regis-success', "Registered successfully, please login!");

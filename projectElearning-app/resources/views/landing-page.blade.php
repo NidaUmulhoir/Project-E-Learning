@@ -17,10 +17,10 @@
 <body>
   
   <nav class="navbar">
-    <img src="./asset/logo.png" alt="">
+    <img src="/assets/img/logo.png" alt="">
     <div class="nav-menu">
-      <p><a href="subscribe">Subscription</a></p>
-      <p><a href="card-slider-b">Service</a></p>
+      {{-- <p><a href="subscribe">Subscription</a></p>
+      <p><a href="card-slider-b">Service</a></p> --}}
       <button id="show-signup">Sign-Up</button>
       <button id="show-login">Login</button>
     </div>

@@ -23,29 +23,15 @@
                 @foreach ($modules as $module)
                     @if (($module->idCourse) == ($course->id))
                         @if ((($module->isSubscribe == 1) && (auth('member')->user()->isSubscribe())) || ($module->isSubscribe == 0))
-                            @if ($module->type == 'link')
-                                <div class="accordion-item-body-content">
-                                    @php $content = strip_tags($module->materi); @endphp
-                                    <a href="/modul/{{ $module->id }}">{{ $module->moduleName}}</a>
-                                </div>
-                            @else
                                 <div class="accordion-item-body-content">
                                     <a href="/modul/{{ $module->id }}">{{ $module->moduleName}}</a>
                                 </div>
-                            @endif
                         @else
-                            @if ($module->type == 'link')
-                                <div class="accordion-item-body-content">
-                                    @php $content = strip_tags($module->materi); @endphp
-                                    <a>{{ $module->moduleName}}</a>
-                                    <img src="./asset/lock.png" alt="">
-                                </div>
-                            @else
+                            
                                 <div class="accordion-item-body-content">
                                     <a>{{ $module->moduleName}}</a>
                                     <img src="./asset/lock.png" alt="">
                                 </div>
-                            @endif
                         @endif
                     @endif
                 @endforeach

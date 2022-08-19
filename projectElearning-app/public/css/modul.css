@@ -56,6 +56,8 @@ body {
   gap: 50px;
   margin-top: 30px;
   border-radius: 8px;
+  padding-bottom: 10px;
+  padding-left: 15px;
 }
 .sidebar-modul .sidebar-menu ul .nama-modul img {
   width: 30px;
@@ -63,7 +65,7 @@ body {
 }
 .sidebar-modul .sidebar-menu ul .nama-modul h3 {
   color: black;
-  font-size: large;
+  font-size: 15px;
   padding: 10px;
 }
 .sidebar-modul .sidebar-menu ul .nama-modul.active, .sidebar-modul .sidebar-menu ul .nama-modul:hover {
@@ -74,7 +76,7 @@ body {
 }
 
 .detail {
-  margin-left: 20%;
+  margin-left: 28%;
   margin-right: 10%;
   font-family: "Times New Roman", Times, serif;
   font-size: 20px;

@@ -18,6 +18,7 @@
           <th scope="col">No</th>
           <th scope="col">Username</th>
           <th scope="col">Packet</th>
+          <th scope="col">Created at</th>
           <th scope="col">Approve</th>
           <th scope="col">Action</th>
         </tr>
@@ -28,6 +29,7 @@
           <td>{{ $loop->iteration }}</td>
           <td>{{ $payment->user->name }}</td>
           <td>{{ $payment->packet->packet }}</td>
+          <td>{{ $payment->created_at }}</td>
           <td>
             <form action="/admin/payment/{{$payment->id}}" method="post" class="d-inline">
               @method('put')

@@ -87,9 +87,11 @@ class DashboardPricelist extends Controller
      */
     public function update(Request $request, Pricelist $pricelist)
     {
+        // return $request;
         $validatedData = $request->validate([
             'packet' => 'required|max:255',
-            'price' => 'required|max:255'
+            'price' => 'required|max:255',
+            'duration' => 'required'
         ]);
 
         Pricelist::where('id', $pricelist->id)

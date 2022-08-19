@@ -3,7 +3,7 @@
 <footer id="footer">
     <div class="container-2">
         <img class="image" src="/assets/img/logo.png"/>
-        <div class="sosmed"> 
+        {{-- <div class="sosmed"> 
             <div class="button"> 
                 <div class="icon">
                     <a href=""><i class='bx bxl-facebook-circle' href=""></i></a>
@@ -19,6 +19,6 @@
                     <a href=""><i class='bx bxl-instagram'></i></a>
                 </div>
             </div>
-        </div>
+        </div> --}}
     </div> 
   </footer>

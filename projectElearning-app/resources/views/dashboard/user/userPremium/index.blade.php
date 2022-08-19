@@ -18,6 +18,7 @@
           <th scope="col">No</th>
           <th scope="col">Username</th>
           <th scope="col">Email</th>
+          <th scope="col">Valid Until</th>
           <th scope="col">Action</th>
         </tr>
       </thead>
@@ -28,6 +29,7 @@
             <td>{{ $loop->iteration }}</td>
             <td>{{ $user->name }}</td>
             <td>{{ $user->email }}</td>
+            <td>{{ $user->subscription }}</td>
             <td>
               <form action="/admin/user/user-premium/{{$user->id}}" method="post" class="d-inline">
                 @method('delete') 

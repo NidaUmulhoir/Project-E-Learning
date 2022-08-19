@@ -8,7 +8,7 @@
 <div class="col-lg-8">
   <form method="post" action="/admin/course" enctype="multipart/form-data">
     @csrf
-    {{-- <div class="mb-3">
+    <div class="mb-3">
       <label for="courseName" class="form-label">Course Name</label>
       <input type="text" class="form-control @error('courseName') is-invalid @enderror" id="courseName" name="courseName" value="{{ old('courseName') }}">
       @error('courseName')
@@ -16,7 +16,7 @@
             {{ $message }}
         </div>
       @enderror
-    </div> --}}
+    </div>
     <div class="mb-3">
       <label for="image" class="form-label">Image</label>
       <img class="img-preview img-fluid mb-3 col-sm-5">
@@ -27,7 +27,7 @@
         </div>
      @enderror
     </div>
-    {{-- <div class="mb-3">
+    <div class="mb-3">
         <label for="description" class="form-label">Description</label>
         @error('description')
             <p class="text-danger"> {{ $message }}</p>
@@ -35,7 +35,7 @@
         @enderror
         <input id="description" type="hidden" name="description" value="{{ old('description') }}">
         <trix-editor input="description"></trix-editor>
-    </div> --}}
+    </div>
     
     <button type="submit" class="btn btn-primary">Create</button>
   </form>
