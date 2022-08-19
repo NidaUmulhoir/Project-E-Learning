@@ -17,7 +17,15 @@ class HomeController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function homepage()
+    public function landing()
+    {
+        return view('landing-page',[
+            'courses'=>Course::all(),
+        ]);
+
+    }
+
+     public function homepage()
     {
         return view('homepage',[
             'courses'=>Course::all(),

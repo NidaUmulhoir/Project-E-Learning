@@ -2,7 +2,7 @@
 
 @section('container')
 <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
-  <h1 class="h2">User Premiumx</h1>
+  <h1 class="h2">User Premium</h1>
 </div>
 
 @if(session()->has('success'))
@@ -23,13 +23,13 @@
       </thead>
       <tbody>
         @foreach ($users as $user)
-          @if ($user->subscription !== NULL)
+          @if ($user->subscription !== NULL && $user->subscription > date("Y-m-d"))
         <tr>
             <td>{{ $loop->iteration }}</td>
             <td>{{ $user->name }}</td>
             <td>{{ $user->email }}</td>
             <td>
-              <form action="{{$user->id}}" method="post" class="d-inline">
+              <form action="/admin/user/user-premium/{{$user->id}}" method="post" class="d-inline">
                 @method('delete') 
                 @csrf
                 <button class="badge bg-danger border-0" onclick="return confirm('Are you sure?')"><span data-feather="x-circle"></span></button>
