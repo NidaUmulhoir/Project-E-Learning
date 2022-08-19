@@ -11,9 +11,11 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\RegisterController;
 
 
-Route::get('/', function () {
-    return view('landing-page');
-});
+// Route::get('/', function () {
+//     return view('landing-page');
+// });
+
+Route::get('/', [HomeController::class, 'landing']);
 
 Route::get('/login', function(){
     return view('homepage');

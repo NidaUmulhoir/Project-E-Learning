@@ -1,5 +1,5 @@
 @if(session()->has('regis-success'))
-<div class="alert alert-success col-lg-8" role="alert">
+<div class="alert alert-success alert-dismissible fade show" role="alert">
     {{session('regis-success')}}
   </div>
 @endif
@@ -36,12 +36,11 @@
             {{-- <button class="btn-signup2" type="submit">Sign-Up2</button> --}}
         </div>
         
+        </form>
         <div class="form-element">
             <h4>Or</h4>
             <hr>
-            <!-- <h4>New Around Here?</h4> -->
             <button class="btn-login">Already Have Account? Login</button>
         </div>
-        </form>
     </div>
 </div>

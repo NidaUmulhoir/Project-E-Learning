@@ -20,7 +20,7 @@ class RegisterController extends Controller
         $request['password'] = Hash::make($request['password']);
         User::create($request->all());
         // dd($data);  
-        return redirect('/')->with('regis-success', "Registered successfully, please login.!");
+        return redirect('/')->with('regis-success', "Registered successfully, please login!");
     }
     public function login(Request $request){
         // return("test");
@@ -44,7 +44,7 @@ class RegisterController extends Controller
                 }
             }
         }
-        return redirect('/') -> with('login-error', "ulang lagiii");
+        return redirect('/') -> with('login-error', "Your email or password is incorrect. Please try again.");
     }
 
     public function logoutAdmin(){

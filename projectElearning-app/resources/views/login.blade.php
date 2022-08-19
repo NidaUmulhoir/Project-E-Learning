@@ -22,13 +22,9 @@
         </div>
 
         <div class="form-element">
-            <button class="btn-fp">Forgot Password?</button>
-        </div>
-
-        <div class="form-element">
             <button class="btn-login" type="submit">Login</button>
         </div>
-        
+    </form>
         <div class="form-element">
             <h4>Or</h4>
             <hr>

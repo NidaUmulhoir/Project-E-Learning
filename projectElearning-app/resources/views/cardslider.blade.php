@@ -44,11 +44,6 @@ courseContainers.forEach((item, i) => {
         item.scrollLeft -= containerWidth;
     })
 })
-  document.querySelector("#show-signup").addEventListener("click",function(){
-    document.querySelector(".pop-up").classList.add("active");
-  });
-  document.querySelector(".pop-up .close-btn").addEventListener("click",function(){
-      document.querySelector(".pop-up").classList.remove("active");
-  });
+
 </script>
 </html>

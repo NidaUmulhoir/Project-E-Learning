@@ -35,14 +35,21 @@
         <div class="boxlast-activity" style="width: auto; height: 6cm;  border-radius:15px; background-color:rgba(226, 225, 225, 0.53) ">
           <div class="col content" data-aos="fade-left" data-aos-delay="100" style="margin-left: 50px; margin-right: 50px; margin-top:10px">
             <h3>Latest Activity</h3>
+            @php $checker = false; @endphp
             @foreach ($activities as $activity)
-            <div class="lastcourse">
-              <p style="text-align: center">{{$activity->course->courseName}} </p>
-              <div class="lastmodul">
-                <h6 style="text-align: center"><a href="/modul/{{ $activity->module->id }}">{{$activity->module->moduleName}}</a></h6>
-              </div>
-            </div>
+              @if ($activity->idUser == auth('member')->user()->id)
+                @php $checker = true; @endphp
+                <div class="lastcourse">
+                  <p style="text-align: center">{{$activity->course->courseName}} </p>
+                  <div class="lastmodul">
+                    <h6 style="text-align: center"><a href="/modul/{{ $activity->module->id }}">{{$activity->module->moduleName}}</a></h6>
+                  </div>
+                </div>
+              @endif
             @endforeach
+            @if (!$checker)
+            <h5>Kamu belum memiliki aktivitas hehe</h5>
+            @endif
           </div>  
         </div>
       </div>
