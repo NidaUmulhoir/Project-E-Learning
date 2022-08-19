@@ -42,7 +42,11 @@
     </div>
     <h3>Lastest Course </h3>
     <div class="percentCourse">
-      <p>Course</p>
+      @foreach ($activities as $activity)
+      <div class="lastcourse">
+        <p style="text-align: center">{{$activity->course->courseName}} </p>
+       </div>
+     @endforeach
     </div>
     <div class="sertif">
       <h3>Lastest Sertificate</h3>
@@ -58,7 +62,7 @@
   <div class="showsertif">
     <img src="/assets/img/foldericon.png" alt="">
     <h4>This feed shows sertificate that can be downloaded</h4>
-    <h6>Are there sertificate you miss? <a href="/profilpage">Reload the page.</a></h6>
+    <h6>Are there sertificate you miss? <a href="/profile">Reload the page.</a></h6>
     <button class="btn"> <a href="/mainpage">Browse All Course</button></a> 
   </div>
 </body>

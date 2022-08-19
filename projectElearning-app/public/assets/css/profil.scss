@@ -53,6 +53,12 @@ h4{
         height: 50px;  
         border-radius:30px;
         margin-bottom: 30px;
+        h5{
+            color: aliceblue;
+            font-weight: 500;
+            margin-left: 30px;
+            padding-top: 10px;
+        }
     }
 
     .percentCourse{
@@ -64,11 +70,22 @@ h4{
         height: 80px;  
         border-radius:30px;
         margin-bottom: 30px;
-        p{
-            color:aliceblue;
-            margin-left: 30px;
-            font-size: 20px;
-            font-weight: 500;
+        .lastcourse{
+            display: flex;
+            justify-content:space-between;
+            padding: 10px 10px 10px 20px;
+            height: 50px;
+            align-items: center;
+            border-radius: 20px;
+            margin-bottom: 10px;
+            p{
+                color: #fff;
+                font-weight: 600;
+                font-size: 20px;
+                margin-left: 15px;
+                margin-top: 10px;
+                padding-top: 30px;
+            }
         }
     }
 
@@ -89,7 +106,7 @@ h4{
                 width: 30px;
                 height: 30px;
             }
-        }   
+        }
     }
 }
     

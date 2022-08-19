@@ -11,6 +11,42 @@ body{
     font-weight: 650;
 }
 
+.latest-activity .container .boxlast-activity .col{
+    .lastcourse{
+        display: flex;
+        justify-content:space-between;
+        background-color: #22577e;
+        padding: 10px 10px 10px 20px;
+        height: 50px;
+        align-items: center;
+        border-radius: 20px;
+        margin-bottom: 10px;
+        p{
+            color: #fff;
+            font-weight: 700;
+            font-size: medium;
+            margin-top: 10px;
+        }
+        .lastmodul{
+            h6{
+                height: 35px;
+                width : 350px;
+                background-color: rgba(232, 170, 66, 1);
+                font-size: medium;
+                align-items: center;
+                border-radius: 20px;
+                display: flex;
+                justify-content: center;
+                margin-top: 10px;
+                a{
+                    color: black;
+                }
+            }
+        }
+    }
+    
+}
+
 a {
     text-decoration: none;
 }
@@ -50,7 +86,7 @@ h1,h2,h3,h4,h5,h6 {
         width: 5%;
 
         .dropprofil1{
-            margin-left: 10px;
+            margin-left: 20px;
             width: 150px; 
             height: 50px; 
             border-radius:20px ; 
@@ -154,7 +190,8 @@ section{
 
 //  footer
 @import url('https://fonts.googleapis.com/css?family=Poppins:400,500,600,700');
-.container-2{
+.container-2{   
+
     background-color: rgba(232, 170, 66, 1);
     width: auto; 
     height: 90px;

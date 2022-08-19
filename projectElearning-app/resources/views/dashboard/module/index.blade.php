@@ -32,7 +32,7 @@
           <td>{{ $module->type }}</td>
           <td>
             @php $content = strip_tags($module->materi); @endphp
-            {{ $content }}
+            {{Str::limit($content, 100, '...') }}
           </td>
           <td>{{ $module->isSubscribe }}</td>
           <td>

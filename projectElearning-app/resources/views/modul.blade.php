@@ -20,11 +20,19 @@
                 <ul>
                     @foreach ($modul->course->modules as $module)
                     <li>
+                        @if ((($module->isSubscribe == 1) && (auth('member')->user()->isSubscribe())) || ($module->isSubscribe == 0))
                         <div class="nama-modul">
                             <a href="/modul/{{ $module->id }}">
                                 <h3>{{$module->moduleName}}</h3>
                             </a>
                         </div>
+                        @else
+                        <div class="nama-modul">
+                            <a href="">
+                                <h3>{{$module->moduleName}}</h3>
+                            </a>
+                        </div>
+                        @endif
                     </li>
                     @endforeach
                 </ul>
@@ -35,7 +43,5 @@
             {!!$modul->materi!!}
         </div>
     </div>
-
-        
 </body>
 </html>
