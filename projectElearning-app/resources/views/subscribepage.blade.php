@@ -30,9 +30,9 @@
             @endforeach
         </ul>
     </div>
-    <h1>Benefit</h1>
+    <p>Benefit</p>
     <h2>Akses penuh ke seluruh modul yang disediakan</h2>
-    <h3>Sertifikat kompetensi kelulusan jika Anda berhasil menyelesaikan kelas</h3>
+    <h4>Sertifikat kompetensi kelulusan jika Anda berhasil menyelesaikan kelas</h4>
 </body>
 @include('footer')
 </html>

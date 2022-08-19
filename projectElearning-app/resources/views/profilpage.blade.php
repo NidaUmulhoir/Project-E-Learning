@@ -29,7 +29,11 @@
   <div class="container mt-3">
     <button class="btn"> <a href="/">Logout</button></a> 
   </div>
-  
+  @if(session()->has('success'))
+        <div class="alert alert-success alert-dismissable fade show" role="alert">
+            {{ session('success') }}
+        </div>
+    @endif
 
   <div class="container">
     <h3>Subscribe Status</h3>

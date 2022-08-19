@@ -12,9 +12,13 @@
 </head>
 <body>
     @include('header')
-
     <div class="space"></div>
     <div class="payment-content">
+        @if(session()->has('success'))
+        <div class="alert alert-success col-lg-8" role="alert">
+            {{ session('success') }}
+        </div>
+    @endif
         <h2>Pembayaran untuk Paket Langganan</h2>
         <div class="amount">
             <div class="pay">
@@ -27,7 +31,7 @@
                     @csrf
                 <div class="promo">
                     <h4>BNI : 07289023 a.n Balqis Sayyidahtul Atiqah</h4>
-                    <h4>Masukkan bukti pembayaran</h4>
+                    <h1>Masukkan bukti pembayaran</h1>
                     <div class="input-code">
                             <div class="mb-3">
                               {{-- <label for="image" class="form-label">Masukkan bukti pembayaran</label> --}}

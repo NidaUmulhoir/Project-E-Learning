@@ -107,9 +107,10 @@ class HomeController extends Controller
             'approve' => 'waiting',
             'image' => $validatedData['image']
         ]);
-        return  view('payment_dashboard',[
-            'price' => $payment
-        ]);
+        // return  view('payment_dashboard',[
+        //     'price' => $payment
+        // ])->with('success', 'Please check your subscribe status in your profile');
+        return redirect('/profile')->with('success', 'Please check your subscribe status in your profile');
     }
 
     public function storeImage(Request $request){

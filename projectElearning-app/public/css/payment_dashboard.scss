@@ -13,40 +13,6 @@ body{
 .space{
     margin-top: 150px;
 }
-// .header{
-//     .header-brand{
-//         img{
-//             width: 3cm;
-//             margin-left: 30px;
-//         }
-//         .profile{
-//             display: flex;
-//             justify-content: center;
-//             align-items: center;
-//             width: 200px;
-//             height: 50px;
-//             background-color: var(--main-color);
-//             gap: 18px;
-//             float: right;
-//             border-radius: 20px;
-//             margin-top: 30px;
-//             margin-right: 28px;
-//             img{
-//                 width: 40px;
-//                 margin-right: 11px;
-//             }
-//             h3{
-//                 font-size: 14.3px;
-//                 margin-left: 20px;
-//                 margin-top: 15px;
-//             }
-//         }
-//     }
-//     hr{
-//         width: 100%;
-//         margin-top: 20px;
-//     }
-// }
 .payment-content{
     background-color: var(--text-color);
     position: relative;
@@ -63,24 +29,29 @@ body{
             margin-bottom: 50px;
             width: 1000px;
             height: 410px;
-            border-radius: 20px;
+            border-radius: 10px;
             border-style: groove;
             h3{
                 margin-left: 88px;
-                padding-top: 15px;
+                margin-top: 5px;
+                padding-bottom: 10px;
                 font-size: 20px;
                 font-weight: 700;
             }
             h4{
                 margin-left: 88px;
                 font-size: 20px;
-                font-weight: 700;
-
+                font-weight: 570;
             }
             h5{
                 margin-left: 88px;
                 font-weight: 400;
-                font-size: 15px;
+                font-size: 20px;
+            }
+            h1{
+                margin-left: 88px;
+                font-size: 20px;
+                font-weight: 500;
             }
             hr{
                 width: 100%;
@@ -133,9 +104,8 @@ body{
                 height: 40px;
                 font-size: medium;
                 font-weight: 600;
-                margin-top: 15px;
                 float: right;
-                margin-right: 20px;
+                margin-right: 25px;
             }
     }
     
