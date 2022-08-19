@@ -2,11 +2,14 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Payment;
 use App\Models\Pricelist;
+use App\Models\User;
+use Carbon\Carbon;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Storage;
 
-class DashboardPricelist extends Controller
+class DashboardPaymentController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -16,8 +19,8 @@ class DashboardPricelist extends Controller
     public function index(Request $request)
     {
         session(["data"=>request()->courseId]);
-        return view('dashboard.pricelist.index', [
-            'pricelists'=>Pricelist::all()
+        return view('dashboard.payment.index', [
+            'payments'=>Payment::all()
         ]);
     }
 
@@ -38,6 +41,13 @@ class DashboardPricelist extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
+
+    public function show(Payment $payment)
+    {
+        return view('dashboard.payment.show', [
+            'payment'=>Payment::find($payment->id)
+        ]);
+    }
     public function store(Request $request)
     {
 
@@ -57,45 +67,16 @@ class DashboardPricelist extends Controller
      * @param  \App\Models\course  $course
      * @return \Illuminate\Http\Response
      */
-    public function show(Pricelist $pricelist)
+    public function update(Request $request, Payment $payment)
     {
-        // return view('pricelist', [
-        //     'pricelist' => $course
-        // ]);
-    }
+        $request->request->add(['approve' => 'approved']);
 
-    /**
-     * Show the form for editing the specified resource.
-     *
-     * @param  \App\Models\course  $course
-     * @return \Illuminate\Http\Response
-     */
-    public function edit(Pricelist $pricelist)
-    {
-        return view('dashboard.pricelist.edit', [
-            'pricelist' => $pricelist,
-            'pricelists'=>Pricelist::all()
-        ]);
-    }
+        $date = Carbon::parse($payment->user->subscription)->addDays($payment->packet->duration); 
+        $date->toDateString();
 
-    /**
-     * Update the specified resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Models\course  $course
-     * @return \Illuminate\Http\Response
-     */
-    public function update(Request $request, Pricelist $pricelist)
-    {
-        $validatedData = $request->validate([
-            'packet' => 'required|max:255',
-            'price' => 'required|max:255'
-        ]);
-
-        Pricelist::where('id', $pricelist->id)
-            ->update($validatedData);
-
-        return redirect('/admin/pricelist')->with('success', 'New post has been added!');
+        Payment::find($payment->id)->update($request->all());
+        User::find($payment->user->id)->update(['subscription' => $date]);
+        return redirect('/admin/payment')->with('success', 'Payment has been approved!');
     }
 
     /**
@@ -104,10 +85,10 @@ class DashboardPricelist extends Controller
      * @param  \App\Models\course  $course
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Pricelist $pricelist)
+    public function destroy(Payment $payment)
     {
-        Pricelist::destroy($pricelist->id);
+        Payment::destroy($payment->id);
 
-        return redirect('/admin/pricelist')->with('success', 'Post has been deleted!');
+        return redirect('/admin/payment')->with('success', 'Post has been deleted!');
     }
 }

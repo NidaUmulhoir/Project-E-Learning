@@ -40,14 +40,16 @@ class DashboardCourseController extends Controller
     {
         // return $request->file('image')->store('post-images');
         $validatedData = $request->validate([
-            'courseName' => 'required|max:255',
-            'image' => 'image|file|max:3072',
-            'description' => 'required|max:255'
+            // 'courseName' => 'required|max:255',
+            // 'image' => 'image|file|max:3072',
+            // 'description' => 'required|max:255'
         ]);
         
         if($request->file('image')){
             $validatedData['image'] = $request->file('image')->store('post-images');
         }
+
+        return $validatedData['image'];
 
         Course::create($validatedData);
 

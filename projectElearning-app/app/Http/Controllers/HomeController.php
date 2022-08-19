@@ -46,7 +46,7 @@ class HomeController extends Controller
      */
     public function profile()
     {
-        return  view('profilpage');
+        return view('profilpage');
     }
 
     public function mainPage()
@@ -84,17 +84,32 @@ class HomeController extends Controller
         ]);
     }
 
-    public function paymentStore($id)
+    public function paymentStore(Request $request)
     {
-        $payment = Pricelist::find($id);
+        // return $request->id;
+        $validatedData = $request->validate([
+            'image' => 'image|file|max:3072',
+        ]);
+        
+        if($request->file('image')){
+            $validatedData['image'] = $request->file('image')->store('post-images');
+        }
+
+        // return $validatedData['image'];
+        $payment = Pricelist::find($request->id);
         Payment::create([
             'idUser' => auth('member')->user()->id,
             'idPacket' => $payment->id,
             'price' =>  $payment->price,
-            'approve' => 'waiting'
+            'approve' => 'waiting',
+            'image' => $validatedData['image']
         ]);
         return  view('payment_dashboard',[
             'price' => $payment
         ]);
+    }
+
+    public function storeImage(Request $request){
+        return 'hehe';
     }
 }

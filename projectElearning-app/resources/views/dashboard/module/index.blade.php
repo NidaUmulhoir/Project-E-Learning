@@ -30,7 +30,10 @@
           <td>{{ $loop->iteration }}</td>
           <td>{{ $module->moduleName }}</td>
           <td>{{ $module->type }}</td>
-          <td>{{ $module->materi }}</td>
+          <td>
+            @php $content = strip_tags($module->materi); @endphp
+            {{ $content }}
+          </td>
           <td>{{ $module->isSubscribe }}</td>
           <td>
             <a href="/admin/course-detail/module/{{$module->id}}/edit" class="badge bg-warning"><span data-feather="edit"></span></a>

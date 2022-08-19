@@ -18,7 +18,7 @@ class DashboardModuleController extends Controller
     {
         session(["data"=>request()->courseId]);
         return view('dashboard.module.index', [
-            'modules'=>Module::where('idCourse', request()->courseId)->get()
+            'modules'=>Module::where('idCourse', request()->courseId)->latest()->get()
         ]);
     }
 
