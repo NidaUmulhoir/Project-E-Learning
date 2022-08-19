@@ -84,7 +84,7 @@ h1,h2,h3,h4,h5,h6 {
         list-style: none;
         align-items: initial;
         width: 5%;
-
+        margin-left: 20px;
         .dropprofil1{
             margin-left: 20px;
             width: 150px; 
@@ -191,7 +191,7 @@ section{
 //  footer
 @import url('https://fonts.googleapis.com/css?family=Poppins:400,500,600,700');
 .container-2{   
-
+    position: relative;
     background-color: rgba(232, 170, 66, 1);
     width: auto; 
     height: 90px;

@@ -59,5 +59,4 @@
 
     <script src="js/mainpage.js"></script>
 </body>
-@include('footer')
 </html>
