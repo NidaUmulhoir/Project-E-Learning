@@ -10,7 +10,7 @@ class Payment extends Model
     use HasFactory;
 
     protected $fillable = [
-        'idUser', 'idPacket', 'price', 'approve'
+        'idUser', 'idPacket', 'price', 'approve', 'image'
     ];
 
     public function course(){

@@ -19,6 +19,7 @@ return new class extends Migration
             $table->unsignedBigInteger('idPacket');
             $table->string('price');
             $table->string('approve');
+            $table->string('image');
             $table->timestamps();
         });
     }
