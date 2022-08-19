@@ -23,9 +23,9 @@
   </head>
 <body>
 @include('header')
-  @auth
+  @auth('member')
   <img class="profil" src="/assets/img/profilakun.png"/>
-  <h2>{{ auth()->user()->name}}</h2>
+  <h2>{{ auth('member')->user()->name}}</h2>
   <div class="container mt-3">
     <button class="btn"> <a href="/">Logout</button></a> 
   </div>

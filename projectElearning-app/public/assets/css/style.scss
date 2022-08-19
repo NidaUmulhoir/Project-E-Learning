@@ -11,6 +11,40 @@ body{
     font-weight: 650;
 }
 
+.latest-activity .container .boxlast-activity .col{
+    .lastcourse{
+        display: flex;
+        justify-content:space-between;
+        background-color: #22577e;
+        padding: 10px 10px 10px 20px;
+        height: 50px;
+        align-items: center;
+        border-radius: 20px;
+        margin-bottom: 10px;
+        p{
+            color: #fff;
+            font-weight: 700;
+            font-size: medium;
+            margin-top: 10px;
+        }
+        .lastmodul{
+            h6{
+                height: 35px;
+                width : 350px;
+                background-color: rgba(232, 170, 66, 1);
+                color: black;
+                font-size: medium;
+                align-items: center;
+                border-radius: 20px;
+                display: flex;
+                justify-content: center;
+                margin-top: 10px;
+            }
+        }
+    }
+    
+}
+
 a {
     text-decoration: none;
 }

@@ -17,19 +17,16 @@ table {
   margin-right: 30px;
   border-spacing: 70px 30px;
 }
-
 table .title {
   font-size: 20px;
   color: black;
   text-align: center;
   font-weight: 700;
 }
-
 table tbody tr {
-  background-color: #d9d9d9;
+  background-color: rgb(217, 217, 217);
   height: 60px;
 }
-
 table tbody tr td {
   text-align: center;
   margin-left: 20px;
@@ -37,13 +34,11 @@ table tbody tr td {
   font-weight: 700;
   color: rgba(0, 0, 0, 0.5);
 }
-
 table tbody tr td.action {
   background-color: white;
 }
-
 table tbody tr td.action button {
-  color: #d27c2c;
+  color: rgb(210, 124, 44);
   background-color: white;
   border: none;
   font-size: 35px;
@@ -55,29 +50,14 @@ table tbody tr td.action button {
   top: 10px;
   left: 50%;
   opacity: 0.3;
-  -webkit-transform: translate(-50%, 50%) scale(1.25);
-          transform: translate(-50%, 50%) scale(1.25);
+  transform: translate(-50%, 50%) scale(1.25);
   width: 580px;
   padding: 20px 30px;
   background: #FFFFFF;
-  -webkit-box-shadow: 2px 2px 5px 5px rgba(0, 0, 0, 0.15);
-          box-shadow: 2px 2px 5px 5px rgba(0, 0, 0, 0.15);
+  box-shadow: 2px 2px 5px 5px rgba(0, 0, 0, 0.15);
   border-radius: 10px;
-  -webkit-transition: top 0ms ease-in-out 200ms, 
- opacity 200ms ease-in-out 0ms,
- -webkit-transform 200ms ease-in-out 0ms;
-  transition: top 0ms ease-in-out 200ms, 
- opacity 200ms ease-in-out 0ms,
- -webkit-transform 200ms ease-in-out 0ms;
-  transition: top 0ms ease-in-out 200ms, 
- opacity 200ms ease-in-out 0ms,
- transform 200ms ease-in-out 0ms;
-  transition: top 0ms ease-in-out 200ms, 
- opacity 200ms ease-in-out 0ms,
- transform 200ms ease-in-out 0ms, 
- -webkit-transform 200ms ease-in-out 0ms;
+  transition: top 0ms ease-in-out 200ms, opacity 200ms ease-in-out 0ms, transform 200ms ease-in-out 0ms;
 }
-
 .pop-up.add .close-btn {
   position: absolute;
   top: 10px;
@@ -91,38 +71,33 @@ table tbody tr td.action button {
   border-radius: 15px;
   cursor: pointer;
 }
-
 .pop-up.add .form h2 {
   text-align: center;
   color: black;
   margin: 10px 0px 20px;
   font-size: 25px;
 }
-
 .pop-up.add .form .form-element {
   margin: 15px 0px;
   color: black;
   font-size: 16px;
   font-weight: 700;
 }
-
 .pop-up.add .form .form-element .label {
   color: black;
 }
-
-.pop-up.add .form .form-element input[type="text"], .pop-up.add .form .form-element input[type="password"] {
+.pop-up.add .form .form-element input[type=text], .pop-up.add .form .form-element input[type=password] {
   margin-top: 5px;
   display: block;
   width: 100%;
   padding: 10px;
   outline: none;
   color: white;
-  background-color: #22577e;
-  border: 1px solid #22577e;
+  background-color: rgb(34, 87, 126);
+  border: 1px solid rgb(34, 87, 126);
   border-radius: 30px;
 }
-
-.pop-up.add .form .form-element input[type="confirm-password"] {
+.pop-up.add .form .form-element input[type=confirm-password] {
   margin-top: 5px;
   display: block;
   width: 100%;
@@ -131,7 +106,6 @@ table tbody tr td.action button {
   border: 1px solid #aaa;
   border-radius: 5px;
 }
-
 .pop-up.add .form .form-element button {
   margin-top: 30px;
   margin-left: 35%;
@@ -140,13 +114,12 @@ table tbody tr td.action button {
   border: none;
   outline: none;
   font-size: 14px;
-  background: #e8aa42;
+  background: rgb(232, 170, 66);
   color: black;
   font-weight: 700;
   border-radius: 50px;
   cursor: pointer;
 }
-
 .pop-up.add .form .form-element b {
   display: block;
   padding-bottom: 15px;
@@ -158,7 +131,6 @@ table tbody tr td.action button {
   cursor: pointer;
   padding-top: 15px;
 }
-
 .pop-up.add .form .form-element h4 {
   display: block;
   padding-bottom: 15px;
@@ -177,29 +149,14 @@ table tbody tr td.action button {
   top: 10px;
   left: 50%;
   opacity: 0.3;
-  -webkit-transform: translate(-50%, 50%) scale(1.25);
-          transform: translate(-50%, 50%) scale(1.25);
+  transform: translate(-50%, 50%) scale(1.25);
   width: 580px;
   padding: 20px 30px;
   background: #FFFFFF;
-  -webkit-box-shadow: 2px 2px 5px 5px rgba(0, 0, 0, 0.15);
-          box-shadow: 2px 2px 5px 5px rgba(0, 0, 0, 0.15);
+  box-shadow: 2px 2px 5px 5px rgba(0, 0, 0, 0.15);
   border-radius: 10px;
-  -webkit-transition: top 0ms ease-in-out 200ms, 
- opacity 200ms ease-in-out 0ms,
- -webkit-transform 200ms ease-in-out 0ms;
-  transition: top 0ms ease-in-out 200ms, 
- opacity 200ms ease-in-out 0ms,
- -webkit-transform 200ms ease-in-out 0ms;
-  transition: top 0ms ease-in-out 200ms, 
- opacity 200ms ease-in-out 0ms,
- transform 200ms ease-in-out 0ms;
-  transition: top 0ms ease-in-out 200ms, 
- opacity 200ms ease-in-out 0ms,
- transform 200ms ease-in-out 0ms, 
- -webkit-transform 200ms ease-in-out 0ms;
+  transition: top 0ms ease-in-out 200ms, opacity 200ms ease-in-out 0ms, transform 200ms ease-in-out 0ms;
 }
-
 .pop-up.edit .close-btn {
   position: absolute;
   top: 10px;
@@ -213,38 +170,33 @@ table tbody tr td.action button {
   border-radius: 15px;
   cursor: pointer;
 }
-
 .pop-up.edit .form h2 {
   text-align: center;
   color: black;
   margin: 10px 0px 20px;
   font-size: 25px;
 }
-
 .pop-up.edit .form .form-element {
   margin: 15px 0px;
   color: black;
   font-size: 16px;
   font-weight: 700;
 }
-
 .pop-up.edit .form .form-element .label {
   color: black;
 }
-
-.pop-up.edit .form .form-element input[type="text"], .pop-up.edit .form .form-element input[type="password"] {
+.pop-up.edit .form .form-element input[type=text], .pop-up.edit .form .form-element input[type=password] {
   margin-top: 5px;
   display: block;
   width: 100%;
   padding: 10px;
   outline: none;
   color: white;
-  background-color: #22577e;
-  border: 1px solid #22577e;
+  background-color: rgb(34, 87, 126);
+  border: 1px solid rgb(34, 87, 126);
   border-radius: 30px;
 }
-
-.pop-up.edit .form .form-element input[type="confirm-password"] {
+.pop-up.edit .form .form-element input[type=confirm-password] {
   margin-top: 5px;
   display: block;
   width: 100%;
@@ -253,7 +205,6 @@ table tbody tr td.action button {
   border: 1px solid #aaa;
   border-radius: 5px;
 }
-
 .pop-up.edit .form .form-element button {
   margin-top: 30px;
   margin-left: 35%;
@@ -262,13 +213,12 @@ table tbody tr td.action button {
   border: none;
   outline: none;
   font-size: 14px;
-  background: #e8aa42;
+  background: rgb(232, 170, 66);
   color: black;
   font-weight: 700;
   border-radius: 50px;
   cursor: pointer;
 }
-
 .pop-up.edit .form .form-element b {
   display: block;
   padding-bottom: 15px;
@@ -280,7 +230,6 @@ table tbody tr td.action button {
   cursor: pointer;
   padding-top: 15px;
 }
-
 .pop-up.edit .form .form-element h4 {
   display: block;
   padding-bottom: 15px;
@@ -296,40 +245,13 @@ table tbody tr td.action button {
 .pop-up.add.active {
   top: 10px;
   opacity: 1;
-  -webkit-transform: translate(-50%, 10%) scale(1);
-          transform: translate(-50%, 10%) scale(1);
-  -webkit-transition: top 0ms ease-in-out 200ms, 
- opacity 200ms ease-in-out 0ms,
- -webkit-transform 20ms ease-in-out 0ms;
-  transition: top 0ms ease-in-out 200ms, 
- opacity 200ms ease-in-out 0ms,
- -webkit-transform 20ms ease-in-out 0ms;
-  transition: top 0ms ease-in-out 200ms, 
- opacity 200ms ease-in-out 0ms,
- transform 20ms ease-in-out 0ms;
-  transition: top 0ms ease-in-out 200ms, 
- opacity 200ms ease-in-out 0ms,
- transform 20ms ease-in-out 0ms, 
- -webkit-transform 20ms ease-in-out 0ms;
+  transform: translate(-50%, 10%) scale(1);
+  transition: top 0ms ease-in-out 200ms, opacity 200ms ease-in-out 0ms, transform 20ms ease-in-out 0ms;
 }
 
 .pop-up.edit.active {
   top: 10px;
   opacity: 1;
-  -webkit-transform: translate(-50%, 10%) scale(1);
-          transform: translate(-50%, 10%) scale(1);
-  -webkit-transition: top 0ms ease-in-out 200ms, 
- opacity 200ms ease-in-out 0ms,
- -webkit-transform 20ms ease-in-out 0ms;
-  transition: top 0ms ease-in-out 200ms, 
- opacity 200ms ease-in-out 0ms,
- -webkit-transform 20ms ease-in-out 0ms;
-  transition: top 0ms ease-in-out 200ms, 
- opacity 200ms ease-in-out 0ms,
- transform 20ms ease-in-out 0ms;
-  transition: top 0ms ease-in-out 200ms, 
- opacity 200ms ease-in-out 0ms,
- transform 20ms ease-in-out 0ms, 
- -webkit-transform 20ms ease-in-out 0ms;
-}
-/*# sourceMappingURL=course.css.map */
+  transform: translate(-50%, 10%) scale(1);
+  transition: top 0ms ease-in-out 200ms, opacity 200ms ease-in-out 0ms, transform 20ms ease-in-out 0ms;
+}/*# sourceMappingURL=course.css.map */

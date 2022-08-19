@@ -36,8 +36,12 @@
           <div class="col content" data-aos="fade-left" data-aos-delay="100" style="margin-left: 50px; margin-right: 50px; margin-top:10px">
             <h3>Latest Activity</h3>
             @foreach ($activities as $activity)
-            <h6 style="text-align: center">{{$activity->course->courseName}}</h6>
-            <h6 style="text-align: center">{{$activity->module->moduleName}}</h6>
+            <div class="lastcourse">
+              <p style="text-align: center">{{$activity->course->courseName}} </p>
+              <div class="lastmodul">
+                <h6 style="text-align: center">{{$activity->module->moduleName}}</h6>
+              </div>
+            </div>
             @endforeach
           </div>  
         </div>
