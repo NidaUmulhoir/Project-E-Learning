@@ -33,6 +33,10 @@
         <div class="alert alert-success alert-dismissable fade show" role="alert">
             {{ session('success') }}
         </div>
+  @elseif (session()->has('fail'))
+    <div class="alert alert-success alert-dismissable fade show" role="alert">
+        {{ session('fail') }}
+    </div>
     @endif
 
   <div class="container">
