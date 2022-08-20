@@ -14,11 +14,11 @@
     @include('header')
     <div class="space"></div>
     <div class="payment-content">
-        @if(session()->has('success'))
+        @if(session()->has('fail'))
         <div class="alert alert-success col-lg-8" role="alert">
-            {{ session('success') }}
+            {{ session('fail') }}
         </div>
-    @endif
+         @endif
         <h2>Pembayaran untuk Paket Langganan</h2>
         <div class="amount">
             <div class="pay">

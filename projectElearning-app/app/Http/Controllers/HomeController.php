@@ -9,6 +9,7 @@ use App\Models\Module;
 use App\Models\Payment;
 use App\Models\Pricelist;
 use Illuminate\Support\Facades\DB;
+use phpDocumentor\Reflection\Types\Null_;
 
 class HomeController extends Controller
 {
@@ -98,27 +99,34 @@ class HomeController extends Controller
     public function paymentStore(Request $request)
     {
         // return $request->id;
-        $validatedData = $request->validate([
-            'image' => 'image|file|max:3072',
-        ]);
-        
-        if($request->file('image')){
-            $validatedData['image'] = $request->file('image')->store('post-images');
+        if ($request->file('image') == NULL){
+            return redirect('/profile')->with('fail', 'Please upload your proof of payment');
+        }else{
+            $validatedData = $request->validate([
+                'image' => 'image|file|max:3072',
+            ]);
+            
+            if($request->file('image')){
+                $validatedData['image'] = $request->file('image')->store('post-images');
+            }
+    
+            
+    
+            // return $validatedData['image'];
+            $payment = Pricelist::find($request->id);
+            Payment::create([
+                'idUser' => auth('member')->user()->id,
+                'idPacket' => $payment->id,
+                'price' =>  $payment->price,
+                'approve' => 'waiting',
+                'image' => $validatedData['image']
+            ]);
+            // return  view('payment_dashboard',[
+            //     'price' => $payment
+            // ])->with('success', 'Please check your subscribe status in your profile');
+            return redirect('/profile')->with('success', 'Please check your subscribe status in your profile');
         }
-
-        // return $validatedData['image'];
-        $payment = Pricelist::find($request->id);
-        Payment::create([
-            'idUser' => auth('member')->user()->id,
-            'idPacket' => $payment->id,
-            'price' =>  $payment->price,
-            'approve' => 'waiting',
-            'image' => $validatedData['image']
-        ]);
-        // return  view('payment_dashboard',[
-        //     'price' => $payment
-        // ])->with('success', 'Please check your subscribe status in your profile');
-        return redirect('/profile')->with('success', 'Please check your subscribe status in your profile');
+       
     }
 
     public function storeImage(Request $request){
