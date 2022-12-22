@@ -20,6 +20,7 @@
           <th scope="col">Packet</th>
           <th scope="col">Price</th>
           <th scope="col">Duration</th>
+          <th scope="col">Action</th>
         </tr>
       </thead>
       <tbody>

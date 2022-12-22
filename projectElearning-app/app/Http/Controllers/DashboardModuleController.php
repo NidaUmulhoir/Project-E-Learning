@@ -44,7 +44,7 @@ class DashboardModuleController extends Controller
     public function store(Request $request)
     {
 
-        return $request;
+        // return $request;
         $post = new Module;
         $post->moduleName = $request->moduleName;
         $post->materi = $request->materi;
@@ -97,7 +97,12 @@ class DashboardModuleController extends Controller
 
         $validatedData = $request->validate([
             'moduleName' => 'required|max:255',
+            'materi' => 'required',
+            'idCourse' => 'required',
+            'isSubscribe' => 'required'
         ]);
+
+        // return $validatedData;
 // 
         Module::where('id', $module->id)
             ->update($validatedData);

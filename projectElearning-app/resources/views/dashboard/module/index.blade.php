@@ -18,7 +18,6 @@
         <tr>
           <th scope="col">No</th>
           <th scope="col">Module Name</th>
-          <th scope="col">Type</th>
           <th scope="col">Materi</th>
           <th scope="col">Subscribe</th>
           <th scope="col">Action</th>

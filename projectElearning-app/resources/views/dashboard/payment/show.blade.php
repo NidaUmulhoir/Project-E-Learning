@@ -6,7 +6,7 @@
     <button type="admin" class="btn btn-primary">Back</button>
 </a>
 <br>
-<h3>Bukti Pembayaran</h3>
+<h3>Payment Detail</h3>
 <table>
     <tr>
         <td>Name    :</td>
